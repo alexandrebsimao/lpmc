@@ -1,0 +1,12 @@
+{
+  "pagina": {
+    "titulo": "Além do Horizonte",
+    "subtitulo": "Cada paisagem guarda uma história esperando para ser vivida.",
+    "cta": "Explorar",
+    "imagem": {
+      "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+      "alt": "Montanhas ao amanhecer com névoa"
+    },
+    "rodape": "© 2026 Além do Horizonte"
+  }
+}
