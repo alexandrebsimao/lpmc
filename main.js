@@ -1,24 +1,9 @@
 /**
  * main.js
- * Dados embutidos diretamente no JS — sem fetch, funciona ao abrir
- * o index.html localmente (file://) sem precisar de servidor.
- *
- * Para alterar conteúdo, edite o objeto DADOS abaixo.
+ * Carrega dados do data.json no mesmo diretório.
  */
 
-const DADOS = [
-    {
-        dia: "1",
-        data: "03/04/2026",
-        titulo: "A crucificação de Jesus",
-        referencia: "João 19:16-30",
-        texto: "16. Então, Pilatos o entregou para ser crucificado. 17. Tomaram eles, pois, a Jesus; e ele próprio, carregando a sua cruz, saiu para o lugar chamado Calvário, Gólgota em hebraico, 18. onde o crucificaram e com ele outros dois, um de cada lado, e Jesus no meio. 19. Pilatos escreveu também um título e o colocou no cimo da cruz; o que estava escrito era: JESUS NAZARENO, O REI DOS JUDEUS. 20. Muitos judeus leram este título, porque o lugar em que Jesus fora crucificado era perto da cidade; e estava escrito em hebraico, latim e grego. 21. Os principais sacerdotes diziam a Pilatos: Não escrevas: Rei dos judeus, e sim que ele disse: Sou o rei dos judeus. 22. Respondeu Pilatos: O que escrevi escrevi. 23. Os soldados, pois, quando crucificaram Jesus, tomaram-lhe as vestes e fizeram quatro partes, para cada soldado uma parte; e pegaram também a túnica. A túnica, porém, era sem costura, toda tecida de alto a baixo. 24. Disseram, pois, uns aos outros: Não a rasguemos, mas lancemos sortes sobre ela para ver a quem caberá — para se cumprir a Escritura: Repartiram entre si as minhas vestes e sobre a minha túnica lançaram sortes. Assim, pois, o fizeram os soldados. 25. E junto à cruz estavam a mãe de Jesus, e a irmã dela, e Maria, mulher de Clopas, e Maria Madalena. 26. Vendo Jesus sua mãe e junto a ela o discípulo amado, disse: Mulher, eis aí teu filho. 27. Depois, disse ao discípulo: Eis aí tua mãe. Dessa hora em diante, o discípulo a tomou para casa. 28. Depois, vendo Jesus que tudo já estava consumado, para se cumprir a Escritura, disse: Tenho sede! 29. Estava ali um vaso cheio de vinagre. Embeberam de vinagre uma esponja e, fixando-a num caniço de hissopo, lha chegaram à boca. 30. Quando, pois, Jesus tomou o vinagre, disse: Está consumado! E, inclinando a cabeça, rendeu o espírito.",
-        imagem: {
-          url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
-          alt: "Montanhas ao amanhecer com névoa"
-      }
-    }
-  ];
+let DADOS = [];
 
 function diaDoAno(data) {
   const hoje = data instanceof Date ? data : new Date(data);
@@ -28,6 +13,19 @@ function diaDoAno(data) {
   return Math.floor(diferenca / umDia) + 1;
 }
 
+async function carregarDadosJSON() {
+  try {
+    const response = await fetch('./data.json');
+    if (!response.ok) {
+      throw new Error(`Erro ao carregar data.json: ${response.statusText}`);
+    }
+    DADOS = await response.json();
+  } catch (error) {
+    console.error('Erro ao carregar dados:', error);
+    DADOS = [];
+  }
+}
+
 function formatarDataBR(data) {
   const dia = String(data.getDate()).padStart(2, '0');
   const mes = String(data.getMonth() + 1).padStart(2, '0');
@@ -35,14 +33,35 @@ function formatarDataBR(data) {
   return `${dia}/${mes}/${ano}`;
 }
 
+function obterDiaDoQuery() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('day');
+}
+
 function carregarDados() {
   const hoje = new Date();
-  const pagina = DADOS[diaDoAno(hoje)];
+  const diaQuery = obterDiaDoQuery();
+  const diaAtual = diaQuery ? String(diaQuery) : String(diaDoAno(hoje));
+  
+  // Busca no array pelos dados que correspondem ao dia do ano
+  const pagina = DADOS.find(item => item.dia === diaAtual);
+  
+  if (!pagina) {
+    console.warn(`Nenhum dado encontrado para o dia ${diaAtual}`);
+    return {
+      dia: diaAtual,
+      data: formatarDataBR(hoje),
+      titulo: 'Dia sem conteúdo',
+      referencia: '',
+      texto: 'Nenhum conteúdo disponível para este dia.',
+      imagem: {}
+    };
+  }
 
   return {
     ...pagina,
-    dia: String(diaDoAno(hoje)),
-    data: formatarDataBR(hoje)
+    dia: String(diaAtual),
+    data: pagina.data || formatarDataBR(hoje)
   };
 }
 
@@ -53,7 +72,21 @@ function popularPagina(pagina) {
   const palavras = titulo.split(' ').filter(Boolean);
   const ultima = palavras.pop() || '';
   const primeiraParte = palavras.join(' ');
+  const diaQuery = obterDiaDoQuery();
+
   tituloEl.innerHTML = primeiraParte ? `${primeiraParte} <em>${ultima}</em>` : ultima;
+
+  if (diaQuery) {
+    if (diaQuery > 1) {
+      document.getElementById('previous-day').href = `?day=${String(Number(diaQuery) - 1)}`;
+      document.getElementById('previous-day').style.display = 'inline-block';
+    }
+
+    if (diaQuery < 266) {
+      document.getElementById('next-day').href = `?day=${String(Number(diaQuery) + 1)}`;
+      document.getElementById('next-day').style.display = 'inline-block';
+    }
+  }
 
   // Subtítulo / referência
   document.getElementById('subtitulo').textContent = pagina.referencia || '';
@@ -65,7 +98,7 @@ function popularPagina(pagina) {
   const labelEl = document.querySelector('.label');
   if (labelEl) {
     const diaData = [pagina.dia, pagina.data].filter(Boolean).join(' · ');
-    labelEl.textContent = diaData || 'Descubra o mundo';
+    labelEl.textContent = diaData || 'Descubra a palavra';
   }
 
   // Botão CTA
@@ -107,7 +140,8 @@ function revelarConteudo() {
 }
 
 // Inicialização
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await carregarDadosJSON();
   const pagina = carregarDados();
   popularPagina(pagina);
 });
