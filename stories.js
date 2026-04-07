@@ -32,7 +32,7 @@ function renderizarHistorias() {
     <a href="index.html?page=${historia.dia}" class="story-card">
       <div class="story-image">
         <img 
-          src="${historia.imagem?.url || 'https://via.placeholder.com/300x200'}" 
+          src="${historia.imagem?.url || 'https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg'}" 
           alt="${historia.imagem?.alt || historia.titulo}"
           loading="lazy"
         />

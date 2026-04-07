@@ -117,7 +117,7 @@ function popularPagina(pagina) {
   const img = document.getElementById('bg-image');
   const imagem = pagina.imagem || {};
   img.alt = imagem.alt || '';
-  img.src = imagem.url || '';
+  img.src = imagem.url || 'https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg';
 
   if (imagem.url) {
     img.addEventListener('load', () => {
