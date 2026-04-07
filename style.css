@@ -100,7 +100,7 @@ body {
 
 .label {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  /* font-weight: 100; */
   font-size: 0.7rem;
   letter-spacing: 0.45em;
   text-transform: uppercase;
@@ -130,7 +130,7 @@ h1 em {
 
 .subtitle {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(0.78rem, 1.6vw, 0.92rem);
   letter-spacing: 0.18em;
   line-height: 2;
@@ -220,7 +220,7 @@ footer {
   padding: 2rem 1rem;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  /* font-weight: 100; */
   font-size: 0.6rem;
   letter-spacing: 0.3em;
   color: rgba(245, 240, 232, 0.70);
@@ -267,7 +267,7 @@ footer.visible {
   position: absolute;
   bottom: 20px;
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  /* font-weight: 100; */
   font-size: 0.7rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
