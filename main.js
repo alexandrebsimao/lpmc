@@ -35,7 +35,7 @@ function formatarDataBR(data) {
 
 function obterDiaDoQuery() {
   const params = new URLSearchParams(window.location.search);
-  return params.get('day');
+  return params.get('page') || params.get('day');
 }
 
 function carregarDados() {
@@ -61,7 +61,7 @@ function carregarDados() {
   return {
     ...pagina,
     dia: String(diaAtual),
-    data: pagina.data || formatarDataBR(hoje)
+    data: diaQuery ? '' : formatarDataBR(hoje)
   };
 }
 
@@ -78,12 +78,12 @@ function popularPagina(pagina) {
 
   if (diaQuery) {
     if (diaQuery > 1) {
-      document.getElementById('previous-day').href = `?day=${String(Number(diaQuery) - 1)}`;
+      document.getElementById('previous-day').href = `?page=${String(Number(diaQuery) - 1)}`;
       document.getElementById('previous-day').style.display = 'inline-block';
     }
 
     if (diaQuery < 266) {
-      document.getElementById('next-day').href = `?day=${String(Number(diaQuery) + 1)}`;
+      document.getElementById('next-day').href = `?page=${String(Number(diaQuery) + 1)}`;
       document.getElementById('next-day').style.display = 'inline-block';
     }
   }
