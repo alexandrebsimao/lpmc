@@ -7,7 +7,7 @@ let HISTORIAS = [];
 
 async function carregarHistorias() {
   try {
-    const response = await fetch('./data.json');
+    const response = await fetch('./data/data.json');
     if (!response.ok) {
       throw new Error(`Erro ao carregar data.json: ${response.statusText}`);
     }
