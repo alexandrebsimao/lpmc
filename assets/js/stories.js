@@ -4,6 +4,7 @@
  */
 
 let HISTORIAS = [];
+let HISTORIAS_FILTRADAS = [];
 
 async function carregarHistorias() {
   try {
@@ -12,21 +13,35 @@ async function carregarHistorias() {
       throw new Error(`Erro ao carregar data.json: ${response.statusText}`);
     }
     HISTORIAS = await response.json();
+    HISTORIAS_FILTRADAS = HISTORIAS;
   } catch (error) {
     console.error('Erro ao carregar dados:', error);
     HISTORIAS = [];
+    HISTORIAS_FILTRADAS = [];
   }
+}
+
+function filtrarHistoriasPorTitulo(termo) {
+  if (!termo.trim()) {
+    HISTORIAS_FILTRADAS = HISTORIAS;
+  } else {
+    const termoLower = termo.toLowerCase();
+    HISTORIAS_FILTRADAS = HISTORIAS.filter(historia => 
+      historia.titulo.toLowerCase().includes(termoLower) || historia.referencia?.toLowerCase().includes(termoLower)
+    );
+  }
+  renderizarHistorias();
 }
 
 function renderizarHistorias() {
   const grid = document.getElementById('stories-grid');
   
-  if (HISTORIAS.length === 0) {
-    grid.innerHTML = '<p class="no-stories">Nenhuma história disponível.</p>';
+  if (HISTORIAS_FILTRADAS.length === 0) {
+    grid.innerHTML = '<p class="no-stories">Nenhuma história encontrada.</p>';
     return;
   }
 
-  const historiasOrdenadas = HISTORIAS.sort((a, b) => Number(a.dia) - Number(b.dia));
+  const historiasOrdenadas = HISTORIAS_FILTRADAS.sort((a, b) => Number(a.dia) - Number(b.dia));
 
   grid.innerHTML = historiasOrdenadas.map(historia => `
     <a href="index.html?page=${historia.dia}" class="story-card">
@@ -42,7 +57,6 @@ function renderizarHistorias() {
         <span class="story-day">Dia ${historia.dia}</span>
         <h3 class="story-title">${historia.titulo}</h3>
         <p class="story-reference">${historia.referencia || ''}</p>
-        <p class="story-date">${historia.data || ''}</p>
       </div>
     </a>
   `).join('');
@@ -55,9 +69,19 @@ function esconderLoader() {
   }
 }
 
+function configurarBusca() {
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (event) => {
+      filtrarHistoriasPorTitulo(event.target.value);
+    });
+  }
+}
+
 async function inicializar() {
   await carregarHistorias();
   renderizarHistorias();
+  configurarBusca();
   esconderLoader();
 }
 
