@@ -139,8 +139,58 @@ function revelarConteudo() {
   document.getElementById('rodape').classList.add('visible');
 }
 
+// ── Controle de Fonte ──
+const MIN_SCALE = 0.8;
+const MAX_SCALE = 1.5;
+const SCALE_STEP = 0.1;
+const FONT_SCALE_KEY = 'lpmc-font-scale';
+
+function getFontScale() {
+  const saved = localStorage.getItem(FONT_SCALE_KEY);
+  return saved ? parseFloat(saved) : 1;
+}
+
+function setFontScale(scale) {
+  const clamped = Math.max(MIN_SCALE, Math.min(MAX_SCALE, scale));
+  localStorage.setItem(FONT_SCALE_KEY, String(clamped));
+  document.documentElement.style.setProperty('--font-scale', String(clamped));
+  updateFontSizeDisplay();
+}
+
+function updateFontSizeDisplay() {
+  const scale = getFontScale();
+  const percentage = Math.round(scale * 100);
+  const display = document.getElementById('font-size-display');
+  if (display) {
+    display.textContent = `${percentage}%`;
+  }
+}
+
+function initFontControls() {
+  const decreaseBtn = document.getElementById('font-decrease');
+  const increaseBtn = document.getElementById('font-increase');
+
+  if (decreaseBtn) {
+    decreaseBtn.addEventListener('click', () => {
+      const current = getFontScale();
+      setFontScale(current - SCALE_STEP);
+    });
+  }
+
+  if (increaseBtn) {
+    increaseBtn.addEventListener('click', () => {
+      const current = getFontScale();
+      setFontScale(current + SCALE_STEP);
+    });
+  }
+
+  // Restaura a escala salva e atualiza display
+  setFontScale(getFontScale());
+}
+
 // Inicialização
 document.addEventListener('DOMContentLoaded', async () => {
+  initFontControls();
   await carregarDadosJSON();
   const pagina = carregarDados();
   popularPagina(pagina);
