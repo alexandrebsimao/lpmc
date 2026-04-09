@@ -44,7 +44,7 @@ function renderizarHistorias() {
   const historiasOrdenadas = HISTORIAS_FILTRADAS.sort((a, b) => Number(a.dia) - Number(b.dia));
 
   grid.innerHTML = historiasOrdenadas.map(historia => `
-    <a href="index.html?page=${historia.dia}" class="story-card">
+    <a href="/?page=${historia.dia}" class="story-card">
       <div class="story-image">
         <img 
           src="${historia.imagem?.url || 'https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg'}" 
