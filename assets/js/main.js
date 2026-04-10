@@ -97,8 +97,9 @@ function popularPagina(pagina) {
   // Label com dia / data, se houver
   const labelEl = document.querySelector('.label');
   if (labelEl) {
-    const diaData = [pagina.dia, pagina.data].filter(Boolean).join(' · ');
-    labelEl.textContent = diaData || 'Descubra a palavra';
+    // const diaData = [pagina.dia, pagina.data].filter(Boolean).join(' · ');
+    const diaData = pagina.data;
+    labelEl.textContent = diaData || '';
   }
 
   // Botão CTA

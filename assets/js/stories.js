@@ -54,7 +54,6 @@ function renderizarHistorias() {
         <div class="story-overlay"></div>
       </div>
       <div class="story-content">
-        <span class="story-day">Dia ${historia.dia}</span>
         <h3 class="story-title">${historia.titulo}</h3>
         <p class="story-reference">${historia.referencia || ''}</p>
       </div>
