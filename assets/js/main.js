@@ -79,10 +79,10 @@ function popularPagina(pagina) {
   if (diaQuery) {
     if (diaQuery > 1) {
       document.getElementById('previous-day').href = `?page=${String(Number(diaQuery) - 1)}`;
-      document.getElementById('previous-day').style.display = 'inline-block';
+      // document.getElementById('previous-day').style.display = 'inline-block';
     }
 
-    if (diaQuery < 266) {
+    if (diaQuery < 365) {
       document.getElementById('next-day').href = `?page=${String(Number(diaQuery) + 1)}`;
       document.getElementById('next-day').style.display = 'inline-block';
     }
