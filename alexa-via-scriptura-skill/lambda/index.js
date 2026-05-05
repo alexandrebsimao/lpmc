@@ -14,6 +14,25 @@ function normalizeText(value) {
     .trim();
 }
 
+function tokenize(value) {
+  return normalizeText(value)
+    .split(/[^a-z0-9]+/g)
+    .filter(Boolean);
+}
+
+function jaccardSimilarity(aTokens, bTokens) {
+  const a = new Set(aTokens);
+  const b = new Set(bTokens);
+  if (a.size === 0 || b.size === 0) return 0;
+
+  let intersection = 0;
+  for (const token of a) {
+    if (b.has(token)) intersection += 1;
+  }
+  const union = new Set([...a, ...b]).size;
+  return union === 0 ? 0 : intersection / union;
+}
+
 function plainResponse(text, reprompt = null, shouldEndSession = false) {
   const response = {
     version: '1.0',
@@ -120,6 +139,7 @@ async function obterLeituraDoDia() {
 async function buscarHistoria(consulta) {
   const historias = await carregarHistorias();
   const q = normalizeText(consulta);
+  const qTokens = tokenize(consulta);
   if (!q) return null;
 
   const exact = historias.find((item) => {
@@ -130,11 +150,37 @@ async function buscarHistoria(consulta) {
   });
   if (exact) return exact;
 
-  return historias.find((item) => {
+  const includesMatch = historias.find((item) => {
     const titulo = normalizeText(item.titulo);
     const referencia = normalizeText(item.referencia);
     return titulo.includes(q) || referencia.includes(q) || q.includes(titulo);
-  }) || null;
+  });
+  if (includesMatch) return includesMatch;
+
+  let best = null;
+  let bestScore = 0;
+
+  for (const item of historias) {
+    const tituloTokens = tokenize(item.titulo);
+    const referenciaTokens = tokenize(item.referencia);
+    const textoTokens = tokenize(item.texto).slice(0, 120);
+
+    const titleScore = jaccardSimilarity(qTokens, tituloTokens);
+    const refScore = jaccardSimilarity(qTokens, referenciaTokens);
+    const textScore = jaccardSimilarity(qTokens, textoTokens);
+
+    // Peso maior para título, depois referência, depois texto.
+    const score = (titleScore * 0.65) + (refScore * 0.25) + (textScore * 0.10);
+
+    if (score > bestScore) {
+      bestScore = score;
+      best = item;
+    }
+  }
+
+  // Limiar para evitar respostas erradas quando a consulta for muito vaga.
+  if (best && bestScore >= 0.18) return best;
+  return null;
 }
 
 function getSessionAttributes(event) {
