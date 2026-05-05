@@ -1,0 +1,73 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "via scriptura",
+      "intents": [
+        {
+          "name": "DailyReadingIntent",
+          "samples": [
+            "leitura do dia",
+            "qual é a leitura do dia",
+            "me diga a leitura de hoje",
+            "quero a leitura do dia",
+            "leitura de hoje",
+            "me fala a leitura do dia",
+            "quero ouvir a leitura do dia",
+            "me passe a leitura de hoje"
+          ]
+        },
+        {
+          "name": "BibleStoryIntent",
+          "slots": [
+            {
+              "name": "storyTitle",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "conte a história {storyTitle}",
+            "quero ouvir {storyTitle}",
+            "me conte sobre {storyTitle}",
+            "história {storyTitle}",
+            "conte {storyTitle}",
+            "fale sobre {storyTitle}",
+            "quero uma história da bíblia",
+            "quero ouvir uma história da bíblia",
+            "conte uma história da bíblia",
+            "me conte uma história da bíblia",
+            "história da bíblia"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  }
+}
