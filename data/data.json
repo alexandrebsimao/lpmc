@@ -8,7 +8,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/photo-1470252649378-9c29740c9fa8.jpeg",
             "alt": "Representação visual de 'O novo começo em Cristo', baseada no texto bíblico de 2 Coríntios 5:17 (ARA)."
-        }
+        },
+        "slug": "1_o_novo_comeco_em_cristo"
     },
     {
         "dia": "2",
@@ -19,7 +20,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/sunrise-1765027_1280.jpg",
             "alt": "Representação visual de 'A criação do mundo', baseada no texto bíblico de Gênesis 1:1-31 (ARA)."
-        }
+        },
+        "slug": "2_a_criacao_do_mundo"
     },
     {
         "dia": "3",
@@ -30,7 +32,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A criação de Adão e Eva.png",
             "alt": "Representação visual de 'A criação do homem e da mulher', baseada no texto bíblico de Gênesis 2:18-25 (ARA)."
-        }
+        },
+        "slug": "3_a_criacao_do_homem_e_da_mulher"
     },
     {
         "dia": "4",
@@ -41,7 +44,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A queda de Adão e Eva.png",
             "alt": "Representação visual de 'A queda do homem', baseada no texto bíblico de Gênesis 3:1-24 (ARA)."
-        }
+        },
+        "slug": "4_a_queda_do_homem"
     },
     {
         "dia": "5",
@@ -52,7 +56,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/cain_and_abel.png",
             "alt": "Representação visual de 'Caim e Abel', baseada no texto bíblico de Gênesis 4:1-16 (ARA)."
-        }
+        },
+        "slug": "5_caim_e_abel"
     },
     {
         "dia": "6",
@@ -63,7 +68,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ai-generated-8375784_1280.png",
             "alt": "Representação visual de 'O dilúvio', baseada no texto bíblico de Gênesis 6:9-22 (ARA)."
-        }
+        },
+        "slug": "6_o_diluvio"
     },
     {
         "dia": "7",
@@ -74,7 +80,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ai-generated-8677947_1280.png",
             "alt": "Representação visual de 'A arca de Noé', baseada no texto bíblico de Gênesis 7:1-24 (ARA)."
-        }
+        },
+        "slug": "7_a_arca_de_noe"
     },
     {
         "dia": "8",
@@ -85,7 +92,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/alianca_noe_1280x800.png",
             "alt": "Representação visual de 'A aliança com Noé', baseada no texto bíblico de Gênesis 9:8-17 (ARA)."
-        }
+        },
+        "slug": "8_a_alianca_com_noe"
     },
     {
         "dia": "9",
@@ -96,7 +104,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ai-generated-8881193_1280.png",
             "alt": "Representação visual de 'A Torre de Babel', baseada no texto bíblico de Gênesis 11:1-9 (ARA)."
-        }
+        },
+        "slug": "9_a_torre_de_babel"
     },
     {
         "dia": "10",
@@ -107,7 +116,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ai-generated-8772680_1280.png",
             "alt": "Representação visual de 'O chamado de Abrão', baseada no texto bíblico de Gênesis 12:1-9 (ARA)."
-        }
+        },
+        "slug": "10_o_chamado_de_abrao"
     },
     {
         "dia": "11",
@@ -118,7 +128,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ai-generated-8772664_1280.png",
             "alt": "Representação visual de 'Abrão e Ló se separam', baseada no texto bíblico de Gênesis 13:1-18 (ARA)."
-        }
+        },
+        "slug": "11_abrao_e_lo_se_separam"
     },
     {
         "dia": "12",
@@ -129,7 +140,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ai-generated-8930616_1280.png",
             "alt": "Representação visual de 'A promessa de um filho a Abrão', baseada no texto bíblico de Gênesis 15:1-21 (ARA)."
-        }
+        },
+        "slug": "12_a_promessa_de_um_filho_a_abrao"
     },
     {
         "dia": "13",
@@ -140,7 +152,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Nascimento de Ismael em tenda.png",
             "alt": "Representação visual de 'O nascimento de Ismael', baseada no texto bíblico de Gênesis 16:1-16 (ARA)."
-        }
+        },
+        "slug": "13_o_nascimento_de_ismael"
     },
     {
         "dia": "14",
@@ -151,7 +164,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A aliança de Deus com Abraão.png",
             "alt": "Representação visual de 'A aliança da circuncisão', baseada no texto bíblico de Gênesis 17:1-27 (ARA)."
-        }
+        },
+        "slug": "14_a_alianca_da_circuncisao"
     },
     {
         "dia": "15",
@@ -162,7 +176,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Abraão recebe os três anjos.png",
             "alt": "Representação visual de 'A visita dos três anjos a Abraão', baseada no texto bíblico de Gênesis 18:1-15 (ARA)."
-        }
+        },
+        "slug": "15_a_visita_dos_tres_anjos_a_abraao"
     },
     {
         "dia": "16",
@@ -173,7 +188,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/sodoma_gomorra_1280x800.png",
             "alt": "Representação visual de 'A destruição de Sodoma e Gomorra', baseada no texto bíblico de Gênesis 19:1-29 (ARA)."
-        }
+        },
+        "slug": "16_a_destruicao_de_sodoma_e_gomorra"
     },
     {
         "dia": "17",
@@ -184,7 +200,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/nascimento_isaque_1280x800.png",
             "alt": "Representação visual de 'O nascimento de Isaque', baseada no texto bíblico de Gênesis 21:1-7 (ARA)."
-        }
+        },
+        "slug": "17_o_nascimento_de_isaque"
     },
     {
         "dia": "18",
@@ -195,7 +212,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/sacrificio_isaque_1280x800.png",
             "alt": "Representação visual de 'O sacrifício de Isaque', baseada no texto bíblico de Gênesis 22:1-19 (ARA)."
-        }
+        },
+        "slug": "18_o_sacrificio_de_isaque"
     },
     {
         "dia": "19",
@@ -206,7 +224,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/rebekah_isaac_meeting.png",
             "alt": "Representação visual de 'Rebeca e Isaque', baseada no texto bíblico de Gênesis 24:1-67 (ARA)."
-        }
+        },
+        "slug": "19_rebeca_e_isaque"
     },
     {
         "dia": "20",
@@ -217,7 +236,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jacob_esau_meeting.png",
             "alt": "Representação visual de 'Jacó e Esaú', baseada no texto bíblico de Gênesis 25:19-34 (ARA)."
-        }
+        },
+        "slug": "20_jaco_e_esau"
     },
     {
         "dia": "21",
@@ -228,7 +248,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O sonho de Jacó em Betel', baseada no texto bíblico de Gênesis 28:10-22 (ARA)."
-        }
+        },
+        "slug": "21_o_sonho_de_jaco_em_betel"
     },
     {
         "dia": "22",
@@ -239,7 +260,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Jacó e Labão', baseada no texto bíblico de Gênesis 29:1-30 (ARA)."
-        }
+        },
+        "slug": "22_jaco_e_labao"
     },
     {
         "dia": "23",
@@ -250,7 +272,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O encontro de Jacó e Esaú', baseada no texto bíblico de Gênesis 33:1-20 (ARA)."
-        }
+        },
+        "slug": "23_o_encontro_de_jaco_e_esau"
     },
     {
         "dia": "24",
@@ -261,7 +284,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'José é vendido pelos irmãos', baseada no texto bíblico de Gênesis 37:12-36 (ARA)."
-        }
+        },
+        "slug": "24_jose_e_vendido_pelos_irmaos"
     },
     {
         "dia": "25",
@@ -272,7 +296,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'José no Egito', baseada no texto bíblico de Gênesis 39:1-23 (ARA)."
-        }
+        },
+        "slug": "25_jose_no_egito"
     },
     {
         "dia": "26",
@@ -283,7 +308,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Os sonhos do copeiro e do padeiro', baseada no texto bíblico de Gênesis 40:1-23 (ARA)."
-        }
+        },
+        "slug": "26_os_sonhos_do_copeiro_e_do_padeiro"
     },
     {
         "dia": "27",
@@ -294,7 +320,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Os sonhos de Faraó', baseada no texto bíblico de Gênesis 41:1-36 (ARA)."
-        }
+        },
+        "slug": "27_os_sonhos_de_farao"
     },
     {
         "dia": "28",
@@ -305,7 +332,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'José interpreta os sonhos de Faraó', baseada no texto bíblico de Gênesis 41:37-57 (ARA)."
-        }
+        },
+        "slug": "28_jose_interpreta_os_sonhos_de_farao"
     },
     {
         "dia": "29",
@@ -316,7 +344,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Os irmãos de José vão ao Egito', baseada no texto bíblico de Gênesis 42:1-38 (ARA)."
-        }
+        },
+        "slug": "29_os_irmaos_de_jose_vao_ao_egito"
     },
     {
         "dia": "30",
@@ -327,7 +356,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'José se revela aos irmãos', baseada no texto bíblico de Gênesis 45:1-28 (ARA)."
-        }
+        },
+        "slug": "30_jose_se_revela_aos_irmaos"
     },
     {
         "dia": "31",
@@ -338,7 +368,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A família de Jacó vai para o Egito', baseada no texto bíblico de Gênesis 46:1-34 (ARA)."
-        }
+        },
+        "slug": "31_a_familia_de_jaco_vai_para_o_egito"
     },
     {
         "dia": "32",
@@ -349,7 +380,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A morte de Jacó', baseada no texto bíblico de Gênesis 49:29-33 (ARA)."
-        }
+        },
+        "slug": "32_a_morte_de_jaco"
     },
     {
         "dia": "33",
@@ -360,7 +392,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A morte de José', baseada no texto bíblico de Gênesis 50:22-26 (ARA)."
-        }
+        },
+        "slug": "33_a_morte_de_jose"
     },
     {
         "dia": "34",
@@ -371,7 +404,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O nascimento de Moisés', baseada no texto bíblico de Êxodo 2:1-10 (ARA)."
-        }
+        },
+        "slug": "34_o_nascimento_de_moises"
     },
     {
         "dia": "35",
@@ -382,7 +416,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A sarça ardente', baseada no texto bíblico de Êxodo 3:1-15 (ARA)."
-        }
+        },
+        "slug": "35_a_sarca_ardente"
     },
     {
         "dia": "36",
@@ -393,7 +428,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Moisés e Arão diante de Faraó', baseada no texto bíblico de Êxodo 5:1-23 (ARA)."
-        }
+        },
+        "slug": "36_moises_e_arao_diante_de_farao"
     },
     {
         "dia": "37",
@@ -404,7 +440,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'As pragas do Egito', baseada no texto bíblico de Êxodo 7:14-25 (ARA)."
-        }
+        },
+        "slug": "37_as_pragas_do_egito"
     },
     {
         "dia": "38",
@@ -415,7 +452,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/the_passover_exodus.png",
             "alt": "Representação visual de 'A Páscoa', baseada no texto bíblico de Êxodo 12:1-14 (ARA)."
-        }
+        },
+        "slug": "38_a_pascoa"
     },
     {
         "dia": "39",
@@ -426,7 +464,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A saída do Egito', baseada no texto bíblico de Êxodo 12:29-42 (ARA)."
-        }
+        },
+        "slug": "39_a_saida_do_egito"
     },
     {
         "dia": "40",
@@ -437,7 +476,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A travessia do Mar Vermelho', baseada no texto bíblico de Êxodo 14:1-31 (ARA)."
-        }
+        },
+        "slug": "40_a_travessia_do_mar_vermelho"
     },
     {
         "dia": "41",
@@ -448,7 +488,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O maná e as codornizes', baseada no texto bíblico de Êxodo 16:1-36 (ARA)."
-        }
+        },
+        "slug": "41_o_mana_e_as_codornizes"
     },
     {
         "dia": "42",
@@ -459,7 +500,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A água da rocha', baseada no texto bíblico de Êxodo 17:1-7 (ARA)."
-        }
+        },
+        "slug": "42_a_agua_da_rocha"
     },
     {
         "dia": "43",
@@ -470,7 +512,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ten_commandments_sinai.png",
             "alt": "Representação visual de 'Os Dez Mandamentos', baseada no texto bíblico de Êxodo 20:1-17 (ARA)."
-        }
+        },
+        "slug": "43_os_dez_mandamentos"
     },
     {
         "dia": "44",
@@ -481,7 +524,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O bezerro de ouro', baseada no texto bíblico de Êxodo 32:1-35 (ARA)."
-        }
+        },
+        "slug": "44_o_bezerro_de_ouro"
     },
     {
         "dia": "45",
@@ -492,7 +536,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A construção do Tabernáculo', baseada no texto bíblico de Êxodo 35:4-29 (ARA)."
-        }
+        },
+        "slug": "45_a_construcao_do_tabernaculo"
     },
     {
         "dia": "46",
@@ -503,7 +548,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A consagração dos sacerdotes', baseada no texto bíblico de Levítico 8:1-36 (ARA)."
-        }
+        },
+        "slug": "46_a_consagracao_dos_sacerdotes"
     },
     {
         "dia": "47",
@@ -514,7 +560,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O dia da Expiação', baseada no texto bíblico de Levítico 16:1-34 (ARA)."
-        }
+        },
+        "slug": "47_o_dia_da_expiacao"
     },
     {
         "dia": "48",
@@ -525,7 +572,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O fruto do Espírito: alegria', baseada no texto bíblico de Gálatas 5:22 (ARA)."
-        }
+        },
+        "slug": "48_o_fruto_do_espirito_alegria"
     },
     {
         "dia": "49",
@@ -536,7 +584,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Jejum e oração', baseada no texto bíblico de Mateus 6:16-18 (ARA)."
-        }
+        },
+        "slug": "49_jejum_e_oracao"
     },
     {
         "dia": "50",
@@ -547,7 +596,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A rebelião de Corá', baseada no texto bíblico de Números 16:1-35 (ARA)."
-        }
+        },
+        "slug": "50_a_rebeliao_de_cora"
     },
     {
         "dia": "51",
@@ -558,7 +608,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A serpente de bronze', baseada no texto bíblico de Números 21:4-9 (ARA)."
-        }
+        },
+        "slug": "51_a_serpente_de_bronze"
     },
     {
         "dia": "52",
@@ -569,7 +620,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Balaão e a jumenta', baseada no texto bíblico de Números 22:21-35 (ARA)."
-        }
+        },
+        "slug": "52_balaao_e_a_jumenta"
     },
     {
         "dia": "53",
@@ -580,7 +632,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A morte de Moisés', baseada no texto bíblico de Deuteronômio 34:1-12 (ARA)."
-        }
+        },
+        "slug": "53_a_morte_de_moises"
     },
     {
         "dia": "54",
@@ -591,7 +644,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Josué assume a liderança', baseada no texto bíblico de Josué 1:1-9 (ARA)."
-        }
+        },
+        "slug": "54_josue_assume_a_lideranca"
     },
     {
         "dia": "55",
@@ -602,7 +656,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Raabe e os espias', baseada no texto bíblico de Josué 2:1-24 (ARA)."
-        }
+        },
+        "slug": "55_raabe_e_os_espias"
     },
     {
         "dia": "56",
@@ -613,7 +668,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A travessia do Jordão', baseada no texto bíblico de Josué 3:1-17 (ARA)."
-        }
+        },
+        "slug": "56_a_travessia_do_jordao"
     },
     {
         "dia": "57",
@@ -624,7 +680,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A queda de Jericó', baseada no texto bíblico de Josué 6:1-27 (ARA)."
-        }
+        },
+        "slug": "57_a_queda_de_jerico"
     },
     {
         "dia": "58",
@@ -635,7 +692,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Acã e o pecado', baseada no texto bíblico de Josué 7:1-26 (ARA)."
-        }
+        },
+        "slug": "58_aca_e_o_pecado"
     },
     {
         "dia": "59",
@@ -646,7 +704,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O sol parado', baseada no texto bíblico de Josué 10:1-15 (ARA)."
-        }
+        },
+        "slug": "59_o_sol_parado"
     },
     {
         "dia": "60",
@@ -657,7 +716,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A divisão da terra', baseada no texto bíblico de Josué 14:6-15 (ARA)."
-        }
+        },
+        "slug": "60_a_divisao_da_terra"
     },
     {
         "dia": "61",
@@ -668,7 +728,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A morte de Josué', baseada no texto bíblico de Josué 24:29-33 (ARA)."
-        }
+        },
+        "slug": "61_a_morte_de_josue"
     },
     {
         "dia": "62",
@@ -679,7 +740,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O ciclo dos juízes', baseada no texto bíblico de Juízes 2:11-23 (ARA)."
-        }
+        },
+        "slug": "62_o_ciclo_dos_juizes"
     },
     {
         "dia": "63",
@@ -690,7 +752,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Débora e Baraque', baseada no texto bíblico de Juízes 4:1-24 (ARA)."
-        }
+        },
+        "slug": "63_debora_e_baraque"
     },
     {
         "dia": "64",
@@ -701,7 +764,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Gideão e os midianitas', baseada no texto bíblico de Juízes 7:1-25 (ARA)."
-        }
+        },
+        "slug": "64_gideao_e_os_midianitas"
     },
     {
         "dia": "65",
@@ -712,7 +776,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Sansão e Dalila', baseada no texto bíblico de Juízes 16:4-22 (ARA)."
-        }
+        },
+        "slug": "65_sansao_e_dalila"
     },
     {
         "dia": "66",
@@ -723,7 +788,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Rute e Noemi', baseada no texto bíblico de Rute 1:1-22 (ARA)."
-        }
+        },
+        "slug": "66_rute_e_noemi"
     },
     {
         "dia": "67",
@@ -734,7 +800,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Rute e Boaz', baseada no texto bíblico de Rute 4:1-22 (ARA)."
-        }
+        },
+        "slug": "67_rute_e_boaz"
     },
     {
         "dia": "68",
@@ -745,7 +812,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O nascimento de Samuel', baseada no texto bíblico de 1 Samuel 1:1-28 (ARA)."
-        }
+        },
+        "slug": "68_o_nascimento_de_samuel"
     },
     {
         "dia": "69",
@@ -756,7 +824,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O chamado de Samuel', baseada no texto bíblico de 1 Samuel 3:1-21 (ARA)."
-        }
+        },
+        "slug": "69_o_chamado_de_samuel"
     },
     {
         "dia": "70",
@@ -767,7 +836,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A arca da aliança capturada', baseada no texto bíblico de 1 Samuel 4:1-22 (ARA)."
-        }
+        },
+        "slug": "70_a_arca_da_alianca_capturada"
     },
     {
         "dia": "71",
@@ -778,7 +848,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/saul_ungido_rei.png",
             "alt": "Representação visual de 'Saul é ungido rei', baseada no texto bíblico de 1 Samuel 10:17-27 (ARA)."
-        }
+        },
+        "slug": "71_saul_e_ungido_rei"
     },
     {
         "dia": "72",
@@ -789,7 +860,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/david_and_goliath.png",
             "alt": "Representação visual de 'Davi e Golias', baseada no texto bíblico de 1 Samuel 17:1-58 (ARA)."
-        }
+        },
+        "slug": "72_davi_e_golias"
     },
     {
         "dia": "73",
@@ -800,7 +872,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Davi e Jônatas', baseada no texto bíblico de 1 Samuel 20:1-42 (ARA)."
-        }
+        },
+        "slug": "73_davi_e_jonatas"
     },
     {
         "dia": "74",
@@ -811,7 +884,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Davi poupa a vida de Saul', baseada no texto bíblico de 1 Samuel 24:1-22 (ARA)."
-        }
+        },
+        "slug": "74_davi_poupa_a_vida_de_saul"
     },
     {
         "dia": "75",
@@ -822,7 +896,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A morte de Saul', baseada no texto bíblico de 1 Samuel 31:1-13 (ARA)."
-        }
+        },
+        "slug": "75_a_morte_de_saul"
     },
     {
         "dia": "76",
@@ -833,7 +908,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Davi é ungido rei de Israel', baseada no texto bíblico de 2 Samuel 5:1-12 (ARA)."
-        }
+        },
+        "slug": "76_davi_e_ungido_rei_de_israel"
     },
     {
         "dia": "77",
@@ -844,7 +920,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A arca é levada para Jerusalém', baseada no texto bíblico de 2 Samuel 6:1-23 (ARA)."
-        }
+        },
+        "slug": "77_a_arca_e_levada_para_jerusalem"
     },
     {
         "dia": "78",
@@ -855,7 +932,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A promessa de Deus a Davi', baseada no texto bíblico de 2 Samuel 7:1-29 (ARA)."
-        }
+        },
+        "slug": "78_a_promessa_de_deus_a_davi"
     },
     {
         "dia": "79",
@@ -866,7 +944,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Davi e Bate-Seba', baseada no texto bíblico de 2 Samuel 11:1-27 (ARA)."
-        }
+        },
+        "slug": "79_davi_e_bate_seba"
     },
     {
         "dia": "80",
@@ -877,7 +956,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Natã repreende Davi', baseada no texto bíblico de 2 Samuel 12:1-15 (ARA)."
-        }
+        },
+        "slug": "80_nata_repreende_davi"
     },
     {
         "dia": "81",
@@ -888,7 +968,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A rebelião de Absalão', baseada no texto bíblico de 2 Samuel 15:1-12 (ARA)."
-        }
+        },
+        "slug": "81_a_rebeliao_de_absalao"
     },
     {
         "dia": "82",
@@ -899,7 +980,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A morte de Absalão', baseada no texto bíblico de 2 Samuel 18:9-18 (ARA)."
-        }
+        },
+        "slug": "82_a_morte_de_absalao"
     },
     {
         "dia": "83",
@@ -910,7 +992,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Salomão pede sabedoria', baseada no texto bíblico de 1 Reis 3:1-15 (ARA)."
-        }
+        },
+        "slug": "83_salomao_pede_sabedoria"
     },
     {
         "dia": "84",
@@ -921,7 +1004,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A construção do Templo', baseada no texto bíblico de 1 Reis 6:1-38 (ARA)."
-        }
+        },
+        "slug": "84_a_construcao_do_templo"
     },
     {
         "dia": "85",
@@ -932,7 +1016,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A dedicação do Templo', baseada no texto bíblico de 1 Reis 8:1-66 (ARA)."
-        }
+        },
+        "slug": "85_a_dedicacao_do_templo"
     },
     {
         "dia": "86",
@@ -943,7 +1028,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A visita da Rainha de Sabá', baseada no texto bíblico de 1 Reis 10:1-13 (ARA)."
-        }
+        },
+        "slug": "86_a_visita_da_rainha_de_saba"
     },
     {
         "dia": "87",
@@ -954,7 +1040,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A divisão do reino', baseada no texto bíblico de 1 Reis 12:1-24 (ARA)."
-        }
+        },
+        "slug": "87_a_divisao_do_reino"
     },
     {
         "dia": "88",
@@ -965,7 +1052,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Elias e os profetas de Baal', baseada no texto bíblico de 1 Reis 18:17-40 (ARA)."
-        }
+        },
+        "slug": "88_elias_e_os_profetas_de_baal"
     },
     {
         "dia": "89",
@@ -976,7 +1064,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Elias no Horebe', baseada no texto bíblico de 1 Reis 19:1-18 (ARA)."
-        }
+        },
+        "slug": "89_elias_no_horebe"
     },
     {
         "dia": "90",
@@ -987,7 +1076,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/vinha_de_nabote.png",
             "alt": "Representação visual de 'A vinha de Nabote', baseada no texto bíblico de 1 Reis 21:1-29 (ARA)."
-        }
+        },
+        "slug": "90_a_vinha_de_nabote"
     },
     {
         "dia": "91",
@@ -998,7 +1088,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Eliseu sucede Elias', baseada no texto bíblico de 2 Reis 2:1-18 (ARA)."
-        }
+        },
+        "slug": "91_eliseu_sucede_elias"
     },
     {
         "dia": "92",
@@ -1009,7 +1100,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Naamã é curado', baseada no texto bíblico de 2 Reis 5:1-19 (ARA)."
-        }
+        },
+        "slug": "92_naama_e_curado"
     },
     {
         "dia": "93",
@@ -1020,7 +1112,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/crucifixion_of_jesus.png",
             "alt": "Representação visual de 'A crucificação de Jesus', baseada no texto bíblico de João 19:16-30 (ARA)."
-        }
+        },
+        "slug": "93_a_crucificacao_de_jesus"
     },
     {
         "dia": "94",
@@ -1031,7 +1124,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A ressurreição de Lázaro', baseada no texto bíblico de João 11:1-44 (ARA)."
-        }
+        },
+        "slug": "94_a_ressurreicao_de_lazaro"
     },
     {
         "dia": "95",
@@ -1042,7 +1136,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/resurrection_of_jesus.png",
             "alt": "Representação visual de 'A ressurreição de Jesus', baseada no texto bíblico de João 20:1-18 (ARA)."
-        }
+        },
+        "slug": "95_a_ressurreicao_de_jesus"
     },
     {
         "dia": "96",
@@ -1053,7 +1148,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ascensão divina ao amanhecer.png",
             "alt": "Representação visual de 'A ascensão de Jesus', baseada no texto bíblico de Atos 1:6-11 (ARA)."
-        }
+        },
+        "slug": "96_a_ascensao_de_jesus"
     },
     {
         "dia": "97",
@@ -1064,7 +1160,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O dia de Pentecostes', baseada no texto bíblico de Atos 2:1-47 (ARA)."
-        }
+        },
+        "slug": "97_o_dia_de_pentecostes"
     },
     {
         "dia": "98",
@@ -1075,7 +1172,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/cura_coxo_1280x800.png",
             "alt": "Representação visual de 'Pedro e João curam um coxo', baseada no texto bíblico de Atos 3:1-26 (ARA)."
-        }
+        },
+        "slug": "98_pedro_e_joao_curam_um_coxo"
     },
     {
         "dia": "99",
@@ -1086,7 +1184,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ananias_safira_1280x800_final.png",
             "alt": "Representação visual de 'Ananias e Safira', baseada no texto bíblico de Atos 5:1-11 (ARA)."
-        }
+        },
+        "slug": "99_ananias_e_safira"
     },
     {
         "dia": "100",
@@ -1097,7 +1196,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/seven_deacons_corrected.png",
             "alt": "Representação visual de 'A escolha dos sete diáconos', baseada no texto bíblico de Atos 6:1-7 (ARA)."
-        }
+        },
+        "slug": "100_a_escolha_dos_sete_diaconos"
     },
     {
         "dia": "101",
@@ -1108,7 +1208,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/martyrdom_of_stephen.png",
             "alt": "Representação visual de 'O martírio de Estêvão', baseada no texto bíblico de Atos 7:54-60 (ARA)."
-        }
+        },
+        "slug": "101_o_martirio_de_estevao"
     },
     {
         "dia": "102",
@@ -1119,7 +1220,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/philip_and_the_ethiopian_eunuch.png",
             "alt": "Representação visual de 'Filipe e o eunuco etíope', baseada no texto bíblico de Atos 8:26-40 (ARA)."
-        }
+        },
+        "slug": "102_filipe_e_o_eunuco_etiope"
     },
     {
         "dia": "103",
@@ -1130,7 +1232,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/conversion_of_saul.png",
             "alt": "Representação visual de 'A conversão de Saulo', baseada no texto bíblico de Atos 9:1-19 (ARA)."
-        }
+        },
+        "slug": "103_a_conversao_de_saulo"
     },
     {
         "dia": "104",
@@ -1141,7 +1244,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/peter_and_cornelius.png",
             "alt": "Representação visual de 'Pedro e Cornélio', baseada no texto bíblico de Atos 10:1-48 (ARA)."
-        }
+        },
+        "slug": "104_pedro_e_cornelio"
     },
     {
         "dia": "105",
@@ -1152,7 +1256,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/peter_freed_from_prison.png",
             "alt": "Representação visual de 'Pedro é libertado da prisão', baseada no texto bíblico de Atos 12:1-19 (ARA)."
-        }
+        },
+        "slug": "105_pedro_e_libertado_da_prisao"
     },
     {
         "dia": "106",
@@ -1163,7 +1268,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/pauls_first_missionary_journey.png",
             "alt": "Representação visual de 'A primeira viagem missionária de Paulo', baseada no texto bíblico de Atos 13:1-52 (ARA)."
-        }
+        },
+        "slug": "106_a_primeira_viagem_missionaria_de_paulo"
     },
     {
         "dia": "107",
@@ -1174,7 +1280,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/council_of_jerusalem.png",
             "alt": "Representação visual de 'O Concílio de Jerusalém', baseada no texto bíblico de Atos 15:1-35 (ARA)."
-        }
+        },
+        "slug": "107_o_concilio_de_jerusalem"
     },
     {
         "dia": "108",
@@ -1185,7 +1292,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/paul_and_silas_in_prison.png",
             "alt": "Representação visual de 'Paulo e Silas na prisão', baseada no texto bíblico de Atos 16:16-40 (ARA)."
-        }
+        },
+        "slug": "108_paulo_e_silas_na_prisao"
     },
     {
         "dia": "109",
@@ -1196,7 +1304,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/paulo_em_atenas.png",
             "alt": "Representação visual de 'Paulo em Atenas', baseada no texto bíblico de Atos 17:16-34 (ARA)."
-        }
+        },
+        "slug": "109_paulo_em_atenas"
     },
     {
         "dia": "110",
@@ -1207,7 +1316,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/paulo_em_corinto.png",
             "alt": "Representação visual de 'Paulo em Corinto', baseada no texto bíblico de Atos 18:1-17 (ARA)."
-        }
+        },
+        "slug": "110_paulo_em_corinto"
     },
     {
         "dia": "111",
@@ -1218,7 +1328,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/paulo_em_efeso.png",
             "alt": "Representação visual de 'Paulo em Éfeso', baseada no texto bíblico de Atos 19:1-41 (ARA)."
-        }
+        },
+        "slug": "111_paulo_em_efeso"
     },
     {
         "dia": "112",
@@ -1229,7 +1340,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ressurreicao_eutico.png",
             "alt": "Representação visual de 'Eutico ressuscita', baseada no texto bíblico de Atos 20:7-12 (ARA)."
-        }
+        },
+        "slug": "112_eutico_ressuscita"
     },
     {
         "dia": "113",
@@ -1240,7 +1352,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/paulo_preso_jerusalem.png",
             "alt": "Representação visual de 'Paulo preso em Jerusalém', baseada no texto bíblico de Atos 21:27-36 (ARA)."
-        }
+        },
+        "slug": "113_paulo_preso_em_jerusalem"
     },
     {
         "dia": "114",
@@ -1251,7 +1364,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O apóstolo Paulo diante de Félix.png",
             "alt": "Representação visual de 'Paulo diante de Félix', baseada no texto bíblico de Atos 24:1-27 (ARA)."
-        }
+        },
+        "slug": "114_paulo_diante_de_felix"
     },
     {
         "dia": "115",
@@ -1262,7 +1376,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Paulo diante de Festus e Agripa.png",
             "alt": "Representação visual de 'Paulo diante de Festo e Agripa', baseada no texto bíblico de Atos 26:1-32 (ARA)."
-        }
+        },
+        "slug": "115_paulo_diante_de_festo_e_agripa"
     },
     {
         "dia": "116",
@@ -1273,7 +1388,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A viagem de Paulo a Roma.png",
             "alt": "Representação visual de 'A viagem de Paulo a Roma', baseada no texto bíblico de Atos 27:1-44 (ARA)."
-        }
+        },
+        "slug": "116_a_viagem_de_paulo_a_roma"
     },
     {
         "dia": "117",
@@ -1284,7 +1400,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Paulo e a serpente na ilha.png",
             "alt": "Representação visual de 'Paulo em Malta', baseada no texto bíblico de Atos 28:1-10 (ARA)."
-        }
+        },
+        "slug": "117_paulo_em_malta"
     },
     {
         "dia": "118",
@@ -1295,7 +1412,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Paulo em Roma, pregando aos fiéis.png",
             "alt": "Representação visual de 'Paulo prega em Roma', baseada no texto bíblico de Atos 28:11-31 (ARA)."
-        }
+        },
+        "slug": "118_paulo_prega_em_roma"
     },
     {
         "dia": "119",
@@ -1306,7 +1424,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/justification_by_faith.png",
             "alt": "Representação visual de 'A justificação pela fé', baseada no texto bíblico de Romanos 3:21-31 (ARA)."
-        }
+        },
+        "slug": "119_a_justificacao_pela_fe"
     },
     {
         "dia": "120",
@@ -1317,7 +1436,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/new_life_in_christ.png",
             "alt": "Representação visual de 'A nova vida em Cristo', baseada no texto bíblico de Romanos 6:1-23 (ARA)."
-        }
+        },
+        "slug": "120_a_nova_vida_em_cristo"
     },
     {
         "dia": "121",
@@ -1328,7 +1448,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/love_of_god.png",
             "alt": "Representação visual de 'O amor de Deus', baseada no texto bíblico de Romanos 8:31-39 (ARA)."
-        }
+        },
+        "slug": "121_o_amor_de_deus"
     },
     {
         "dia": "122",
@@ -1339,7 +1460,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/spiritual_gifts.png",
             "alt": "Representação visual de 'Os dons espirituais', baseada no texto bíblico de Romanos 12:3-8 (ARA)."
-        }
+        },
+        "slug": "122_os_dons_espirituais"
     },
     {
         "dia": "123",
@@ -1350,7 +1472,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O corpo de Cristo reunido.png",
             "alt": "Representação visual de 'O corpo de Cristo', baseada no texto bíblico de 1 Coríntios 12:12-31 (ARA)."
-        }
+        },
+        "slug": "123_o_corpo_de_cristo"
     },
     {
         "dia": "124",
@@ -1361,7 +1484,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O poder do amor divino.png",
             "alt": "Representação visual de 'O amor', baseada no texto bíblico de 1 Coríntios 13:1-13 (ARA)."
-        }
+        },
+        "slug": "124_o_amor"
     },
     {
         "dia": "125",
@@ -1372,7 +1496,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A ressurreição gloriosa em Cristo.png",
             "alt": "Representação visual de 'A ressurreição dos mortos', baseada no texto bíblico de 1 Coríntios 15:35-58 (ARA)."
-        }
+        },
+        "slug": "125_a_ressurreicao_dos_mortos"
     },
     {
         "dia": "126",
@@ -1383,7 +1508,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/new_creation_2cor5.png",
             "alt": "Representação visual de 'A nova criação', baseada no texto bíblico de 2 Coríntios 5:17-21 (ARA)."
-        }
+        },
+        "slug": "126_a_nova_criacao"
     },
     {
         "dia": "127",
@@ -1394,7 +1520,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/fruit_of_the_spirit.png",
             "alt": "Representação visual de 'O fruto do Espírito', baseada no texto bíblico de Gálatas 5:22-26 (ARA)."
-        }
+        },
+        "slug": "127_o_fruto_do_espirito"
     },
     {
         "dia": "128",
@@ -1405,7 +1532,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/armor_of_god.png",
             "alt": "Representação visual de 'A armadura de Deus', baseada no texto bíblico de Efésios 6:10-20 (ARA)."
-        }
+        },
+        "slug": "128_a_armadura_de_deus"
     },
     {
         "dia": "129",
@@ -1416,7 +1544,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/supremacy_of_christ.png",
             "alt": "Representação visual de 'A supremacia de Cristo', baseada no texto bíblico de Colossenses 1:15-23 (ARA)."
-        }
+        },
+        "slug": "129_a_supremacia_de_cristo"
     },
     {
         "dia": "130",
@@ -1427,7 +1556,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/coming_of_the_lord.png",
             "alt": "Representação visual de 'A vinda do Senhor', baseada no texto bíblico de 1 Tessalonicenses 4:13-18 (ARA)."
-        }
+        },
+        "slug": "130_a_vinda_do_senhor"
     },
     {
         "dia": "131",
@@ -1438,7 +1568,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/perseverance_of_faith.png",
             "alt": "Representação visual de 'A perseverança na fé', baseada no texto bíblico de Hebreus 11:1-40 (ARA)."
-        }
+        },
+        "slug": "131_a_perseveranca_na_fe"
     },
     {
         "dia": "132",
@@ -1449,7 +1580,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/faith_and_works.png",
             "alt": "Representação visual de 'A fé sem obras é morta', baseada no texto bíblico de Tiago 2:14-26 (ARA)."
-        }
+        },
+        "slug": "132_a_fe_sem_obras_e_morta"
     },
     {
         "dia": "133",
@@ -1460,7 +1592,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/royal_priesthood.png",
             "alt": "Representação visual de 'O sacerdócio real', baseada no texto bíblico de 1 Pedro 2:9-10 (ARA)."
-        }
+        },
+        "slug": "133_o_sacerdocio_real"
     },
     {
         "dia": "134",
@@ -1471,7 +1604,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/love_of_god_2.png",
             "alt": "Representação visual de 'O amor de Deus', baseada no texto bíblico de 1 João 4:7-21 (ARA)."
-        }
+        },
+        "slug": "134_o_amor_de_deus"
     },
     {
         "dia": "135",
@@ -1482,7 +1616,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/visao_trono_de_deus.png",
             "alt": "Representação visual de 'A visão do trono de Deus', baseada no texto bíblico de Apocalipse 4:1-11 (ARA)."
-        }
+        },
+        "slug": "135_a_visao_do_trono_de_deus"
     },
     {
         "dia": "136",
@@ -1493,7 +1628,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/cordeiro_e_o_livro.png",
             "alt": "Representação visual de 'O Cordeiro e o livro', baseada no texto bíblico de Apocalipse 5:1-14 (ARA)."
-        }
+        },
+        "slug": "136_o_cordeiro_e_o_livro"
     },
     {
         "dia": "137",
@@ -1504,7 +1640,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/nova_jerusalem.png",
             "alt": "Representação visual de 'A nova Jerusalém', baseada no texto bíblico de Apocalipse 21:1-27 (ARA)."
-        }
+        },
+        "slug": "137_a_nova_jerusalem"
     },
     {
         "dia": "138",
@@ -1515,7 +1652,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Paisagem divina ao entardecer com seguidores.png",
             "alt": "Representação visual de 'O rio da vida', baseada no texto bíblico de Apocalipse 22:1-5 (ARA)."
-        }
+        },
+        "slug": "138_o_rio_da_vida"
     },
     {
         "dia": "139",
@@ -1526,7 +1664,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Visão celestial no templo dourado.png",
             "alt": "Representação visual de 'O chamado de Isaías', baseada no texto bíblico de Isaías 6:1-13 (ARA)."
-        }
+        },
+        "slug": "139_o_chamado_de_isaias"
     },
     {
         "dia": "140",
@@ -1537,7 +1676,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A paixão e a ressurreição de Cristo.png",
             "alt": "Representação visual de 'O Servo Sofredor', baseada no texto bíblico de Isaías 53:1-12 (ARA)."
-        }
+        },
+        "slug": "140_o_servo_sofredor"
     },
     {
         "dia": "141",
@@ -1548,7 +1688,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Visão divina sobre vale de ossos.png",
             "alt": "Representação visual de 'A visão do vale de ossos secos', baseada no texto bíblico de Ezequiel 37:1-14 (ARA)."
-        }
+        },
+        "slug": "141_a_visao_do_vale_de_ossos_secos"
     },
     {
         "dia": "142",
@@ -1559,7 +1700,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Reflexão sagrada na caverna iluminada.png",
             "alt": "Representação visual de 'Daniel na cova dos leões', baseada no texto bíblico de Daniel 6:1-28 (ARA)."
-        }
+        },
+        "slug": "142_daniel_na_cova_dos_leoes"
     },
     {
         "dia": "143",
@@ -1570,7 +1712,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jonah_and_the_whale.png",
             "alt": "Representação visual de 'Jonas e o grande peixe', baseada no texto bíblico de Jonas 1:1-17 (ARA)."
-        }
+        },
+        "slug": "143_jonas_e_o_grande_peixe"
     },
     {
         "dia": "144",
@@ -1581,7 +1724,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O homem na boca da baleia.png",
             "alt": "Representação visual de 'A oração de Jonas', baseada no texto bíblico de Jonas 2:1-10 (ARA)."
-        }
+        },
+        "slug": "144_a_oracao_de_jonas"
     },
     {
         "dia": "145",
@@ -1592,7 +1736,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A grande pregação na cidade antiga.png",
             "alt": "Representação visual de 'A pregação de Jonas em Nínive', baseada no texto bíblico de Jonas 3:1-10 (ARA)."
-        }
+        },
+        "slug": "145_a_pregacao_de_jonas_em_ninive"
     },
     {
         "dia": "146",
@@ -1603,7 +1748,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O homem sob o pôr do sol.png",
             "alt": "Representação visual de 'O descontentamento de Jonas', baseada no texto bíblico de Jonas 4:1-11 (ARA)."
-        }
+        },
+        "slug": "146_o_descontentamento_de_jonas"
     },
     {
         "dia": "147",
@@ -1614,7 +1760,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena sagrada em luz dourada.png",
             "alt": "Representação visual de 'O nascimento de João Batista', baseada no texto bíblico de Lucas 1:5-25 (ARA)."
-        }
+        },
+        "slug": "147_o_nascimento_de_joao_batista"
     },
     {
         "dia": "148",
@@ -1625,7 +1772,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A visitação angelical na casa simples.png",
             "alt": "Representação visual de 'A anunciação a Maria', baseada no texto bíblico de Lucas 1:26-38 (ARA)."
-        }
+        },
+        "slug": "148_a_anunciacao_a_maria"
     },
     {
         "dia": "149",
@@ -1636,7 +1784,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Abraço no pátio iluminado pelo sol.png",
             "alt": "Representação visual de 'A visita de Maria a Isabel', baseada no texto bíblico de Lucas 1:39-56 (ARA)."
-        }
+        },
+        "slug": "149_a_visita_de_maria_a_isabel"
     },
     {
         "dia": "150",
@@ -1647,7 +1796,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de bênção com luz dourada.png",
             "alt": "Representação visual de 'O cântico de Zacarias', baseada no texto bíblico de Lucas 1:57-80 (ARA)."
-        }
+        },
+        "slug": "150_o_cantico_de_zacarias"
     },
     {
         "dia": "151",
@@ -1658,7 +1808,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Adoração dos Magos no estábulo.png",
             "alt": "Representação visual de 'A visita dos magos', baseada no texto bíblico de Mateus 2:1-12 (ARA)."
-        }
+        },
+        "slug": "151_a_visita_dos_magos"
     },
     {
         "dia": "152",
@@ -1669,7 +1820,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Viagem sagrada sob o luar.png",
             "alt": "Representação visual de 'A fuga para o Egito', baseada no texto bíblico de Mateus 2:13-23 (ARA)."
-        }
+        },
+        "slug": "152_a_fuga_para_o_egito"
     },
     {
         "dia": "153",
@@ -1680,7 +1832,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Batismo ao pôr do sol.png",
             "alt": "Representação visual de 'O batismo de Jesus', baseada no texto bíblico de Mateus 3:13-17 (ARA)."
-        }
+        },
+        "slug": "153_o_batismo_de_jesus"
     },
     {
         "dia": "154",
@@ -1691,7 +1844,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A tentação no monte rochoso.png",
             "alt": "Representação visual de 'A tentação de Jesus', baseada no texto bíblico de Mateus 4:1-11 (ARA)."
-        }
+        },
+        "slug": "154_a_tentacao_de_jesus"
     },
     {
         "dia": "155",
@@ -1702,7 +1856,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Sermão na montanha em luz dourada.png",
             "alt": "Representação visual de 'O sermão da montanha', baseada no texto bíblico de Mateus 5:1-12 (ARA)."
-        }
+        },
+        "slug": "155_o_sermao_da_montanha"
     },
     {
         "dia": "156",
@@ -1713,7 +1868,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Sermão na montanha ao pôr do sol.png",
             "alt": "Representação visual de 'As bem-aventuranças', baseada no texto bíblico de Mateus 5:1-12 (ARA)."
-        }
+        },
+        "slug": "156_as_bem_aventurancas"
     },
     {
         "dia": "157",
@@ -1724,7 +1880,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de ensinamento ao pôr do sol.png",
             "alt": "Representação visual de 'O sal da terra e a luz do mundo', baseada no texto bíblico de Mateus 5:13-16 (ARA)."
-        }
+        },
+        "slug": "157_o_sal_da_terra_e_a_luz_do_mundo"
     },
     {
         "dia": "158",
@@ -1735,7 +1892,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Oração do Senhor em oração.png",
             "alt": "Representação visual de 'O Pai Nosso', baseada no texto bíblico de Mateus 6:9-13 (ARA)."
-        }
+        },
+        "slug": "158_o_pai_nosso"
     },
     {
         "dia": "159",
@@ -1746,7 +1904,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Aula sob o por do sol.png",
             "alt": "Representação visual de 'Não julgueis', baseada no texto bíblico de Mateus 7:1-5 (ARA)."
-        }
+        },
+        "slug": "159_nao_julgueis"
     },
     {
         "dia": "160",
@@ -1757,7 +1916,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A cura do leproso por Jesus.png",
             "alt": "Representação visual de 'A cura do leproso', baseada no texto bíblico de Mateus 8:1-4 (ARA)."
-        }
+        },
+        "slug": "160_a_cura_do_leproso"
     },
     {
         "dia": "161",
@@ -1768,7 +1928,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A cura do homem paralítico.png",
             "alt": "Representação visual de 'A cura do paralítico', baseada no texto bíblico de Mateus 9:1-8 (ARA)."
-        }
+        },
+        "slug": "161_a_cura_do_paralitico"
     },
     {
         "dia": "162",
@@ -1779,7 +1940,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/chamado_de_mateus.png",
             "alt": "Representação visual de 'O chamado de Mateus', baseada no texto bíblico de Mateus 9:9-13 (ARA)."
-        }
+        },
+        "slug": "162_o_chamado_de_mateus"
     },
     {
         "dia": "163",
@@ -1790,7 +1952,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jesus_acalma_tempestade_fiel_v2.png",
             "alt": "Representação visual de 'Jesus acalma a tempestade', baseada no texto bíblico de Mateus 8:23-27 (ARA)."
-        }
+        },
+        "slug": "163_jesus_acalma_a_tempestade"
     },
     {
         "dia": "164",
@@ -1801,7 +1964,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A parábola do semeador.png",
             "alt": "Representação visual de 'A parábola do semeador', baseada no texto bíblico de Mateus 13:1-23 (ARA)."
-        }
+        },
+        "slug": "164_a_parabola_do_semeador"
     },
     {
         "dia": "165",
@@ -1812,7 +1976,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A parábola do joio no campo.png",
             "alt": "Representação visual de 'A parábola do joio', baseada no texto bíblico de Mateus 13:24-30 (ARA)."
-        }
+        },
+        "slug": "165_a_parabola_do_joio"
     },
     {
         "dia": "166",
@@ -1823,7 +1988,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A parábola da semente de mostarda.png",
             "alt": "Representação visual de 'A parábola do grão de mostarda', baseada no texto bíblico de Mateus 13:31-32 (ARA)."
-        }
+        },
+        "slug": "166_a_parabola_do_grao_de_mostarda"
     },
     {
         "dia": "167",
@@ -1834,7 +2000,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/parabola_fermento.png",
             "alt": "Representação visual de 'A parábola do fermento', baseada no texto bíblico de Mateus 13:33-35 (ARA)."
-        }
+        },
+        "slug": "167_a_parabola_do_fermento"
     },
     {
         "dia": "168",
@@ -1845,7 +2012,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jesus_alimenta_cinco_mil.png",
             "alt": "Representação visual de 'Jesus alimenta cinco mil', baseada no texto bíblico de Mateus 14:13-21 (ARA)."
-        }
+        },
+        "slug": "168_jesus_alimenta_cinco_mil"
     },
     {
         "dia": "169",
@@ -1856,7 +2024,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jesus_anda_sobre_as_aguas.png",
             "alt": "Representação visual de 'Jesus anda sobre as águas', baseada no texto bíblico de Mateus 14:22-33 (ARA)."
-        }
+        },
+        "slug": "169_jesus_anda_sobre_as_aguas"
     },
     {
         "dia": "170",
@@ -1867,7 +2036,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Chave do ensinamento ao entardecer.png",
             "alt": "Representação visual de 'A confissão de Pedro', baseada no texto bíblico de Mateus 16:13-20 (ARA)."
-        }
+        },
+        "slug": "170_a_confissao_de_pedro"
     },
     {
         "dia": "171",
@@ -1878,7 +2048,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A transfiguração no monte.png",
             "alt": "Representação visual de 'A transfiguração', baseada no texto bíblico de Mateus 17:1-13 (ARA)."
-        }
+        },
+        "slug": "171_a_transfiguracao"
     },
     {
         "dia": "172",
@@ -1889,7 +2060,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/lost_sheep_parable.png",
             "alt": "Representação visual de 'A parábola da ovelha perdida', baseada no texto bíblico de Mateus 18:10-14 (ARA)."
-        }
+        },
+        "slug": "172_a_parabola_da_ovelha_perdida"
     },
     {
         "dia": "173",
@@ -1900,7 +2072,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena bíblica de julgamento e súplica.png",
             "alt": "Representação visual de 'A parábola do credor incompassivo', baseada no texto bíblico de Mateus 18:21-35 (ARA)."
-        }
+        },
+        "slug": "173_a_parabola_do_credor_incompassivo"
     },
     {
         "dia": "174",
@@ -1911,7 +2084,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jesus_e_as_criancas.png",
             "alt": "Representação visual de 'Jesus e as crianças', baseada no texto bíblico de Mateus 19:13-15 (ARA)."
-        }
+        },
+        "slug": "174_jesus_e_as_criancas"
     },
     {
         "dia": "175",
@@ -1922,7 +2096,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jovem_rico.png",
             "alt": "Representação visual de 'O jovem rico', baseada no texto bíblico de Mateus 19:16-30 (ARA)."
-        }
+        },
+        "slug": "175_o_jovem_rico"
     },
     {
         "dia": "176",
@@ -1933,7 +2108,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O pagamento dos trabalhadores na vinícola.png",
             "alt": "Representação visual de 'A parábola dos trabalhadores na vinha', baseada no texto bíblico de Mateus 20:1-16 (ARA)."
-        }
+        },
+        "slug": "176_a_parabola_dos_trabalhadores_na_vinha"
     },
     {
         "dia": "177",
@@ -1944,7 +2120,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Entrada triunfal em Jerusalém.png",
             "alt": "Representação visual de 'A entrada triunfal em Jerusalém', baseada no texto bíblico de Mateus 21:1-11 (ARA)."
-        }
+        },
+        "slug": "177_a_entrada_triunfal_em_jerusalem"
     },
     {
         "dia": "178",
@@ -1955,7 +2132,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A purificação do templo.png",
             "alt": "Representação visual de 'A purificação do Templo', baseada no texto bíblico de Mateus 21:12-17 (ARA)."
-        }
+        },
+        "slug": "178_a_purificacao_do_templo"
     },
     {
         "dia": "179",
@@ -1966,7 +2144,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O chamado na paisagem dourada.png",
             "alt": "Representação visual de 'A parábola dos dois filhos', baseada no texto bíblico de Mateus 21:28-32 (ARA)."
-        }
+        },
+        "slug": "179_a_parabola_dos_dois_filhos"
     },
     {
         "dia": "180",
@@ -1977,7 +2156,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Confronto no vinhedo ao entardecer.png",
             "alt": "Representação visual de 'A parábola dos lavradores maus', baseada no texto bíblico de Mateus 21:33-46 (ARA)."
-        }
+        },
+        "slug": "180_a_parabola_dos_lavradores_maus"
     },
     {
         "dia": "181",
@@ -1988,7 +2168,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Banquete real sob luz dourada.png",
             "alt": "Representação visual de 'A parábola das bodas', baseada no texto bíblico de Mateus 22:1-14 (ARA)."
-        }
+        },
+        "slug": "181_a_parabola_das_bodas"
     },
     {
         "dia": "182",
@@ -1999,7 +2180,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ensino e sabedoria sob o amanhecer.png",
             "alt": "Representação visual de 'O grande mandamento', baseada no texto bíblico de Mateus 22:34-40 (ARA)."
-        }
+        },
+        "slug": "182_o_grande_mandamento"
     },
     {
         "dia": "183",
@@ -2010,7 +2192,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A espera das não-virgens.png",
             "alt": "Representação visual de 'A parábola das dez virgens', baseada no texto bíblico de Mateus 25:1-13 (ARA)."
-        }
+        },
+        "slug": "183_a_parabola_das_dez_virgens"
     },
     {
         "dia": "184",
@@ -2021,7 +2204,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de comércio no pôr do sol.png",
             "alt": "Representação visual de 'A parábola dos talentos', baseada no texto bíblico de Mateus 25:14-30 (ARA)."
-        }
+        },
+        "slug": "184_a_parabola_dos_talentos"
     },
     {
         "dia": "185",
@@ -2032,7 +2216,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A separação das ovelhas e bodes.png",
             "alt": "Representação visual de 'O julgamento das nações', baseada no texto bíblico de Mateus 25:31-46 (ARA)."
-        }
+        },
+        "slug": "185_o_julgamento_das_nacoes"
     },
     {
         "dia": "186",
@@ -2043,7 +2228,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/the_last_supper.png",
             "alt": "Representação visual de 'A última ceia', baseada no texto bíblico de Mateus 26:17-30 (ARA)."
-        }
+        },
+        "slug": "186_a_ultima_ceia"
     },
     {
         "dia": "187",
@@ -2054,7 +2240,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Oração no jardim à noite.png",
             "alt": "Representação visual de 'A oração no Getsêmani', baseada no texto bíblico de Mateus 26:36-46 (ARA)."
-        }
+        },
+        "slug": "187_a_oracao_no_getsemani"
     },
     {
         "dia": "188",
@@ -2065,7 +2252,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A prisáo no jardim à noite.png",
             "alt": "Representação visual de 'A prisão de Jesus', baseada no texto bíblico de Mateus 26:47-56 (ARA)."
-        }
+        },
+        "slug": "188_a_prisao_de_jesus"
     },
     {
         "dia": "189",
@@ -2076,7 +2264,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Acontecimentos à luz de chama.png",
             "alt": "Representação visual de 'Pedro nega Jesus', baseada no texto bíblico de Mateus 26:69-75 (ARA)."
-        }
+        },
+        "slug": "189_pedro_nega_jesus"
     },
     {
         "dia": "190",
@@ -2087,7 +2276,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O julgamento de Jesus diante de Pilatos.png",
             "alt": "Representação visual de 'Jesus diante de Pilatos', baseada no texto bíblico de Mateus 27:11-26 (ARA)."
-        }
+        },
+        "slug": "190_jesus_diante_de_pilatos"
     },
     {
         "dia": "191",
@@ -2098,7 +2288,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Paisagem dramática ao entardecer.png",
             "alt": "Representação visual de 'A morte de Judas', baseada no texto bíblico de Mateus 27:3-10 (ARA)."
-        }
+        },
+        "slug": "191_a_morte_de_judas"
     },
     {
         "dia": "192",
@@ -2109,7 +2300,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Amanhecer diante do túmulo vazio.png",
             "alt": "Representação visual de 'A ressurreição', baseada no texto bíblico de Mateus 28:1-10 (ARA)."
-        }
+        },
+        "slug": "192_a_ressurreicao"
     },
     {
         "dia": "193",
@@ -2120,7 +2312,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de ensino e devoção divina.png",
             "alt": "Representação visual de 'A grande comissão', baseada no texto bíblico de Mateus 28:16-20 (ARA)."
-        }
+        },
+        "slug": "193_a_grande_comissao"
     },
     {
         "dia": "194",
@@ -2131,7 +2324,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A cura do paralítico.png",
             "alt": "Representação visual de 'O paralítico de Cafarnaum', baseada no texto bíblico de Marcos 2:1-12 (ARA)."
-        }
+        },
+        "slug": "194_o_paralitico_de_cafarnaum"
     },
     {
         "dia": "195",
@@ -2142,7 +2336,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Figuras em silêncio sob luz dourada.png",
             "alt": "Representação visual de 'A cura da mulher com hemorragia', baseada no texto bíblico de Marcos 5:25-34 (ARA)."
-        }
+        },
+        "slug": "195_a_cura_da_mulher_com_hemorragia"
     },
     {
         "dia": "196",
@@ -2153,7 +2348,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cura radiante em um cenário bíblico.png",
             "alt": "Representação visual de 'A ressurreição da filha de Jairo', baseada no texto bíblico de Marcos 5:35-43 (ARA)."
-        }
+        },
+        "slug": "196_a_ressurreicao_da_filha_de_jairo"
     },
     {
         "dia": "197",
@@ -2164,7 +2360,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Milagre da multiplicação dos pães.png",
             "alt": "Representação visual de 'A multiplicação dos pães e peixes', baseada no texto bíblico de Marcos 6:30-44 (ARA)."
-        }
+        },
+        "slug": "197_a_multiplicacao_dos_paes_e_peixes"
     },
     {
         "dia": "198",
@@ -2175,7 +2372,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O toque de cura à beira do lago.png",
             "alt": "Representação visual de 'A cura do cego de Betsaida', baseada no texto bíblico de Marcos 8:22-26 (ARA)."
-        }
+        },
+        "slug": "198_a_cura_do_cego_de_betsaida"
     },
     {
         "dia": "199",
@@ -2186,7 +2384,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ensino sob a luz dourada.png",
             "alt": "Representação visual de 'O jovem rico', baseada no texto bíblico de Marcos 10:17-31 (ARA)."
-        }
+        },
+        "slug": "199_o_jovem_rico"
     },
     {
         "dia": "200",
@@ -2197,7 +2396,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A cerimônia da doação silenciosa.png",
             "alt": "Representação visual de 'A viúva pobre', baseada no texto bíblico de Marcos 12:41-44 (ARA)."
-        }
+        },
+        "slug": "200_a_viuva_pobre"
     },
     {
         "dia": "201",
@@ -2208,7 +2408,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Unção dos pés em ambiente bíblico.png",
             "alt": "Representação visual de 'A unção em Betânia', baseada no texto bíblico de Marcos 14:3-9 (ARA)."
-        }
+        },
+        "slug": "201_a_uncao_em_betania"
     },
     {
         "dia": "202",
@@ -2219,7 +2420,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Acusação na prisão antiga.png",
             "alt": "Representação visual de 'A negação de Pedro', baseada no texto bíblico de Marcos 14:66-72 (ARA)."
-        }
+        },
+        "slug": "202_a_negacao_de_pedro"
     },
     {
         "dia": "203",
@@ -2230,7 +2432,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/crucifixion_of_jesus.png",
             "alt": "Representação visual de 'A crucificação', baseada no texto bíblico de Marcos 15:21-41 (ARA)."
-        }
+        },
+        "slug": "203_a_crucificacao"
     },
     {
         "dia": "204",
@@ -2241,7 +2444,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ressurreição iluminada na manhã dourada.png",
             "alt": "Representação visual de 'A ressurreição', baseada no texto bíblico de Marcos 16:1-8 (ARA)."
-        }
+        },
+        "slug": "204_a_ressurreicao"
     },
     {
         "dia": "205",
@@ -2252,7 +2456,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de celebração ao nascimento.png",
             "alt": "Representação visual de 'O nascimento de João Batista', baseada no texto bíblico de Lucas 1:57-80 (ARA)."
-        }
+        },
+        "slug": "205_o_nascimento_de_joao_batista"
     },
     {
         "dia": "206",
@@ -2263,7 +2468,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Anunciação divina em ambiente acolhedor.png",
             "alt": "Representação visual de 'A anunciação a Maria', baseada no texto bíblico de Lucas 1:26-38 (ARA)."
-        }
+        },
+        "slug": "206_a_anunciacao_a_maria"
     },
     {
         "dia": "207",
@@ -2274,7 +2480,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena devocional no amanhecer dourado.png",
             "alt": "Representação visual de 'O Magnificat de Maria', baseada no texto bíblico de Lucas 1:46-55 (ARA)."
-        }
+        },
+        "slug": "207_o_magnificat_de_maria"
     },
     {
         "dia": "208",
@@ -2285,7 +2492,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/nativity_of_jesus.png",
             "alt": "Representação visual de 'O nascimento de Jesus', baseada no texto bíblico de Lucas 2:1-7 (ARA)."
-        }
+        },
+        "slug": "208_o_nascimento_de_jesus"
     },
     {
         "dia": "209",
@@ -2296,7 +2504,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Visão celestial sobre pastores e anjos.png",
             "alt": "Representação visual de 'Os pastores e os anjos', baseada no texto bíblico de Lucas 2:8-20 (ARA)."
-        }
+        },
+        "slug": "209_os_pastores_e_os_anjos"
     },
     {
         "dia": "210",
@@ -2307,7 +2516,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cenário religioso em templo dourado.png",
             "alt": "Representação visual de 'A apresentação de Jesus no Templo', baseada no texto bíblico de Lucas 2:22-40 (ARA)."
-        }
+        },
+        "slug": "210_a_apresentacao_de_jesus_no_templo"
     },
     {
         "dia": "211",
@@ -2318,7 +2528,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ensino no templo antigo.png",
             "alt": "Representação visual de 'Jesus aos doze anos no Templo', baseada no texto bíblico de Lucas 2:41-52 (ARA)."
-        }
+        },
+        "slug": "211_jesus_aos_doze_anos_no_templo"
     },
     {
         "dia": "212",
@@ -2329,7 +2540,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Batismo à beira do rio.png",
             "alt": "Representação visual de 'O batismo de Jesus', baseada no texto bíblico de Lucas 3:21-22 (ARA)."
-        }
+        },
+        "slug": "212_o_batismo_de_jesus"
     },
     {
         "dia": "213",
@@ -2340,7 +2552,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Tentação no deserto sagrado.png",
             "alt": "Representação visual de 'A tentação de Jesus', baseada no texto bíblico de Lucas 4:1-13 (ARA)."
-        }
+        },
+        "slug": "213_a_tentacao_de_jesus"
     },
     {
         "dia": "214",
@@ -2351,7 +2564,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Pregação em templo antigo com luz divina.png",
             "alt": "Representação visual de 'Jesus prega em Nazaré', baseada no texto bíblico de Lucas 4:16-30 (ARA)."
-        }
+        },
+        "slug": "214_jesus_prega_em_nazare"
     },
     {
         "dia": "215",
@@ -2362,7 +2576,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A pesca milagrosa ao amanhecer.png",
             "alt": "Representação visual de 'A pesca maravilhosa', baseada no texto bíblico de Lucas 5:1-11 (ARA)."
-        }
+        },
+        "slug": "215_a_pesca_maravilhosa"
     },
     {
         "dia": "216",
@@ -2373,7 +2588,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cura na antiga sala iluminada.png",
             "alt": "Representação visual de 'A cura do paralítico', baseada no texto bíblico de Lucas 5:17-26 (ARA)."
-        }
+        },
+        "slug": "216_a_cura_do_paralitico"
     },
     {
         "dia": "217",
@@ -2384,7 +2600,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Aula de sabedoria em mosaico.png",
             "alt": "Representação visual de 'O chamado de Levi', baseada no texto bíblico de Lucas 5:27-32 (ARA)."
-        }
+        },
+        "slug": "217_o_chamado_de_levi"
     },
     {
         "dia": "218",
@@ -2395,7 +2612,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena bíblica no campo de trigo.png",
             "alt": "Representação visual de 'Jesus e o sábado', baseada no texto bíblico de Lucas 6:1-11 (ARA)."
-        }
+        },
+        "slug": "218_jesus_e_o_sabado"
     },
     {
         "dia": "219",
@@ -2406,7 +2624,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ensino à beira do lago.png",
             "alt": "Representação visual de 'A escolha dos doze apóstolos', baseada no texto bíblico de Lucas 6:12-16 (ARA)."
-        }
+        },
+        "slug": "219_a_escolha_dos_doze_apostolos"
     },
     {
         "dia": "220",
@@ -2417,7 +2636,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Pregação ao entardecer em mosaico.png",
             "alt": "Representação visual de 'O sermão da planície', baseada no texto bíblico de Lucas 6:17-49 (ARA)."
-        }
+        },
+        "slug": "220_o_sermao_da_planicie"
     },
     {
         "dia": "221",
@@ -2428,7 +2648,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena bíblica iluminada em mosaico.png",
             "alt": "Representação visual de 'A cura do servo do centurião', baseada no texto bíblico de Lucas 7:1-10 (ARA)."
-        }
+        },
+        "slug": "221_a_cura_do_servo_do_centuriao"
     },
     {
         "dia": "222",
@@ -2439,7 +2660,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Milagre de cura em aldeia antiga.png",
             "alt": "Representação visual de 'A ressurreição do filho da viúva de Naim', baseada no texto bíblico de Lucas 7:11-17 (ARA)."
-        }
+        },
+        "slug": "222_a_ressurreicao_do_filho_da_viuva_de_naim"
     },
     {
         "dia": "223",
@@ -2450,7 +2672,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de reverência e serviço.png",
             "alt": "Representação visual de 'A mulher pecadora perdoada', baseada no texto bíblico de Lucas 7:36-50 (ARA)."
-        }
+        },
+        "slug": "223_a_mulher_pecadora_perdoada"
     },
     {
         "dia": "224",
@@ -2461,7 +2684,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O semeador no campo dourado.png",
             "alt": "Representação visual de 'A parábola do semeador', baseada no texto bíblico de Lucas 8:4-15 (ARA)."
-        }
+        },
+        "slug": "224_a_parabola_do_semeador"
     },
     {
         "dia": "225",
@@ -2472,7 +2696,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Tempestade e fé no mar.png",
             "alt": "Representação visual de 'Jesus acalma a tempestade', baseada no texto bíblico de Lucas 8:22-25 (ARA)."
-        }
+        },
+        "slug": "225_jesus_acalma_a_tempestade"
     },
     {
         "dia": "226",
@@ -2483,7 +2708,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O milagre à beira do lago.png",
             "alt": "Representação visual de 'A cura do gadareno', baseada no texto bíblico de Lucas 8:26-39 (ARA)."
-        }
+        },
+        "slug": "226_a_cura_do_gadareno"
     },
     {
         "dia": "227",
@@ -2494,7 +2720,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A multiplicidade do milagre da partilha.png",
             "alt": "Representação visual de 'A multiplicação dos pães', baseada no texto bíblico de Lucas 9:10-17 (ARA)."
-        }
+        },
+        "slug": "227_a_multiplicacao_dos_paes"
     },
     {
         "dia": "228",
@@ -2505,7 +2732,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Visão divina no monte sagrado.png",
             "alt": "Representação visual de 'A transfiguração', baseada no texto bíblico de Lucas 9:28-36 (ARA)."
-        }
+        },
+        "slug": "228_a_transfiguracao"
     },
     {
         "dia": "229",
@@ -2516,7 +2744,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/good_samaritan.png",
             "alt": "Representação visual de 'A parábola do bom samaritano', baseada no texto bíblico de Lucas 10:25-37 (ARA)."
-        }
+        },
+        "slug": "229_a_parabola_do_bom_samaritano"
     },
     {
         "dia": "230",
@@ -2527,7 +2756,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de ensino em ambiente rústico.png",
             "alt": "Representação visual de 'Marta e Maria', baseada no texto bíblico de Lucas 10:38-42 (ARA)."
-        }
+        },
+        "slug": "230_marta_e_maria"
     },
     {
         "dia": "231",
@@ -2538,7 +2768,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ensino à beira do lago2.png",
             "alt": "Representação visual de 'O Pai Nosso', baseada no texto bíblico de Lucas 11:1-4 (ARA)."
-        }
+        },
+        "slug": "231_o_pai_nosso"
     },
     {
         "dia": "232",
@@ -2549,7 +2780,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A visão do banquete ao entardecer.png",
             "alt": "Representação visual de 'A parábola do rico insensato', baseada no texto bíblico de Lucas 12:13-21 (ARA)."
-        }
+        },
+        "slug": "232_a_parabola_do_rico_insensato"
     },
     {
         "dia": "233",
@@ -2560,7 +2792,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena bíblica ao entardecer com árvore.png",
             "alt": "Representação visual de 'A parábola da figueira estéril', baseada no texto bíblico de Lucas 13:6-9 (ARA)."
-        }
+        },
+        "slug": "233_a_parabola_da_figueira_esteril"
     },
     {
         "dia": "234",
@@ -2571,7 +2804,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Banquete ao pôr do sol.png",
             "alt": "Representação visual de 'A parábola da grande ceia', baseada no texto bíblico de Lucas 14:15-24 (ARA)."
-        }
+        },
+        "slug": "234_a_parabola_da_grande_ceia"
     },
     {
         "dia": "235",
@@ -2582,7 +2816,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/lost_sheep_parable.png",
             "alt": "Representação visual de 'A parábola da ovelha perdida', baseada no texto bíblico de Lucas 15:1-7 (ARA)."
-        }
+        },
+        "slug": "235_a_parabola_da_ovelha_perdida"
     },
     {
         "dia": "236",
@@ -2593,7 +2828,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Mulher busca a moeda na luz do sol.png",
             "alt": "Representação visual de 'A parábola da moeda perdida', baseada no texto bíblico de Lucas 15:8-10 (ARA)."
-        }
+        },
+        "slug": "236_a_parabola_da_moeda_perdida"
     },
     {
         "dia": "237",
@@ -2604,7 +2840,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/filho_prodigo.png",
             "alt": "Representação visual de 'A parábola do filho pródigo', baseada no texto bíblico de Lucas 15:11-32 (ARA)."
-        }
+        },
+        "slug": "237_a_parabola_do_filho_prodigo"
     },
     {
         "dia": "238",
@@ -2615,7 +2852,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A riqueza e o sofrimento humano.png",
             "alt": "Representação visual de 'A parábola do rico e Lázaro', baseada no texto bíblico de Lucas 16:19-31 (ARA)."
-        }
+        },
+        "slug": "238_a_parabola_do_rico_e_lazaro"
     },
     {
         "dia": "239",
@@ -2626,7 +2864,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Oração e humildade no templo.png",
             "alt": "Representação visual de 'A parábola do fariseu e do publicano', baseada no texto bíblico de Lucas 18:9-14 (ARA)."
-        }
+        },
+        "slug": "239_a_parabola_do_fariseu_e_do_publicano"
     },
     {
         "dia": "240",
@@ -2637,7 +2876,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena bíblica sob a luz dourada.png",
             "alt": "Representação visual de 'Jesus e Zaqueu', baseada no texto bíblico de Lucas 19:1-10 (ARA)."
-        }
+        },
+        "slug": "240_jesus_e_zaqueu"
     },
     {
         "dia": "241",
@@ -2648,7 +2888,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Aclamada entrada em Jerusalém.png",
             "alt": "Representação visual de 'A entrada triunfal em Jerusalém', baseada no texto bíblico de Lucas 19:28-40 (ARA)."
-        }
+        },
+        "slug": "241_a_entrada_triunfal_em_jerusalem"
     },
     {
         "dia": "242",
@@ -2659,7 +2900,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/the_last_supper.png",
             "alt": "Representação visual de 'A última ceia', baseada no texto bíblico de Lucas 22:7-23 (ARA)."
-        }
+        },
+        "slug": "242_a_ultima_ceia"
     },
     {
         "dia": "243",
@@ -2670,7 +2912,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Oração na oliveira sob a lua.png",
             "alt": "Representação visual de 'A oração no Getsêmani', baseada no texto bíblico de Lucas 22:39-46 (ARA)."
-        }
+        },
+        "slug": "243_a_oracao_no_getsemani"
     },
     {
         "dia": "244",
@@ -2681,7 +2924,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Prisão sob luz de tochas.png",
             "alt": "Representação visual de 'A prisão de Jesus', baseada no texto bíblico de Lucas 22:47-53 (ARA)."
-        }
+        },
+        "slug": "244_a_prisao_de_jesus"
     },
     {
         "dia": "245",
@@ -2692,7 +2936,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Confronto à luz das tochas.png",
             "alt": "Representação visual de 'Pedro nega Jesus', baseada no texto bíblico de Lucas 22:54-62 (ARA)."
-        }
+        },
+        "slug": "245_pedro_nega_jesus"
     },
     {
         "dia": "246",
@@ -2703,7 +2948,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O julgamento no pátio romano.png",
             "alt": "Representação visual de 'Jesus diante de Pilatos e Herodes', baseada no texto bíblico de Lucas 23:1-25 (ARA)."
-        }
+        },
+        "slug": "246_jesus_diante_de_pilatos_e_herodes"
     },
     {
         "dia": "247",
@@ -2714,7 +2960,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/crucifixion_of_jesus.png",
             "alt": "Representação visual de 'A crucificação', baseada no texto bíblico de Lucas 23:26-49 (ARA)."
-        }
+        },
+        "slug": "247_a_crucificacao"
     },
     {
         "dia": "248",
@@ -2725,7 +2972,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ato de sepultamento em entardecer.png",
             "alt": "Representação visual de 'O sepultamento de Jesus', baseada no texto bíblico de Lucas 23:50-56 (ARA)."
-        }
+        },
+        "slug": "248_o_sepultamento_de_jesus"
     },
     {
         "dia": "249",
@@ -2736,7 +2984,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Amanhecer radiante na tumba sagrada.png",
             "alt": "Representação visual de 'A ressurreição', baseada no texto bíblico de Lucas 24:1-12 (ARA)."
-        }
+        },
+        "slug": "249_a_ressurreicao"
     },
     {
         "dia": "250",
@@ -2747,7 +2996,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Caminho dourado no entardecer bíblico.png",
             "alt": "Representação visual de 'Os discípulos no caminho de Emaús', baseada no texto bíblico de Lucas 24:13-35 (ARA)."
-        }
+        },
+        "slug": "250_os_discipulos_no_caminho_de_emaus"
     },
     {
         "dia": "251",
@@ -2758,7 +3008,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/A última ceia em luz dourada.png",
             "alt": "Representação visual de 'Jesus aparece aos discípulos', baseada no texto bíblico de Lucas 24:36-49 (ARA)."
-        }
+        },
+        "slug": "251_jesus_aparece_aos_discipulos"
     },
     {
         "dia": "252",
@@ -2769,7 +3020,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ascensão divina ao amanhecer.png",
             "alt": "Representação visual de 'A ascensão de Jesus', baseada no texto bíblico de Lucas 24:50-53 (ARA)."
-        }
+        },
+        "slug": "252_a_ascensao_de_jesus"
     },
     {
         "dia": "253",
@@ -2780,7 +3032,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de Natal iluminada e serena.png",
             "alt": "Representação visual de 'O Verbo se fez carne', baseada no texto bíblico de João 1:1-18 (ARA)."
-        }
+        },
+        "slug": "253_o_verbo_se_fez_carne"
     },
     {
         "dia": "254",
@@ -2791,7 +3044,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O pregador e a figura luminosa.png",
             "alt": "Representação visual de 'O testemunho de João Batista', baseada no texto bíblico de João 1:19-34 (ARA)."
-        }
+        },
+        "slug": "254_o_testemunho_de_joao_batista"
     },
     {
         "dia": "255",
@@ -2802,7 +3056,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O milagre das bodas de Caná.png",
             "alt": "Representação visual de 'O primeiro milagre: água em vinho', baseada no texto bíblico de João 2:1-12 (ARA)."
-        }
+        },
+        "slug": "255_o_primeiro_milagre_agua_em_vinho"
     },
     {
         "dia": "256",
@@ -2813,7 +3068,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Encontro nocturno entre Jesus e Nicodemos.png",
             "alt": "Representação visual de 'Jesus e Nicodemos', baseada no texto bíblico de João 3:1-21 (ARA)."
-        }
+        },
+        "slug": "256_jesus_e_nicodemos"
     },
     {
         "dia": "257",
@@ -2824,7 +3080,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jesus_samaritan_woman.png",
             "alt": "Representação visual de 'Jesus e a mulher samaritana', baseada no texto bíblico de João 4:1-42 (ARA)."
-        }
+        },
+        "slug": "257_jesus_e_a_mulher_samaritana"
     },
     {
         "dia": "258",
@@ -2835,7 +3092,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de oração ao entardecer.png",
             "alt": "Representação visual de 'A cura do filho do oficial', baseada no texto bíblico de João 4:43-54 (ARA)."
-        }
+        },
+        "slug": "258_a_cura_do_filho_do_oficial"
     },
     {
         "dia": "259",
@@ -2846,7 +3104,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cura à beira da piscina.png",
             "alt": "Representação visual de 'A cura do paralítico de Betesda', baseada no texto bíblico de João 5:1-18 (ARA)."
-        }
+        },
+        "slug": "259_a_cura_do_paralitico_de_betesda"
     },
     {
         "dia": "260",
@@ -2857,7 +3116,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Milagre do pão e peixe ao entardecer.png",
             "alt": "Representação visual de 'Jesus alimenta cinco mil', baseada no texto bíblico de João 6:1-15 (ARA)."
-        }
+        },
+        "slug": "260_jesus_alimenta_cinco_mil"
     },
     {
         "dia": "261",
@@ -2868,7 +3128,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Caminho dourado sobre o mar.png",
             "alt": "Representação visual de 'Jesus anda sobre as águas', baseada no texto bíblico de João 6:16-21 (ARA)."
-        }
+        },
+        "slug": "261_jesus_anda_sobre_as_aguas"
     },
     {
         "dia": "262",
@@ -2879,7 +3140,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena sagrada ao pôr do sol.png",
             "alt": "Representação visual de 'Jesus, o pão da vida', baseada no texto bíblico de João 6:22-59 (ARA)."
-        }
+        },
+        "slug": "262_jesus_o_pao_da_vida"
     },
     {
         "dia": "263",
@@ -2890,7 +3152,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O julgamento na antiga corte.png",
             "alt": "Representação visual de 'A mulher adúltera', baseada no texto bíblico de João 8:1-11 (ARA)."
-        }
+        },
+        "slug": "263_a_mulher_adultera"
     },
     {
         "dia": "264",
@@ -2901,7 +3164,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de ensino à luz da lâmpada.png",
             "alt": "Representação visual de 'Jesus, a luz do mundo', baseada no texto bíblico de João 8:12-30 (ARA)."
-        }
+        },
+        "slug": "264_jesus_a_luz_do_mundo"
     },
     {
         "dia": "265",
@@ -2912,7 +3176,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cura divina em ambiente antigo.png",
             "alt": "Representação visual de 'A cura do cego de nascença', baseada no texto bíblico de João 9:1-41 (ARA)."
-        }
+        },
+        "slug": "265_a_cura_do_cego_de_nascenca"
     },
     {
         "dia": "266",
@@ -2923,7 +3188,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O bom pastor ao entardecer.png",
             "alt": "Representação visual de 'Jesus, o bom Pastor', baseada no texto bíblico de João 10:1-21 (ARA)."
-        }
+        },
+        "slug": "266_jesus_o_bom_pastor"
     },
     {
         "dia": "267",
@@ -2934,7 +3200,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ascensão divina ao amanhecer.png",
             "alt": "Representação visual de 'A Ascensão de Jesus', baseada no texto bíblico de Atos 1:9-11 (ARA)."
-        }
+        },
+        "slug": "267_a_ascensao_de_jesus"
     },
     {
         "dia": "268",
@@ -2945,7 +3212,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Amanhecer dourado e benção divina.png",
             "alt": "Representação visual de 'A Promessa do Espírito Santo', baseada no texto bíblico de Atos 1:4-5 (ARA)."
-        }
+        },
+        "slug": "268_a_promessa_do_espirito_santo"
     },
     {
         "dia": "269",
@@ -2956,7 +3224,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O sorteio de Matias em cena bíblica.png",
             "alt": "Representação visual de 'A Escolha de Matias', baseada no texto bíblico de Atos 1:23-26 (ARA)."
-        }
+        },
+        "slug": "269_a_escolha_de_matias"
     },
     {
         "dia": "270",
@@ -2967,7 +3236,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Pentecostos e chamas de luz divina.png",
             "alt": "Representação visual de 'Pentecostes: A Vinda do Espírito Santo', baseada no texto bíblico de Atos 2:1-4 (ARA)."
-        }
+        },
+        "slug": "270_pentecostes_a_vinda_do_espirito_santo"
     },
     {
         "dia": "271",
@@ -2976,9 +3246,10 @@
         "referencia": "Atos 2:14-17",
         "texto": "14. Então, Pedro, levantando a voz, dirigiu-se à multidão: Varões judeus e todos os que habitais em Jerusalém, seja-vos isto notório, e escutai as minhas palavras. 15. Porque estes não estão embriagados, como vós pensais, pois é apenas a terceira hora do dia. 16. Mas isto é o que foi dito pelo profeta Joel: 17. E nos últimos dias acontecerá, diz Deus, que do meu Espírito derramarei sobre toda a carne; e os vossos filhos e as vossas filhas profetizarão.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de pregação em luz dourada.png",
             "alt": "Representação visual de 'Pedro Prega no Pentecostes', baseada no texto bíblico de Atos 2:14-17 (ARA)."
-        }
+        },
+        "slug": "271_pedro_prega_no_pentecostes"
     },
     {
         "dia": "272",
@@ -2987,9 +3258,10 @@
         "referencia": "Atos 3:6-8",
         "texto": "6. Então, Pedro disse: Não tenho prata nem ouro, mas o que tenho, isso te dou: em nome de Jesus Cristo, o Nazareno, levanta-te e anda. 7. E, tomando-o pela mão direita, o levantou; e logo os seus pés e tornozelos se firmaram. 8. E, saltando, pôs-se em pé, e andou, e entrou com eles no templo, andando, e saltando e louvando a Deus.",
         "imagem": {
-            "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ajuda no templo antigo.png",
             "alt": "Representação visual de 'A Cura do Aleijado na Porta do Templo', baseada no texto bíblico de Atos 3:6-8 (ARA)."
-        }
+        },
+        "slug": "272_a_cura_do_aleijado_na_porta_do_templo"
     },
     {
         "dia": "273",
@@ -2998,9 +3270,10 @@
         "referencia": "Atos 4:19-20",
         "texto": "19. Mas Pedro e João responderam e disseram-lhes: Julgai vós se é justo diante de Deus obedecer a vós antes que a Deus. 20. Porque não podemos deixar de falar das coisas que temos visto e ouvido.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Tribunal antigo em luz dourada.png",
             "alt": "Representação visual de 'Pedro e João Antes do Sinédrio', baseada no texto bíblico de Atos 4:19-20 (ARA)."
-        }
+        },
+        "slug": "273_pedro_e_joao_antes_do_sinedrio"
     },
     {
         "dia": "274",
@@ -3009,9 +3282,10 @@
         "referencia": "Atos 4:32",
         "texto": "32. Da multidão dos que criam era um o coração e a alma; e ninguém dizia ser seu próprio nada do que possuía, mas tudo lhes era comum.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Reunião acolhedora na antiga casa.png",
             "alt": "Representação visual de 'A Comunidade dos Crentes', baseada no texto bíblico de Atos 4:32 (ARA)."
-        }
+        },
+        "slug": "274_a_comunidade_dos_crentes"
     },
     {
         "dia": "275",
@@ -3022,7 +3296,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ananias_safira_1280x800_final.png",
             "alt": "Representação visual de 'Ananias e Safira', baseada no texto bíblico de Atos 5:1-5 (ARA)."
-        }
+        },
+        "slug": "275_ananias_e_safira"
     },
     {
         "dia": "276",
@@ -3031,9 +3306,10 @@
         "referencia": "Atos 6:7",
         "texto": "7. E a palavra de Deus crescia, e o número dos discípulos se multiplicava muito em Jerusalém; também um grande número de sacerdotes obedecia à fé.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Reunião de sabedoria e fé.png",
             "alt": "Representação visual de 'A Multiplicação dos Apóstolos', baseada no texto bíblico de Atos 6:7 (ARA)."
-        }
+        },
+        "slug": "276_a_multiplicacao_dos_apostolos"
     },
     {
         "dia": "277",
@@ -3042,9 +3318,10 @@
         "referencia": "Atos 6:3-5",
         "texto": "3. Procurai, pois, irmãos, dentre vós sete homens de boa reputação, cheios do Espírito Santo e de sabedoria, aos quais possamos encarregar este serviço. 4. E nós nos dedicaremos à oração e ao ministério da palavra. 5. E agradou a toda a multidão escolherem Estêvão, homem cheio de fé e do Espírito Santo, e a Filipe, e a Prócoro, e a Nicanor, e a Timão, e a Parmenas, e a Nicolau, prosélito de Antioquia.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Reunião bíblica em ambiente iluminado.png",
             "alt": "Representação visual de 'A Escolha dos Sete Diáconos', baseada no texto bíblico de Atos 6:3-5 (ARA)."
-        }
+        },
+        "slug": "277_a_escolha_dos_sete_diaconos"
     },
     {
         "dia": "278",
@@ -3053,9 +3330,10 @@
         "referencia": "Atos 7:54-60",
         "texto": "54. E, ouvindo eles estas coisas, se enfureceram em seus corações e rangeram os dentes contra ele. 55. Mas Estêvão, cheio do Espírito Santo, fitava os olhos no céu e viu a glória de Deus e Jesus em pé à direita de Deus, 56. e disse: Eis que vejo os céus abertos e o Filho do Homem em pé à direita de Deus. 57. Então, gritaram com grande voz, taparam os ouvidos e, unânimes, se lançaram contra ele. 58. E, lançando-o fora da cidade, o apedrejaram. E os que apedrejavam a Estêvão, puseram suas vestes aos pés de um jovem chamado Saulo. 59. E apedrejavam a Estêvão, que invocava e dizia: Senhor Jesus, recebe o meu espírito. 60. E, pondo-se de joelhos, clamou com grande voz: Senhor, não lhes imputes este pecado. E, tendo dito isto, adormeceu.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ato de martírio em luz dourada.png",
             "alt": "Representação visual de 'Estêvão, o Primeiro Mártir', baseada no texto bíblico de Atos 7:54-60 (ARA)."
-        }
+        },
+        "slug": "278_estevao_o_primeiro_martir"
     },
     {
         "dia": "279",
@@ -3064,9 +3342,10 @@
         "referencia": "Atos 9:3-6",
         "texto": "3. E, indo pelo caminho, aconteceu que, chegando perto de Damasco, subitamente o cercou um resplendor de luz do céu. 4. E caiu por terra e ouviu uma voz que lhe dizia: Saulo, Saulo, por que me persegues? 5. E ele disse: Quem és, Senhor? E disse o Senhor: Eu sou Jesus, a quem tu persegues. 6. Levanta-te, entra na cidade, e lá te será dito o que te convém fazer.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Visão divina na estrada poeirenta.png",
             "alt": "Representação visual de 'A Conversão de Saulo', baseada no texto bíblico de Atos 9:3-6 (ARA)."
-        }
+        },
+        "slug": "279_a_conversao_de_saulo"
     },
     {
         "dia": "280",
@@ -3075,9 +3354,10 @@
         "referencia": "Atos 9:17-18",
         "texto": "17. E Ananias foi e entrou na casa, e pondo sobre ele as mãos, disse: Irmão Saulo, o Senhor Jesus, que te apareceu no caminho por onde vinhas, enviou-me para que tornes a ver e sejas cheio do Espírito Santo. 18. E logo lhe caíram dos olhos como que umas escamas, e ele recuperou a vista; e levantando-se, foi batizado.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Ato de bênção em ambiente iluminado.png",
             "alt": "Representação visual de 'Ananias Restaura a Visão de Saulo', baseada no texto bíblico de Atos 9:17-18 (ARA)."
-        }
+        },
+        "slug": "280_ananias_restaura_a_visao_de_saulo"
     },
     {
         "dia": "281",
@@ -3086,9 +3366,10 @@
         "referencia": "Atos 9:36-42",
         "texto": "36. Ora, havia em Jope uma discípula chamada Tabita, que, traduzido, quer dizer Dorcas; esta abundava em boas obras e esmolas que fazia. 37. E aconteceu que, adoecendo, morreu; e, lavada, foi colocada numa câmara. 40. E, pondo Pedro todos fora, pôs-se de joelhos e orou; e, voltando-se para o corpo, disse: Tabita, levanta-te. E ela abriu os olhos; e, vendo a Pedro, sentou-se. 41. E ele, dando-lhe a mão, a levantou. 42. E, chamando os santos e as viúvas, apresentou-a viva.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cura compartilhada em cena sacra.png",
             "alt": "Representação visual de 'Pedro Cura e Ressuscita', baseada no texto bíblico de Atos 9:36-42 (ARA)."
-        }
+        },
+        "slug": "281_pedro_cura_e_ressuscita"
     },
     {
         "dia": "282",
@@ -3097,9 +3378,10 @@
         "referencia": "Atos 12:6-10",
         "texto": "6. E, na noite antes do dia em que Herodes havia de o trazer à público, Pedro estava dormindo entre dois soldados, preso com duas correntes, e os guardas diante da porta guardavam a prisão. 7. E eis que um anjo do Senhor apareceu, e uma luz brilhou na prisão; e, tocando Pedro no lado, o despertou, dizendo: Levanta-te depressa. E as correntes caíram das suas mãos. 8. E disse o anjo: Cinge-te, e calça as sandálias. E ele assim o fez. E disse-lhe: Veste a tua capa, e segue-me. 9. E saindo, seguia-o, e não sabia que era verdade o que se fazia por meio do anjo, mas julgava estar vendo uma visão. 10. E, passando a primeira e a segunda guarda, chegaram à porta de ferro que dá para a cidade, a qual se abriu por si mesma; e saíram e passaram uma rua, e logo o anjo o deixou.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Anjo da libertação na prisão.png",
             "alt": "Representação visual de 'A Libertação de Pedro da Prisão', baseada no texto bíblico de Atos 12:6-10 (ARA)."
-        }
+        },
+        "slug": "282_a_libertacao_de_pedro_da_prisao"
     },
     {
         "dia": "283",
@@ -3108,9 +3390,10 @@
         "referencia": "Atos 13:2-3",
         "texto": "2. Enquanto ministravam ao Senhor e jejuavam, disse o Espírito Santo: Separai-me Barnabé e Saulo para a obra a que os tenho chamado. 3. Então, jejuando e orando, lhes impuseram as mãos e os despediram.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Abençoamento sob luz divina.png",
             "alt": "Representação visual de 'A Missão de Paulo e Barnabé', baseada no texto bíblico de Atos 13:2-3 (ARA)."
-        }
+        },
+        "slug": "283_a_missao_de_paulo_e_barnabe"
     },
     {
         "dia": "284",
@@ -3119,9 +3402,10 @@
         "referencia": "Atos 13:38-39",
         "texto": "38. Portanto, saibam que por meio dele é anunciado o perdão dos pecados a todos os que nele creem. 39. E por meio dele todo aquele que crê é justificado de todas as coisas, de que, pela lei de Moisés, não podiam ser justificados.",
         "imagem": {
-            "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
+            "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Discurso em um templo antigo.png",
             "alt": "Representação visual de 'Paulo em Antioquia da Pisídia', baseada no texto bíblico de Atos 13:38-39 (ARA)."
-        }
+        },
+        "slug": "284_paulo_em_antioquia_da_pisidia"
     },
     {
         "dia": "285",
@@ -3132,7 +3416,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Reação dos Judeus e dos Gentios', baseada no texto bíblico de Atos 13:45-48 (ARA)."
-        }
+        },
+        "slug": "285_a_reacao_dos_judeus_e_dos_gentios"
     },
     {
         "dia": "286",
@@ -3143,7 +3428,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Conselho de Jerusalém', baseada no texto bíblico de Atos 15:19-20 (ARA)."
-        }
+        },
+        "slug": "286_o_conselho_de_jerusalem"
     },
     {
         "dia": "287",
@@ -3154,7 +3440,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A escolha dos sete diáconos', baseada no texto bíblico de Atos 6:1-7 (ARA)."
-        }
+        },
+        "slug": "287_a_escolha_dos_sete_diaconos"
     },
     {
         "dia": "288",
@@ -3165,7 +3452,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A cura do coxo na porta do templo', baseada no texto bíblico de Atos 3:1-10 (ARA)."
-        }
+        },
+        "slug": "288_a_cura_do_coxo_na_porta_do_templo"
     },
     {
         "dia": "289",
@@ -3176,7 +3464,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Pedro prega em Jerusalém', baseada no texto bíblico de Atos 2:14-41 (ARA)."
-        }
+        },
+        "slug": "289_pedro_prega_em_jerusalem"
     },
     {
         "dia": "290",
@@ -3187,7 +3476,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ananias_safira_1280x800_final.png",
             "alt": "Representação visual de 'Ananias e Safira', baseada no texto bíblico de Atos 5:1-11 (ARA)."
-        }
+        },
+        "slug": "290_ananias_e_safira"
     },
     {
         "dia": "291",
@@ -3198,7 +3488,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A prisão e libertação dos apóstolos', baseada no texto bíblico de Atos 5:17-42 (ARA)."
-        }
+        },
+        "slug": "291_a_prisao_e_libertacao_dos_apostolos"
     },
     {
         "dia": "292",
@@ -3209,7 +3500,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A escolha de Estêvão como primeiro mártir', baseada no texto bíblico de Atos 6:8-15 (ARA)."
-        }
+        },
+        "slug": "292_a_escolha_de_estevao_como_primeiro_martir"
     },
     {
         "dia": "293",
@@ -3220,7 +3512,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O martírio de Estêvão', baseada no texto bíblico de Atos 7:54-60 (ARA)."
-        }
+        },
+        "slug": "293_o_martirio_de_estevao"
     },
     {
         "dia": "294",
@@ -3231,7 +3524,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A conversão de Saulo no caminho de Damasco', baseada no texto bíblico de Atos 9:1-19 (ARA)."
-        }
+        },
+        "slug": "294_a_conversao_de_saulo_no_caminho_de_damasco"
     },
     {
         "dia": "295",
@@ -3242,7 +3536,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Pedro e Cornélio', baseada no texto bíblico de Atos 10:1-48 (ARA)."
-        }
+        },
+        "slug": "295_pedro_e_cornelio"
     },
     {
         "dia": "296",
@@ -3253,7 +3548,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A primeira viagem missionária de Paulo e Barnabé', baseada no texto bíblico de Atos 13:1-12 (ARA)."
-        }
+        },
+        "slug": "296_a_primeira_viagem_missionaria_de_paulo_e_barnabe"
     },
     {
         "dia": "297",
@@ -3264,7 +3560,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Paulo em Listra e a cura do aleijado', baseada no texto bíblico de Atos 14:8-20 (ARA)."
-        }
+        },
+        "slug": "297_paulo_em_listra_e_a_cura_do_aleijado"
     },
     {
         "dia": "298",
@@ -3275,7 +3572,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Paulo e Silas na prisão de Filipos', baseada no texto bíblico de Atos 16:16-40 (ARA)."
-        }
+        },
+        "slug": "298_paulo_e_silas_na_prisao_de_filipos"
     },
     {
         "dia": "299",
@@ -3286,7 +3584,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Paulo prega em Atenas', baseada no texto bíblico de Atos 17:16-34 (ARA)."
-        }
+        },
+        "slug": "299_paulo_prega_em_atenas"
     },
     {
         "dia": "300",
@@ -3297,7 +3596,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Paulo e o conselho em Corinto', baseada no texto bíblico de Atos 18:1-17 (ARA)."
-        }
+        },
+        "slug": "300_paulo_e_o_conselho_em_corinto"
     },
     {
         "dia": "301",
@@ -3308,7 +3608,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'Paulo em Éfeso', baseada no texto bíblico de Atos 19:1-20 (ARA)."
-        }
+        },
+        "slug": "301_paulo_em_efeso"
     },
     {
         "dia": "302",
@@ -3319,7 +3620,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O naufrágio de Paulo em Malta', baseada no texto bíblico de Atos 27:27-44 (ARA)."
-        }
+        },
+        "slug": "302_o_naufragio_de_paulo_em_malta"
     },
     {
         "dia": "303",
@@ -3330,7 +3632,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Paulo em Roma', baseada no texto bíblico de Atos 28:16-31 (ARA)."
-        }
+        },
+        "slug": "303_paulo_em_roma"
     },
     {
         "dia": "304",
@@ -3341,7 +3644,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Carta de Paulo aos Romanos: Justificação pela fé', baseada no texto bíblico de Romanos 3:21-31 (ARA)."
-        }
+        },
+        "slug": "304_carta_de_paulo_aos_romanos_justificacao_pela_fe"
     },
     {
         "dia": "305",
@@ -3352,7 +3656,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Carta de Paulo aos Coríntios: O amor é paciente', baseada no texto bíblico de 1 Coríntios 13:4-7 (ARA)."
-        }
+        },
+        "slug": "305_carta_de_paulo_aos_corintios_o_amor_e_paciente"
     },
     {
         "dia": "306",
@@ -3363,7 +3668,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Carta de Paulo aos Efésios: A armadura de Deus', baseada no texto bíblico de Efésios 6:10-18 (ARA)."
-        }
+        },
+        "slug": "306_carta_de_paulo_aos_efesios_a_armadura_de_deus"
     },
     {
         "dia": "307",
@@ -3374,7 +3680,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O Discurso de Pedro no Pentecostes', baseada no texto bíblico de Atos 2:1-41 (ARA)."
-        }
+        },
+        "slug": "307_o_discurso_de_pedro_no_pentecostes"
     },
     {
         "dia": "308",
@@ -3385,7 +3692,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Cura do Aleijado na Porta do Templo', baseada no texto bíblico de Atos 3:1-10 (ARA)."
-        }
+        },
+        "slug": "308_a_cura_do_aleijado_na_porta_do_templo"
     },
     {
         "dia": "309",
@@ -3396,7 +3704,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Pedro e João Perseguidos pelos Judeus', baseada no texto bíblico de Atos 4:1-22 (ARA)."
-        }
+        },
+        "slug": "309_pedro_e_joao_perseguidos_pelos_judeus"
     },
     {
         "dia": "310",
@@ -3407,7 +3716,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Oração da Igreja por Coragem', baseada no texto bíblico de Atos 4:23-31 (ARA)."
-        }
+        },
+        "slug": "310_a_oracao_da_igreja_por_coragem"
     },
     {
         "dia": "311",
@@ -3418,7 +3728,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Exortação à Unidade na Igreja', baseada no texto bíblico de Efésios 4:1-16 (ARA)."
-        }
+        },
+        "slug": "311_a_exortacao_a_unidade_na_igreja"
     },
     {
         "dia": "312",
@@ -3429,7 +3740,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Amor como o Maior Dom', baseada no texto bíblico de 1 Coríntios 13:1-13 (ARA)."
-        }
+        },
+        "slug": "312_o_amor_como_o_maior_dom"
     },
     {
         "dia": "313",
@@ -3440,7 +3752,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A Justificação pela Fé', baseada no texto bíblico de Romanos 5:1-11 (ARA)."
-        }
+        },
+        "slug": "313_a_justificacao_pela_fe"
     },
     {
         "dia": "314",
@@ -3451,7 +3764,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Armadura de Deus', baseada no texto bíblico de Efésios 6:10-18 (ARA)."
-        }
+        },
+        "slug": "314_a_armadura_de_deus"
     },
     {
         "dia": "315",
@@ -3462,7 +3776,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A Nova Vida em Cristo', baseada no texto bíblico de 2 Coríntios 5:17-21 (ARA)."
-        }
+        },
+        "slug": "315_a_nova_vida_em_cristo"
     },
     {
         "dia": "316",
@@ -3473,7 +3788,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O Fruto do Espírito', baseada no texto bíblico de Gálatas 5:22-26 (ARA)."
-        }
+        },
+        "slug": "316_o_fruto_do_espirito"
     },
     {
         "dia": "317",
@@ -3484,7 +3800,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Súplica de Paulo por Sabedoria', baseada no texto bíblico de Efésios 1:15-23 (ARA)."
-        }
+        },
+        "slug": "317_a_suplica_de_paulo_por_sabedoria"
     },
     {
         "dia": "318",
@@ -3495,7 +3812,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Amor de Deus Derramado em Nossos Corações', baseada no texto bíblico de Romanos 5:5 (ARA)."
-        }
+        },
+        "slug": "318_o_amor_de_deus_derramado_em_nossos_coracoes"
     },
     {
         "dia": "319",
@@ -3506,7 +3824,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Vida em Espírito e Não na Carne', baseada no texto bíblico de Romanos 8:1-17 (ARA)."
-        }
+        },
+        "slug": "319_a_vida_em_espirito_e_nao_na_carne"
     },
     {
         "dia": "320",
@@ -3517,7 +3836,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Exortação à Humildade e Serviço', baseada no texto bíblico de Filipenses 2:1-11 (ARA)."
-        }
+        },
+        "slug": "320_a_exortacao_a_humildade_e_servico"
     },
     {
         "dia": "321",
@@ -3528,7 +3848,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Confiança na Graça de Deus', baseada no texto bíblico de 2 Coríntios 12:7-10 (ARA)."
-        }
+        },
+        "slug": "321_a_confianca_na_graca_de_deus"
     },
     {
         "dia": "322",
@@ -3539,7 +3860,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A Esperança da Ressurreição', baseada no texto bíblico de 1 Tessalonicenses 4:13-18 (ARA)."
-        }
+        },
+        "slug": "322_a_esperanca_da_ressurreicao"
     },
     {
         "dia": "323",
@@ -3550,7 +3872,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Vida de Oração e Ação de Graças', baseada no texto bíblico de Colossenses 4:2 (ARA)."
-        }
+        },
+        "slug": "323_a_vida_de_oracao_e_acao_de_gracas"
     },
     {
         "dia": "324",
@@ -3561,7 +3884,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Chamado à Santidade', baseada no texto bíblico de 1 Pedro 1:13-16 (ARA)."
-        }
+        },
+        "slug": "324_o_chamado_a_santidade"
     },
     {
         "dia": "325",
@@ -3572,7 +3896,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Amor Fraternal e a Hospitalidade', baseada no texto bíblico de Hebreus 13:1-3 (ARA)."
-        }
+        },
+        "slug": "325_o_amor_fraternal_e_a_hospitalidade"
     },
     {
         "dia": "326",
@@ -3583,7 +3908,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A armadura de Deus', baseada no texto bíblico de Efésios 6:10-18 (ARA)."
-        }
+        },
+        "slug": "326_a_armadura_de_deus"
     },
     {
         "dia": "327",
@@ -3594,7 +3920,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A Exortação à Unidade', baseada no texto bíblico de Romanos 12:4-5 (ARA)."
-        }
+        },
+        "slug": "327_a_exortacao_a_unidade"
     },
     {
         "dia": "328",
@@ -3605,7 +3932,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Amor como Cumprimento da Lei', baseada no texto bíblico de Romanos 13:8 (ARA)."
-        }
+        },
+        "slug": "328_o_amor_como_cumprimento_da_lei"
     },
     {
         "dia": "329",
@@ -3616,7 +3944,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A Armadura de Deus', baseada no texto bíblico de Efésios 6:11 (ARA)."
-        }
+        },
+        "slug": "329_a_armadura_de_deus"
     },
     {
         "dia": "330",
@@ -3627,7 +3956,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Fruto do Espírito', baseada no texto bíblico de Gálatas 5:22-23 (ARA)."
-        }
+        },
+        "slug": "330_o_fruto_do_espirito"
     },
     {
         "dia": "331",
@@ -3638,7 +3968,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A Nova Criação em Cristo', baseada no texto bíblico de 2 Coríntios 5:17 (ARA)."
-        }
+        },
+        "slug": "331_a_nova_criacao_em_cristo"
     },
     {
         "dia": "332",
@@ -3649,7 +3980,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Suficiência da Graça', baseada no texto bíblico de 2 Coríntios 12:9 (ARA)."
-        }
+        },
+        "slug": "332_a_suficiencia_da_graca"
     },
     {
         "dia": "333",
@@ -3660,7 +3992,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O Chamado para a Santidade', baseada no texto bíblico de 1 Tessalonicenses 4:7 (ARA)."
-        }
+        },
+        "slug": "333_o_chamado_para_a_santidade"
     },
     {
         "dia": "334",
@@ -3671,7 +4004,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'A Esperança da Ressurreição', baseada no texto bíblico de 1 Tessalonicenses 4:14 (ARA)."
-        }
+        },
+        "slug": "334_a_esperanca_da_ressurreicao"
     },
     {
         "dia": "335",
@@ -3682,7 +4016,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Amor de Deus Manifestado', baseada no texto bíblico de 1 João 4:9 (ARA)."
-        }
+        },
+        "slug": "335_o_amor_de_deus_manifestado"
     },
     {
         "dia": "336",
@@ -3693,7 +4028,8 @@
         "imagem": {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80",
             "alt": "Representação visual de 'O Nascimento de João Batista', baseada no texto bíblico de Lucas 1:13-17 (ARA)."
-        }
+        },
+        "slug": "336_o_nascimento_de_joao_batista"
     },
     {
         "dia": "337",
@@ -3704,7 +4040,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Ministério de João Batista', baseada no texto bíblico de Mateus 3:1-3 (ARA)."
-        }
+        },
+        "slug": "337_o_ministerio_de_joao_batista"
     },
     {
         "dia": "338",
@@ -3715,7 +4052,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Anúncio do Nascimento de Jesus', baseada no texto bíblico de Lucas 1:26-31 (ARA)."
-        }
+        },
+        "slug": "338_o_anuncio_do_nascimento_de_jesus"
     },
     {
         "dia": "339",
@@ -3726,7 +4064,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/nativity_of_jesus.png",
             "alt": "Representação visual de 'O Nascimento de Jesus', baseada no texto bíblico de Lucas 2:6-7 (ARA)."
-        }
+        },
+        "slug": "339_o_nascimento_de_jesus"
     },
     {
         "dia": "340",
@@ -3737,7 +4076,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Visita dos Pastores', baseada no texto bíblico de Lucas 2:15-16 (ARA)."
-        }
+        },
+        "slug": "340_a_visita_dos_pastores"
     },
     {
         "dia": "341",
@@ -3748,7 +4088,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Adoração dos Magos', baseada no texto bíblico de Mateus 2:1-2 (ARA)."
-        }
+        },
+        "slug": "341_a_adoracao_dos_magos"
     },
     {
         "dia": "342",
@@ -3759,7 +4100,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Fuga para o Egito', baseada no texto bíblico de Mateus 2:13 (ARA)."
-        }
+        },
+        "slug": "342_a_fuga_para_o_egito"
     },
     {
         "dia": "343",
@@ -3770,7 +4112,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Jesus no Templo aos Doze Anos', baseada no texto bíblico de Lucas 2:41-47 (ARA)."
-        }
+        },
+        "slug": "343_jesus_no_templo_aos_doze_anos"
     },
     {
         "dia": "344",
@@ -3781,7 +4124,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Batismo de Jesus', baseada no texto bíblico de Mateus 3:16-17 (ARA)."
-        }
+        },
+        "slug": "344_o_batismo_de_jesus"
     },
     {
         "dia": "345",
@@ -3792,7 +4136,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Ministério de João Batista', baseada no texto bíblico de João 1:29 (ARA)."
-        }
+        },
+        "slug": "345_o_ministerio_de_joao_batista"
     },
     {
         "dia": "346",
@@ -3803,7 +4148,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Preparação para a Vinda do Senhor', baseada no texto bíblico de Lucas 3:4-6 (ARA)."
-        }
+        },
+        "slug": "346_a_preparacao_para_a_vinda_do_senhor"
     },
     {
         "dia": "347",
@@ -3814,7 +4160,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Preparação para o Advento', baseada no texto bíblico de Isaías 40:3-5 (ARA)."
-        }
+        },
+        "slug": "347_a_preparacao_para_o_advento"
     },
     {
         "dia": "348",
@@ -3825,7 +4172,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'João Batista Prepara o Caminho', baseada no texto bíblico de Mateus 3:1-3 (ARA)."
-        }
+        },
+        "slug": "348_joao_batista_prepara_o_caminho"
     },
     {
         "dia": "349",
@@ -3836,7 +4184,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Nascimento de João Batista', baseada no texto bíblico de Lucas 1:57-60 (ARA)."
-        }
+        },
+        "slug": "349_o_nascimento_de_joao_batista"
     },
     {
         "dia": "350",
@@ -3847,7 +4196,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Anúncio do Nascimento de Jesus', baseada no texto bíblico de Lucas 1:26-33 (ARA)."
-        }
+        },
+        "slug": "350_o_anuncio_do_nascimento_de_jesus"
     },
     {
         "dia": "351",
@@ -3858,7 +4208,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Maria Visita Isabel', baseada no texto bíblico de Lucas 1:39-45 (ARA)."
-        }
+        },
+        "slug": "351_maria_visita_isabel"
     },
     {
         "dia": "352",
@@ -3869,7 +4220,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Cântico de Maria', baseada no texto bíblico de Lucas 1:46-55 (ARA)."
-        }
+        },
+        "slug": "352_o_cantico_de_maria"
     },
     {
         "dia": "353",
@@ -3880,7 +4232,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/nativity_of_jesus.png",
             "alt": "Representação visual de 'O Nascimento de Jesus', baseada no texto bíblico de Lucas 2:1-7 (ARA)."
-        }
+        },
+        "slug": "353_o_nascimento_de_jesus"
     },
     {
         "dia": "354",
@@ -3891,7 +4244,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Os Pastores e o Anjo', baseada no texto bíblico de Lucas 2:8-14 (ARA)."
-        }
+        },
+        "slug": "354_os_pastores_e_o_anjo"
     },
     {
         "dia": "355",
@@ -3902,7 +4256,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Visita dos Pastores', baseada no texto bíblico de Lucas 2:15-20 (ARA)."
-        }
+        },
+        "slug": "355_a_visita_dos_pastores"
     },
     {
         "dia": "356",
@@ -3913,7 +4268,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Circuncisão e o Nome de Jesus', baseada no texto bíblico de Lucas 2:21 (ARA)."
-        }
+        },
+        "slug": "356_a_circuncisao_e_o_nome_de_jesus"
     },
     {
         "dia": "357",
@@ -3924,7 +4280,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Apresentação no Templo', baseada no texto bíblico de Lucas 2:22-24 (ARA)."
-        }
+        },
+        "slug": "357_a_apresentacao_no_templo"
     },
     {
         "dia": "358",
@@ -3935,7 +4292,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Simeão e a Promessa Cumprida', baseada no texto bíblico de Lucas 2:25-35 (ARA)."
-        }
+        },
+        "slug": "358_simeao_e_a_promessa_cumprida"
     },
     {
         "dia": "359",
@@ -3946,7 +4304,8 @@
         "imagem": {
             "url": "https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/nativity_of_jesus.png",
             "alt": "Representação visual de 'O nascimento de Jesus', baseada no texto bíblico de Lucas 2:1-20 (ARA)."
-        }
+        },
+        "slug": "359_o_nascimento_de_jesus"
     },
     {
         "dia": "360",
@@ -3957,7 +4316,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Natal: O Verbo se Fez Carne', baseada no texto bíblico de João 1:14 (ARA)."
-        }
+        },
+        "slug": "360_o_natal_o_verbo_se_fez_carne"
     },
     {
         "dia": "361",
@@ -3968,7 +4328,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'A Fuga para o Egito', baseada no texto bíblico de Mateus 2:13-15 (ARA)."
-        }
+        },
+        "slug": "361_a_fuga_para_o_egito"
     },
     {
         "dia": "362",
@@ -3979,7 +4340,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O Retorno a Nazaré', baseada no texto bíblico de Mateus 2:19-23 (ARA)."
-        }
+        },
+        "slug": "362_o_retorno_a_nazare"
     },
     {
         "dia": "363",
@@ -3990,7 +4352,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Os Santos Inocentes', baseada no texto bíblico de Mateus 2:16-18 (ARA)."
-        }
+        },
+        "slug": "363_os_santos_inocentes"
     },
     {
         "dia": "364",
@@ -4001,7 +4364,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Jesus no Templo aos Doze Anos', baseada no texto bíblico de Lucas 2:41-50 (ARA)."
-        }
+        },
+        "slug": "364_jesus_no_templo_aos_doze_anos"
     },
     {
         "dia": "365",
@@ -4012,7 +4376,8 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'Jesus Cresce em Sabedoria', baseada no texto bíblico de Lucas 2:51-52 (ARA)."
-        }
+        },
+        "slug": "365_jesus_cresce_em_sabedoria"
     },
     {
         "dia": "366",
@@ -4023,6 +4388,7 @@
         "imagem": {
             "url": "https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg",
             "alt": "Representação visual de 'O dia especial: A graça de Deus é suficiente', baseada no texto bíblico de 2 Coríntios 12:9 (ARA)."
-        }
+        },
+        "slug": "366_o_dia_especial_a_graca_de_deus_e_suficiente"
     }
 ]
