@@ -38,16 +38,29 @@ function obterDiaDoQuery() {
   return params.get('page') || params.get('day');
 }
 
+function obterSlugDoQuery() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('p');
+}
+
 function carregarDados() {
   const hoje = new Date();
+  const slugQuery = obterSlugDoQuery();
   const diaQuery = obterDiaDoQuery();
-  const diaAtual = diaQuery ? String(diaQuery) : String(diaDoAno(hoje));
-  
-  // Busca no array pelos dados que correspondem ao dia do ano
-  const pagina = DADOS.find(item => item.dia === diaAtual);
+  const diaAtual = String(diaDoAno(hoje));
+
+  // Prioriza slug na URL; dia fica apenas para fallback/compatibilidade.
+  let pagina = null;
+  if (slugQuery) {
+    pagina = DADOS.find(item => item.slug === String(slugQuery));
+  } else if (diaQuery) {
+    pagina = DADOS.find(item => item.dia === String(diaQuery));
+  } else {
+    pagina = DADOS.find(item => item.dia === diaAtual);
+  }
   
   if (!pagina) {
-    console.warn(`Nenhum dado encontrado para o dia ${diaAtual}`);
+    console.warn(`Nenhum dado encontrado para slug "${slugQuery}"`);
     return {
       dia: diaAtual,
       data: formatarDataBR(hoje),
@@ -60,8 +73,8 @@ function carregarDados() {
 
   return {
     ...pagina,
-    dia: String(diaAtual),
-    data: diaQuery ? '' : formatarDataBR(hoje)
+    dia: String(pagina.dia || diaAtual),
+    data: slugQuery || diaQuery ? '' : formatarDataBR(hoje)
   };
 }
 
@@ -72,22 +85,31 @@ function popularPagina(pagina) {
   const palavras = titulo.split(' ').filter(Boolean);
   const ultima = palavras.pop() || '';
   const primeiraParte = palavras.join(' ');
-  const diaQuery = obterDiaDoQuery();
 
   tituloEl.innerHTML = primeiraParte ? `${primeiraParte} <em>${ultima}</em>` : ultima;
 
-  document.getElementById('previous-day').href = `?page=${String(Number(diaQuery) - 1)}`;
+  const historiasOrdenadas = [...DADOS].sort((a, b) => Number(a.dia) - Number(b.dia));
+  const indiceAtual = historiasOrdenadas.findIndex(item => item.slug === pagina.slug);
+  const anterior = indiceAtual > 0 ? historiasOrdenadas[indiceAtual - 1] : null;
+  const proxima = indiceAtual >= 0 && indiceAtual < historiasOrdenadas.length - 1
+    ? historiasOrdenadas[indiceAtual + 1]
+    : null;
 
-  if (diaQuery) {
-    // if (diaQuery > 1) {
-    //   document.getElementById('previous-day').href = `?page=${String(Number(diaQuery) - 1)}`;
-    //   document.getElementById('previous-day').style.display = 'inline-block';
-    // }
+  const previousEl = document.getElementById('previous-day');
+  const nextEl = document.getElementById('next-day');
 
-    if (diaQuery < 365) {
-      document.getElementById('next-day').href = `?page=${String(Number(diaQuery) + 1)}`;
-      document.getElementById('next-day').style.display = 'inline-block';
-    }
+  if (previousEl && anterior?.slug) {
+    previousEl.href = `?p=${encodeURIComponent(anterior.slug)}`;
+    previousEl.style.display = 'inline-block';
+  } else if (previousEl) {
+    previousEl.style.display = 'none';
+  }
+
+  if (nextEl && proxima?.slug) {
+    nextEl.href = `?p=${encodeURIComponent(proxima.slug)}`;
+    nextEl.style.display = 'inline-block';
+  } else if (nextEl) {
+    nextEl.style.display = 'none';
   }
 
   // Subtítulo / referência
