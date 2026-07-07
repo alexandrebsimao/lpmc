@@ -100,14 +100,24 @@ function popularPagina(pagina) {
 
   if (previousEl && anterior?.slug) {
     previousEl.href = `?p=${encodeURIComponent(anterior.slug)}`;
-    previousEl.style.display = 'inline-block';
+    previousEl.setAttribute('aria-label', `História anterior: ${anterior.titulo}`);
+    const previousTitle = previousEl.querySelector('.nav-title');
+    if (previousTitle) {
+      previousTitle.textContent = anterior.titulo || 'História anterior';
+    }
+    previousEl.style.display = 'inline-flex';
   } else if (previousEl) {
     previousEl.style.display = 'none';
   }
 
   if (nextEl && proxima?.slug) {
     nextEl.href = `?p=${encodeURIComponent(proxima.slug)}`;
-    nextEl.style.display = 'inline-block';
+    nextEl.setAttribute('aria-label', `Próxima história: ${proxima.titulo}`);
+    const nextTitle = nextEl.querySelector('.nav-title');
+    if (nextTitle) {
+      nextTitle.textContent = proxima.titulo || 'Próxima história';
+    }
+    nextEl.style.display = 'inline-flex';
   } else if (nextEl) {
     nextEl.style.display = 'none';
   }

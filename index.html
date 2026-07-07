@@ -97,11 +97,30 @@
       </a> -->
     </div>
 
-    <div class="navigation-links">
-      <a href="#" id="previous-day">História anterior</a>
-      <a href="stories.html" class="stories-link">Ver todas as histórias</a>
-      <a href="#" id="next-day">Próxima história</a>
-    </div>
+    <nav class="home-navigation" aria-label="Navegação da leitura">
+      <div class="story-nav">
+        <a href="#" id="previous-day" class="story-nav-link story-nav-link--prev" rel="prev">
+          <span class="nav-arrow" aria-hidden="true">←</span>
+          <span>
+            <span class="nav-kicker">Anterior</span>
+            <span class="nav-title">História anterior</span>
+          </span>
+        </a>
+
+        <a href="#" id="next-day" class="story-nav-link story-nav-link--next" rel="next">
+          <span>
+            <span class="nav-kicker">Próxima</span>
+            <span class="nav-title">Próxima história</span>
+          </span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="page-links">
+        <a href="stories.html" class="stories-link">Ver todas as histórias</a>
+        <a href="about.html" class="stories-link">Sobre</a>
+      </div>
+    </nav>
 
   </section>
 
