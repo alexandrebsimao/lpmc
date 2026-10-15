@@ -125,8 +125,25 @@ function popularPagina(pagina) {
   // Subtítulo / referência
   document.getElementById('subtitulo').textContent = pagina.referencia || '';
 
-  // Texto principal: aceita texto ou historia
-  document.getElementById('historia').textContent = pagina.texto || pagina.historia || '';
+  // Texto principal: exibe imediatamente e sincroniza com a fonte oficial da Bíblia
+  const historiaEl = document.getElementById('historia');
+  historiaEl.textContent = pagina.texto || pagina.historia || '';
+
+  if (pagina.referencia) {
+    const sincronizarComFonteBiblica = async () => {
+      try {
+        if (window.BibleReader && typeof window.BibleReader.fetchPassage === 'function') {
+          const textoBiblia = await window.BibleReader.fetchPassage(pagina.referencia);
+          if (textoBiblia && textoBiblia.trim()) {
+            historiaEl.textContent = textoBiblia;
+          }
+        }
+      } catch (err) {
+        console.warn('Erro ao sincronizar com a fonte bíblica:', err);
+      }
+    };
+    sincronizarComFonteBiblica();
+  }
 
   // Label com dia / data, se houver
   const labelEl = document.querySelector('.label');

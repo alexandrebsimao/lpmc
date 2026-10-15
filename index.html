@@ -13,8 +13,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Leia histórias bíblicas diárias com reflexões e versículos da Bíblia Almeida Revista e Atualizada. Cresça espiritualmente com leituras bíblicas." />
-  <meta name="keywords" content="leitura bíblica, histórias bíblicas, diária, Bíblia, versículos, reflexão espiritual, ARA" />
+  <meta name="description" content="Leia histórias bíblicas diárias com reflexões e versículos da Bíblia Nova Almeida Atualizada. Cresça espiritualmente com leituras bíblicas." />
+  <meta name="keywords" content="leitura bíblica, histórias bíblicas, diária, Bíblia, versículos, reflexão espiritual, NAA" />
   <meta name="theme-color" content="#1a1612" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="Portuguese" />
@@ -90,7 +90,16 @@
     <div class="content">
       <p class="label"></p>
       <h1 id="titulo"></h1>
-      <p class="subtitle" id="subtitulo"></p>
+      <div class="reference-box">
+        <p class="subtitle" id="subtitulo" title="Clique para ler o capítulo completo na Bíblia"></p>
+        <button type="button" id="btn-read-chapter" class="read-chapter-btn" aria-label="Ler capítulo completo na Bíblia">
+          <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          <span>Ler capítulo completo</span>
+        </button>
+      </div>
       <p class="historia" id="historia"></p>
       <!-- <a class="cta-btn" id="cta" href="#">
         <span></span>
@@ -120,15 +129,65 @@
 
       <div class="page-links">
         <a href="stories.html" class="stories-link">Ver todas as histórias</a>
+        <button type="button" id="open-bible-nav" class="stories-link stories-link--btn">Bíblia Completa</button>
         <a href="about.html" class="stories-link">Sobre</a>
       </div>
     </nav>
 
   </section>
 
+  <!-- Drawer da Bíblia Completa (NAA) -->
+  <div id="bible-drawer" class="bible-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bible-drawer-title">
+    <div class="bible-drawer-backdrop" id="bible-drawer-backdrop"></div>
+    <div class="bible-drawer-panel">
+      <!-- Header do Drawer com Seletores -->
+      <header class="bible-drawer-header">
+        <div class="bible-drawer-selectors">
+          <div class="bible-select-wrap">
+            <label for="bible-book-select" class="sr-only">Selecionar Livro</label>
+            <select id="bible-book-select" class="bible-select" aria-label="Selecionar Livro"></select>
+          </div>
+          <div class="bible-select-wrap">
+            <label for="bible-chapter-select" class="sr-only">Selecionar Capítulo</label>
+            <select id="bible-chapter-select" class="bible-select" aria-label="Selecionar Capítulo"></select>
+          </div>
+          <span class="bible-version-badge" title="Nova Almeida Atualizada">NAA</span>
+        </div>
+        <button id="bible-drawer-close" class="bible-drawer-close-btn" aria-label="Fechar leitor da Bíblia">✕</button>
+      </header>
+
+      <!-- Conteúdo do Capítulo -->
+      <div class="bible-drawer-body" id="bible-drawer-body">
+        <div id="bible-drawer-loading" class="bible-drawer-loading">
+          <div class="spinner"></div>
+          <span>Carregando Escrituras...</span>
+        </div>
+        <div id="bible-chapter-container" class="bible-chapter-container">
+          <div class="bible-chapter-header">
+            <h2 id="bible-drawer-title" class="bible-drawer-title"></h2>
+            <div id="bible-drawer-context-tag" class="bible-drawer-context-tag"></div>
+          </div>
+          <div id="bible-verses-list" class="bible-verses-list"></div>
+        </div>
+      </div>
+
+      <!-- Footer do Drawer com Navegação de Capítulos -->
+      <footer class="bible-drawer-footer">
+        <button id="bible-prev-chapter" class="bible-nav-btn" aria-label="Capítulo anterior">
+          <span aria-hidden="true">←</span> <span>Capítulo Anterior</span>
+        </button>
+        <span id="bible-chapter-indicator" class="bible-chapter-indicator"></span>
+        <button id="bible-next-chapter" class="bible-nav-btn" aria-label="Próximo capítulo">
+          <span>Próximo Capítulo</span> <span aria-hidden="true">→</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+
   <!-- Rodapé -->
-  <footer id="rodape">Via Scriptura - Leitura bíblica diária - Versão Almeida Revista e Atualizada</footer>
+  <footer id="rodape">Via Scriptura - Leitura bíblica diária - Versão Nova Almeida Atualizada (NAA)</footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/bible-reader.js"></script>
 </body>
 </html>
