@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "c001",
+    "titulo": "A Genealogia de Sete e o Arrebatamento de Enoque",
+    "referencia": "Gênesis 5:21-24",
+    "categoria": "Origens"
+  },
+  {
+    "id": "c002",
+    "titulo": "A Corrupção da Humanidade e a Graça Achada por Noé",
+    "referencia": "Gênesis 6:1-8",
+    "categoria": "Origens"
+  },
+  {
+    "id": "c003",
+    "titulo": "Noé Planta uma Vinha e a Profecia sobre Sem, Cam e Jafé",
+    "referencia": "Gênesis 9:18-29",
+    "categoria": "Origens"
+  },
+  {
+    "id": "c004",
+    "titulo": "A Tábua das Nações Pós-Dilúvio",
+    "referencia": "Gênesis 10:1-32",
+    "categoria": "Origens"
+  },
+  {
+    "id": "c005",
+    "titulo": "Abrão Desce ao Egito durante a Fome",
+    "referencia": "Gênesis 12:10-20",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c006",
+    "titulo": "Abrão Resgata Ló e o Encontro com Melquisedeque",
+    "referencia": "Gênesis 14:1-24",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c007",
+    "titulo": "A Intercessão de Abraão por Sodoma",
+    "referencia": "Gênesis 18:16-33",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c008",
+    "titulo": "Abraão e Abimeleque em Gerar",
+    "referencia": "Gênesis 20:1-18",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c009",
+    "titulo": "Agar e Ismael no Deserto de Berseba",
+    "referencia": "Gênesis 21:8-21",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c010",
+    "titulo": "A Aliança de Abraão e Abimeleque em Berseba",
+    "referencia": "Gênesis 21:22-34",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c011",
+    "titulo": "A Morte de Sara e a Compra da Caverna de Macpela",
+    "referencia": "Gênesis 23:1-20",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c012",
+    "titulo": "Isaque em Gerar e os Poços de Água Viva",
+    "referencia": "Gênesis 26:1-33",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c013",
+    "titulo": "Jacó Recebe a Bênção de Isaque no Lugar de Esaú",
+    "referencia": "Gênesis 27:1-46",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c014",
+    "titulo": "O Nascimento dos Filhos de Jacó em Harã",
+    "referencia": "Gênesis 29:31-35",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c015",
+    "titulo": "A Partida de Jacó de Harã e o Pacto com Labão em Mizpá",
+    "referencia": "Gênesis 31:1-55",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c016",
+    "titulo": "Jacó Luta com Deus no Vau de Jaboque e Recebe o Nome Israel",
+    "referencia": "Gênesis 32:22-32",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c017",
+    "titulo": "O Episódio de Diná em Siquém",
+    "referencia": "Gênesis 34:1-31",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c018",
+    "titulo": "O Retorno de Jacó a Betel e o Nascimento de Benjamim",
+    "referencia": "Gênesis 35:1-29",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c019",
+    "titulo": "Judá e Tamar",
+    "referencia": "Gênesis 38:1-30",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c020",
+    "titulo": "A Segunda Viagem dos Irmãos de José ao Egito com Benjamim",
+    "referencia": "Gênesis 43:1-34",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c021",
+    "titulo": "A Taça de Prata de José e a Intercessão de Judá por Benjamim",
+    "referencia": "Gênesis 44:1-34",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c022",
+    "titulo": "Jacó Abençoa Efraim e Manassés de Mãos Cruzadas",
+    "referencia": "Gênesis 48:1-22",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c023",
+    "titulo": "As Bênçãos Proféticas de Jacó sobre as Doze Tribos de Israel",
+    "referencia": "Gênesis 49:1-28",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c024",
+    "titulo": "O Perdão de José aos Irmãos: Deus o Tornou em Bem",
+    "referencia": "Gênesis 50:15-21",
+    "categoria": "Patriarcas"
+  },
+  {
+    "id": "c025",
+    "titulo": "A Opressão no Egito e a Coragem das Parteiras Sifrá e Puá",
+    "referencia": "Êxodo 1:1-22",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c026",
+    "titulo": "A Fuga de Moisés para Midiã e o Casamento com Zípora",
+    "referencia": "Êxodo 2:11-25",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c027",
+    "titulo": "Os Sinais da Vara e a Escolha de Arão como Porta-Voz",
+    "referencia": "Êxodo 4:1-31",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c028",
+    "titulo": "As Pragas das Rãs, Piolhos e Moscas no Egito",
+    "referencia": "Êxodo 8:1-32",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c029",
+    "titulo": "As Pragas da Peste, Úlceras e Chuva de Pedras",
+    "referencia": "Êxodo 9:1-35",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c030",
+    "titulo": "As Pragas dos Gafanhotos e das Trevas Espessas",
+    "referencia": "Êxodo 10:1-29",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c031",
+    "titulo": "A Coluna de Nuvem de Dia e a Coluna de Fogo de Noite",
+    "referencia": "Êxodo 13:17-22",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c032",
+    "titulo": "O Cântico de Moisés e Miriã e as Águas Amargas de Mara",
+    "referencia": "Êxodo 15:1-27",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c033",
+    "titulo": "A Batalha contra Amaleque e as Mãos Erguidas de Moisés",
+    "referencia": "Êxodo 17:8-16",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c034",
+    "titulo": "O Conselho de Jetro a Moisés no Deserto",
+    "referencia": "Êxodo 18:1-27",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c035",
+    "titulo": "Israel ao Pé do Monte Sinai e a Descida da Glória de Deus",
+    "referencia": "Êxodo 19:1-25",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c036",
+    "titulo": "A Confirmação da Aliança no Sinai",
+    "referencia": "Êxodo 24:1-18",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c037",
+    "titulo": "O Chamado de Bezalel e Aoliabe Cheios do Espírito de Deus",
+    "referencia": "Êxodo 31:1-11",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c038",
+    "titulo": "Moisés Pede para Ver a Glória do Senhor",
+    "referencia": "Êxodo 33:12-23",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c039",
+    "titulo": "As Novas Tábuas da Aliança e o Rosto Resplandecente de Moisés",
+    "referencia": "Êxodo 34:1-35",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c040",
+    "titulo": "O Tabernáculo é Erguido e Cheio da Glória do Senhor",
+    "referencia": "Êxodo 40:1-38",
+    "categoria": "Êxodo"
+  },
+  {
+    "id": "c041",
+    "titulo": "O Fogo Estranho de Nadabe e Abiú",
+    "referencia": "Levítico 10:1-11",
+    "categoria": "Lei e Aliança"
+  },
+  {
+    "id": "c042",
+    "titulo": "As Festas Solenes do Senhor",
+    "referencia": "Levítico 23:1-44",
+    "categoria": "Lei e Aliança"
+  },
+  {
+    "id": "c043",
+    "titulo": "O Ano Sabático e o Ano do Jubileu",
+    "referencia": "Levítico 25:1-24",
+    "categoria": "Lei e Aliança"
+  },
+  {
+    "id": "c044",
+    "titulo": "O Voto de Nazireu e a Bênção Sacerdotal Aarônica",
+    "referencia": "Números 6:1-27",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c045",
+    "titulo": "Os Setenta Anciãos Recebem o Espírito e Profetizam",
+    "referencia": "Números 11:16-30",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c046",
+    "titulo": "A Murmuração de Miriã e Arão e a Mansidão de Moisés",
+    "referencia": "Números 12:1-16",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c047",
+    "titulo": "Os Doze Espias em Canaã e a Fé de Josué e Calebe",
+    "referencia": "Números 13:1-33",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c048",
+    "titulo": "A Vara de Arão que Floresceu",
+    "referencia": "Números 17:1-13",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c049",
+    "titulo": "As Águas de Meribá e a Morte de Arão no Monte Hor",
+    "referencia": "Números 20:1-29",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c050",
+    "titulo": "A Profecia Messiânica de Balaão: Uma Estrela Procederá de Jacó",
+    "referencia": "Números 24:15-19",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c051",
+    "titulo": "As Filhas de Zelofeade e o Direito de Herança",
+    "referencia": "Números 27:1-11",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c052",
+    "titulo": "As Seis Cidades de Refúgio em Israel",
+    "referencia": "Números 35:9-28",
+    "categoria": "Deserto"
+  },
+  {
+    "id": "c053",
+    "titulo": "O Shemá Israel: Amarás o Senhor teu Deus de Todo o Coração",
+    "referencia": "Deuteronômio 6:1-15",
+    "categoria": "Lei e Aliança"
+  },
+  {
+    "id": "c054",
+    "titulo": "A Promessa de um Profeta Semelhante a Moisés",
+    "referencia": "Deuteronômio 18:15-22",
+    "categoria": "Lei e Aliança"
+  },
+  {
+    "id": "c055",
+    "titulo": "As Bênçãos da Obediência e a Escolha da Vida",
+    "referencia": "Deuteronômio 30:11-20",
+    "categoria": "Lei e Aliança"
+  },
+  {
+    "id": "c056",
+    "titulo": "O Cântico de Moisés: A Rocha cuja Obra é Perfeita",
+    "referencia": "Deuteronômio 32:1-47",
+    "categoria": "Lei e Aliança"
+  },
+  {
+    "id": "c057",
+    "titulo": "O Príncipe do Exército do Senhor Aparece a Josué",
+    "referencia": "Josué 5:13-15",
+    "categoria": "Conquista"
+  },
+  {
+    "id": "c058",
+    "titulo": "A Astúcia dos Gibeonitas e a Aliança com Israel",
+    "referencia": "Josué 9:1-27",
+    "categoria": "Conquista"
+  },
+  {
+    "id": "c059",
+    "titulo": "O Altar Testemunha junto ao Rio Jordão",
+    "referencia": "Josué 22:10-34",
+    "categoria": "Conquista"
+  },
+  {
+    "id": "c060",
+    "titulo": "O Pacto em Siquém: Eu e a Minha Casa Serviremos ao Senhor",
+    "referencia": "Josué 24:1-28",
+    "categoria": "Conquista"
+  },
+  {
+    "id": "c061",
+    "titulo": "Os Juízes Otoniel, Eúde e Sangar Libertam Israel",
+    "referencia": "Juízes 3:7-31",
+    "categoria": "Juízes"
+  },
+  {
+    "id": "c062",
+    "titulo": "O Cântico de Vitória de Débora e Baraque",
+    "referencia": "Juízes 5:1-31",
+    "categoria": "Juízes"
+  },
+  {
+    "id": "c063",
+    "titulo": "O Chamado de Gideão e o Sinal da Lã e do Orvalho",
+    "referencia": "Juízes 6:11-40",
+    "categoria": "Juízes"
+  },
+  {
+    "id": "c064",
+    "titulo": "A Parábola das Árvores de Jotão contra Abimeleque",
+    "referencia": "Juízes 9:7-21",
+    "categoria": "Juízes"
+  },
+  {
+    "id": "c065",
+    "titulo": "Jefté Liberta Israel dos Amonitas e Seu Voto",
+    "referencia": "Juízes 11:1-40",
+    "categoria": "Juízes"
+  },
+  {
+    "id": "c066",
+    "titulo": "O Anjo do Senhor Anuncia o Nascimento de Sansão a Manoá",
+    "referencia": "Juízes 13:1-25",
+    "categoria": "Juízes"
+  },
+  {
+    "id": "c067",
+    "titulo": "O Enigma de Sansão e a Vitória em Leí",
+    "referencia": "Juízes 14:1-20",
+    "categoria": "Juízes"
+  },
+  {
+    "id": "c068",
+    "titulo": "O Clamor Final e a Morte de Sansão no Templo de Dagom",
+    "referencia": "Juízes 16:23-31",
+    "categoria": "Juízes"
+  },
+  {
+    "id": "c069",
+    "titulo": "Rute Colhe Espigas no Campo de Boaz",
+    "referencia": "Rute 2:1-23",
+    "categoria": "Redenção"
+  },
+  {
+    "id": "c070",
+    "titulo": "Rute na Eira e a Promessa do Resgatador Boaz",
+    "referencia": "Rute 3:1-18",
+    "categoria": "Redenção"
+  },
+  {
+    "id": "c071",
+    "titulo": "O Cântico de Ana: O Senhor Exalta os Humildes",
+    "referencia": "1 Samuel 2:1-10",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c072",
+    "titulo": "A Arca no Templo de Dagom e a Devolução a Israel",
+    "referencia": "1 Samuel 5:1-12",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c073",
+    "titulo": "O Avivamento em Mizpá e a Pedra de Ebenézer",
+    "referencia": "1 Samuel 7:1-17",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c074",
+    "titulo": "Israel Pede um Rei e a Advertência de Samuel",
+    "referencia": "1 Samuel 8:1-22",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c075",
+    "titulo": "A Coragem de Jônatas e Seu Escudeiro em Micmás",
+    "referencia": "1 Samuel 14:1-23",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c076",
+    "titulo": "A Rejeição de Saul: Obedecer é Melhor do que Sacrificar",
+    "referencia": "1 Samuel 15:1-35",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c077",
+    "titulo": "Samuel Unge Davi em Belém: O Senhor Olha para o Coração",
+    "referencia": "1 Samuel 16:1-23",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c078",
+    "titulo": "Davi, Nabal e a Sabedoria Pacificadora de Abigail",
+    "referencia": "1 Samuel 25:1-44",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c079",
+    "titulo": "Davi Poupa Saul pela Segunda Vez na Colina de Haquila",
+    "referencia": "1 Samuel 26:1-25",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c080",
+    "titulo": "Davi Fortalece-se no Senhor e Recupera Tudo em Ziclague",
+    "referencia": "1 Samuel 30:1-31",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c081",
+    "titulo": "O Cântico do Arco: Lamento de Davi por Saul e Jônatas",
+    "referencia": "2 Samuel 1:17-27",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c082",
+    "titulo": "A Bondade de Davi para com Mefibosete, Filho de Jônatas",
+    "referencia": "2 Samuel 9:1-13",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c083",
+    "titulo": "Os Valentes de Davi e a Água do Poço de Belém",
+    "referencia": "2 Samuel 23:8-17",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c084",
+    "titulo": "Davi Compra a Eira de Araúna e Ergue um Altar ao Senhor",
+    "referencia": "2 Samuel 24:18-25",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c085",
+    "titulo": "A Coroação do Rei Salomão por Ordem de Davi",
+    "referencia": "1 Reis 1:28-53",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c086",
+    "titulo": "O Julgamento Sábio de Salomão entre as Duas Mães",
+    "referencia": "1 Reis 3:16-28",
+    "categoria": "Reino Unido"
+  },
+  {
+    "id": "c087",
+    "titulo": "Elias no Ribeiro de Querite e a Farinha e o Azeite da Viúva de Sarepta",
+    "referencia": "1 Reis 17:1-16",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c088",
+    "titulo": "Elias Ressuscita o Filho da Viúva de Sarepta",
+    "referencia": "1 Reis 17:17-24",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c089",
+    "titulo": "A Oração de Elias por Chuva e a Pequena Nuvem no Horizonte",
+    "referencia": "1 Reis 18:41-46",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c090",
+    "titulo": "O Chamado de Eliseu para Seguir Elias",
+    "referencia": "1 Reis 19:19-21",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c091",
+    "titulo": "O Profeta Micaías Diante de Acabe e Josafá",
+    "referencia": "1 Reis 22:1-28",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c092",
+    "titulo": "O Azeite da Viúva Multiplicado pelo Profeta Eliseu",
+    "referencia": "2 Reis 4:1-7",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c093",
+    "titulo": "Eliseu e a Mulher Sunamita: A Ressurreição de seu Filho",
+    "referencia": "2 Reis 4:8-37",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c094",
+    "titulo": "O Milagre do Machado que Flutuou e os Carros de Fogo em Dotã",
+    "referencia": "2 Reis 6:1-23",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c095",
+    "titulo": "Os Quatro Leprosos e o Livramento do Cerco de Samaria",
+    "referencia": "2 Reis 7:1-20",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c096",
+    "titulo": "O Menino Joás Preservado no Templo e Coroado Rei",
+    "referencia": "2 Reis 11:1-21",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c097",
+    "titulo": "A Oração do Rei Ezequias e o Livramento contra Senaqueribe",
+    "referencia": "2 Reis 19:1-37",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c098",
+    "titulo": "A Cura de Ezequias e o Sinal da Sombra no Relógio de Acaz",
+    "referencia": "2 Reis 20:1-11",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c099",
+    "titulo": "O Rei Josias Encontra o Livro da Lei e Renova a Aliança",
+    "referencia": "2 Reis 22:1-20",
+    "categoria": "Reino Dividido"
+  },
+  {
+    "id": "c100",
+    "titulo": "A Oração de Jabes",
+    "referencia": "1 Crônicas 4:9-10",
+    "categoria": "Crônicas"
+  },
+  {
+    "id": "c101",
+    "titulo": "O Cântico de Ação de Graças de Davi diante da Arca",
+    "referencia": "1 Crônicas 16:7-36",
+    "categoria": "Crônicas"
+  },
+  {
+    "id": "c102",
+    "titulo": "As Ofertas Voluntárias e a Oração de Davi para o Templo",
+    "referencia": "1 Crônicas 29:1-22",
+    "categoria": "Crônicas"
+  },
+  {
+    "id": "c103",
+    "titulo": "Se o Meu Povo, que se Chama pelo Meu Nome, se Humilhar e Orar",
+    "referencia": "2 Crônicas 7:11-22",
+    "categoria": "Crônicas"
+  },
+  {
+    "id": "c104",
+    "titulo": "A Vitória de Josafá pelo Louvor no Vale de Beraca",
+    "referencia": "2 Crônicas 20:1-30",
+    "categoria": "Crônicas"
+  },
+  {
+    "id": "c105",
+    "titulo": "AGrande Páscoa Restaurada pelo Rei Ezequias",
+    "referencia": "2 Crônicas 30:1-27",
+    "categoria": "Crônicas"
+  },
+  {
+    "id": "c106",
+    "titulo": "O Arrependimento e a Restauração do Rei Manassés",
+    "referencia": "2 Crônicas 33:10-20",
+    "categoria": "Crônicas"
+  },
+  {
+    "id": "c107",
+    "titulo": "O Decreto de Ciro e o Retorno dos Exilados a Jerusalém",
+    "referencia": "Esdras 1:1-11",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c108",
+    "titulo": "A Reconstrução do Altar e os Alicerces do Segundo Templo",
+    "referencia": "Esdras 3:1-13",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c109",
+    "titulo": "A Dedicação do Segundo Templo e a Celebração da Páscoa",
+    "referencia": "Esdras 6:13-22",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c110",
+    "titulo": "A Missão e a Oração de Confissão do Escriba Esdras",
+    "referencia": "Esdras 9:1-15",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c111",
+    "titulo": "A Oração de Neemias em Susã pelos Muros de Jerusalém",
+    "referencia": "Neemias 1:1-11",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c112",
+    "titulo": "Reconstruindo os Muros com uma Mão na Obra e Outra na Espada",
+    "referencia": "Neemias 4:1-23",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c113",
+    "titulo": "A Conclusão dos Muros de Jerusalém em Cinquenta e Dois Dias",
+    "referencia": "Neemias 6:1-16",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c114",
+    "titulo": "A Escolha de Ester como Rainha da Pérsia",
+    "referencia": "Ester 2:1-18",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c115",
+    "titulo": "O Rei Assuero Honra Mardoqueu",
+    "referencia": "Ester 6:1-14",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c116",
+    "titulo": "O Banquete de Ester, a Queda de Hamã e o Livramento dos Judeus",
+    "referencia": "Ester 7:1-10",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c117",
+    "titulo": "Eu Sei que o Meu Redentor Vive",
+    "referencia": "Jó 19:23-27",
+    "categoria": "Sabedoria"
+  },
+  {
+    "id": "c118",
+    "titulo": "A Confissão e a Restauração em Dobro de Jó",
+    "referencia": "Jó 42:1-17",
+    "categoria": "Sabedoria"
+  },
+  {
+    "id": "c119",
+    "titulo": "Os Dois Caminhos: O Justo como Árvore Plantada junto às Águas",
+    "referencia": "Salmos 1:1-6",
+    "categoria": "Salmos"
+  },
+  {
+    "id": "c120",
+    "titulo": "Os Céus Proclamam a Glória de Deus",
+    "referencia": "Salmos 19:1-14",
+    "categoria": "Salmos"
+  },
+  {
+    "id": "c121",
+    "titulo": "Deus é o Nosso Refúgio e Fortaleza",
+    "referencia": "Salmos 46:1-11",
+    "categoria": "Salmos"
+  },
+  {
+    "id": "c122",
+    "titulo": "A Onisciência e a Onipresença de Deus",
+    "referencia": "Salmos 139:1-24",
+    "categoria": "Salmos"
+  },
+  {
+    "id": "c123",
+    "titulo": "O Elogio da Mulher Virtuosa",
+    "referencia": "Provérbios 31:10-31",
+    "categoria": "Sabedoria"
+  },
+  {
+    "id": "c124",
+    "titulo": "Lembra-te do Teu Criador nos Dias da Tua Mocidade",
+    "referencia": "Eclesiastes 12:1-14",
+    "categoria": "Sabedoria"
+  },
+  {
+    "id": "c125",
+    "titulo": "A Voz do Meu Amado e o Amor Forte como a Morte",
+    "referencia": "Cânticos 2:8-17",
+    "categoria": "Sabedoria"
+  },
+  {
+    "id": "c126",
+    "titulo": "As Muitas Águas Não Poderiam Apagar Este Amor",
+    "referencia": "Cânticos 8:6-7",
+    "categoria": "Sabedoria"
+  },
+  {
+    "id": "c127",
+    "titulo": "O Sinal de Emanuel: A Virgem Conceberá",
+    "referencia": "Isaías 7:10-17",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c128",
+    "titulo": "O Rebento do Tronco de Jessé e o Reino de Paz",
+    "referencia": "Isaías 11:1-10",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c129",
+    "titulo": "Os que Esperam no Senhor Renovam as Suas Forças",
+    "referencia": "Isaías 40:25-31",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c130",
+    "titulo": "Buscai ao Senhor Enquanto se Pode Achar",
+    "referencia": "Isaías 55:1-13",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c131",
+    "titulo": "O Espírito do Senhor Deus Está Sobre Mim (O Ano Aceitável)",
+    "referencia": "Isaías 61:1-11",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c132",
+    "titulo": "O Chamado do Jovem Profeta Jeremias",
+    "referencia": "Jeremias 1:4-19",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c133",
+    "titulo": "A Carta de Jeremias aos Cativos: Pensamentos de Paz e Esperança",
+    "referencia": "Jeremias 29:1-14",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c134",
+    "titulo": "Jeremias Compra o Campo de Anatote como Sinal de Restauração",
+    "referencia": "Jeremias 32:1-27",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c135",
+    "titulo": "Jeremias na Cisterna e o Resgate por Ebede-Meleque",
+    "referencia": "Jeremias 38:1-13",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c136",
+    "titulo": "As Misericórdias do Senhor se Renovam a Cada Manhã",
+    "referencia": "Lamentações 3:19-33",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c137",
+    "titulo": "A Visão do Trono e dos Quatro Seres Viventes junto ao Rio Quebar",
+    "referencia": "Ezequiel 1:1-28",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c138",
+    "titulo": "O Chamado de Ezequiel como Atalaia da Casa de Israel",
+    "referencia": "Ezequiel 3:16-27",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c139",
+    "titulo": "A Promessa de um Coração Novo e um Espírito Novo",
+    "referencia": "Ezequiel 36:22-32",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c140",
+    "titulo": "O Rio que Sai do Templo e Traz Vida por Onde Passa",
+    "referencia": "Ezequiel 47:1-12",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c141",
+    "titulo": "Daniel e Seus Três Amigos Decidem Não se Contaminar na Babilônia",
+    "referencia": "Daniel 1:1-21",
+    "categoria": "Exílio"
+  },
+  {
+    "id": "c142",
+    "titulo": "O Sonho da Grande Estátua e a Pedra Cortada sem Auxílio de Mãos",
+    "referencia": "Daniel 2:24-49",
+    "categoria": "Exílio"
+  },
+  {
+    "id": "c143",
+    "titulo": "A Humilhação e a Restauração do Rei Nabucodonosor",
+    "referencia": "Daniel 4:1-37",
+    "categoria": "Exílio"
+  },
+  {
+    "id": "c144",
+    "titulo": "O Banquete de Belsazar e a Escritura na Parede",
+    "referencia": "Daniel 5:1-31",
+    "categoria": "Exílio"
+  },
+  {
+    "id": "c145",
+    "titulo": "A Oração de Daniel e a Profecia das Setenta Semanas",
+    "referencia": "Daniel 9:1-27",
+    "categoria": "Exílio"
+  },
+  {
+    "id": "c146",
+    "titulo": "Conheçamos e Prossigamos em Conhecer ao Senhor",
+    "referencia": "Oseias 6:1-6",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c147",
+    "titulo": "O Amor Redentor de Deus por Efraim",
+    "referencia": "Oseias 11:1-11",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c148",
+    "titulo": "O Chamado ao Arrependimento Sincero: Rasgai o Vosso Coração",
+    "referencia": "Joel 2:12-27",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c149",
+    "titulo": "As Visões de Amós e a Restauração da Tenda de Davi",
+    "referencia": "Amós 9:11-15",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c150",
+    "titulo": "O Juízo sobre a Soberba de Edom e o Reino do Senhor no Monte Sião",
+    "referencia": "Obadias 1:1-21",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c151",
+    "titulo": "A Profecia do Nascimento do Governador em Belém Efrata",
+    "referencia": "Miqueias 5:2-5",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c152",
+    "titulo": "O Senhor é Bom, uma Fortaleza no Dia da Angústia",
+    "referencia": "Naum 1:1-15",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c153",
+    "titulo": "A Oração de Habacuque: Todavia, Eu me Alegrarei no Senhor",
+    "referencia": "Habacuque 3:1-19",
+    "categoria": "Profetas"
+  },
+  {
+    "id": "c154",
+    "titulo": "O Chamado de Ageu para Reconstruir a Casa do Senhor",
+    "referencia": "Ageu 1:1-15",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c155",
+    "titulo": "O Castiçal de Ouro: Não por Força nem por Violência, mas pelo Meu Espírito",
+    "referencia": "Zacarias 4:1-14",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c156",
+    "titulo": "O Mensageiro da Aliança e o Livro de Memorial",
+    "referencia": "Malaquias 3:1-18",
+    "categoria": "Pós-Exílio"
+  },
+  {
+    "id": "c157",
+    "titulo": "A Genealogia de Jesus Cristo e o Sonho de José",
+    "referencia": "Mateus 1:1-25",
+    "categoria": "Evangelhos"
+  },
+  {
+    "id": "c158",
+    "titulo": "A Parábola dos Dois Construtores: A Casa na Rocha e na Areia",
+    "referencia": "Mateus 7:24-29",
+    "categoria": "Parábolas"
+  },
+  {
+    "id": "c159",
+    "titulo": "Vinde a Mim Todos os que Estais Cansados e Sobrecarregados",
+    "referencia": "Mateus 11:25-30",
+    "categoria": "Evangelhos"
+  },
+  {
+    "id": "c160",
+    "titulo": "As Parábolas do Tesouro Escondido, da Pérola e da Rede",
+    "referencia": "Mateus 13:44-52",
+    "categoria": "Parábolas"
+  },
+  {
+    "id": "c161",
+    "titulo": "A Grande Fé da Mulher Cananeia",
+    "referencia": "Mateus 15:21-28",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c162",
+    "titulo": "O Milagre da Moeda na Boca do Peixe",
+    "referencia": "Mateus 17:24-27",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c163",
+    "titulo": "A Questão do Tributo a César",
+    "referencia": "Mateus 22:15-22",
+    "categoria": "Evangelhos"
+  },
+  {
+    "id": "c164",
+    "titulo": "A Cura da Sogra de Pedro e de Muitos Enfermos em Cafarnaum",
+    "referencia": "Marcos 1:29-39",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c165",
+    "titulo": "A Cura do Homem da Mão Ressequida no Sábado",
+    "referencia": "Marcos 3:1-6",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c166",
+    "titulo": "A Parábola da Semente que Germina e Cresce",
+    "referencia": "Marcos 4:26-29",
+    "categoria": "Parábolas"
+  },
+  {
+    "id": "c167",
+    "titulo": "A Cura do Surdo e Gago em Decápolis (Efatá!)",
+    "referencia": "Marcos 7:31-37",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c168",
+    "titulo": "A Segunda Multiplicação dos Pães para Quatro Mil Pessoas",
+    "referencia": "Marcos 8:1-10",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c169",
+    "titulo": "A Cura do Jovem Possesso: Eu Creio! Ajuda-me na Minha Falta de Fé",
+    "referencia": "Marcos 9:14-29",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c170",
+    "titulo": "A Cura do Cego Bartimeu na Saída de Jericó",
+    "referencia": "Marcos 10:46-52",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c171",
+    "titulo": "O Envio dos Setenta Discípulos e o Regresso com Alegria",
+    "referencia": "Lucas 10:1-24",
+    "categoria": "Evangelhos"
+  },
+  {
+    "id": "c172",
+    "titulo": "A Parábola do Amigo Importuno e a Certeza da Oração Atendida",
+    "referencia": "Lucas 11:5-13",
+    "categoria": "Parábolas"
+  },
+  {
+    "id": "c173",
+    "titulo": "A Cura da Mulher Encurvada Há Dezoito Anos",
+    "referencia": "Lucas 13:10-17",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c174",
+    "titulo": "As Parábolas do Construtor da Torre e do Rei que Vai à Guerra",
+    "referencia": "Lucas 14:25-35",
+    "categoria": "Parábolas"
+  },
+  {
+    "id": "c175",
+    "titulo": "A Cura dos Dez Leprosos e a Gratidão do Samaritano",
+    "referencia": "Lucas 17:11-19",
+    "categoria": "Milagres"
+  },
+  {
+    "id": "c176",
+    "titulo": "A Parábola do Juiz Iníquo e da Viúva Persistente",
+    "referencia": "Lucas 18:1-8",
+    "categoria": "Parábolas"
+  },
+  {
+    "id": "c177",
+    "titulo": "O Ladrão Arrependido na Cruz: Hoje Estarás Comigo no Paraíso",
+    "referencia": "Lucas 23:39-43",
+    "categoria": "Paixão"
+  },
+  {
+    "id": "c178",
+    "titulo": "O Chamado dos Primeiros Discípulos: Filipe e Natanael",
+    "referencia": "João 1:35-51",
+    "categoria": "Evangelhos"
+  },
+  {
+    "id": "c179",
+    "titulo": "Jesus Lava os Pés dos Discípulos e Dá o Novo Mandamento",
+    "referencia": "João 13:1-35",
+    "categoria": "Paixão"
+  },
+  {
+    "id": "c180",
+    "titulo": "Jesus, o Caminho, a Verdade e a Vida, e a Promessa do Consolador",
+    "referencia": "João 14:1-31",
+    "categoria": "Evangelhos"
+  },
+  {
+    "id": "c181",
+    "titulo": "A Videira Verdadeira e os Ramos",
+    "referencia": "João 15:1-17",
+    "categoria": "Evangelhos"
+  },
+  {
+    "id": "c182",
+    "titulo": "A Oração Sacerdotal de Jesus pela Unidade dos Discípulos",
+    "referencia": "João 17:1-26",
+    "categoria": "Paixão"
+  },
+  {
+    "id": "c183",
+    "titulo": "A Aparição de Jesus a Tomé: Senhor Meu e Deus Meu!",
+    "referencia": "João 20:24-31",
+    "categoria": "Ressurreição"
+  },
+  {
+    "id": "c184",
+    "titulo": "A Aparição no Mar de Tiberíades e a Restauração de Pedro",
+    "referencia": "João 21:1-25",
+    "categoria": "Ressurreição"
+  },
+  {
+    "id": "c185",
+    "titulo": "Filipe Pregando em Samaria",
+    "referencia": "Atos 8:4-25",
+    "categoria": "Igreja Primitiva"
+  },
+  {
+    "id": "c186",
+    "titulo": "A Igreja em Antioquia: Chamados Cristãos pela Primeira Vez",
+    "referencia": "Atos 11:19-30",
+    "categoria": "Igreja Primitiva"
+  },
+  {
+    "id": "c187",
+    "titulo": "A Visão do Varão Macedônio e a Conversão de Lídia em Filipos",
+    "referencia": "Atos 16:6-15",
+    "categoria": "Igreja Primitiva"
+  },
+  {
+    "id": "c188",
+    "titulo": "Paulo em Tessalônica e a Nobreza dos Cristãos de Bereia",
+    "referencia": "Atos 17:1-15",
+    "categoria": "Igreja Primitiva"
+  },
+  {
+    "id": "c189",
+    "titulo": "Priscila e Áquila Instruem Apolo em Éfeso",
+    "referencia": "Atos 18:24-28",
+    "categoria": "Igreja Primitiva"
+  },
+  {
+    "id": "c190",
+    "titulo": "O Discurso de Despedida de Paulo aos Presbíteros de Éfeso em Mileto",
+    "referencia": "Atos 20:17-38",
+    "categoria": "Igreja Primitiva"
+  },
+  {
+    "id": "c191",
+    "titulo": "A Sabedoria da Cruz e o Poder de Deus",
+    "referencia": "1 Coríntios 1:18-31",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c192",
+    "titulo": "A Instituição da Ceia do Senhor na Igreja",
+    "referencia": "1 Coríntios 11:23-29",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c193",
+    "titulo": "Temos Este Tesouro em Vasos de Barro",
+    "referencia": "2 Coríntios 4:6-18",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c194",
+    "titulo": "Crucificado com Cristo: Já Não Sou Eu Quem Vive",
+    "referencia": "Gálatas 2:19-21",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c195",
+    "titulo": "Salvos pela Graça por Meio da Fé",
+    "referencia": "Efésios 2:1-10",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c196",
+    "titulo": "Alegrai-vos Sempre no Senhor e Tudo Posso Naquele que me Fortalece",
+    "referencia": "Filipenses 4:4-13",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c197",
+    "titulo": "Buscai as Coisas Lá do Alto, Onde Cristo Vive",
+    "referencia": "Colossenses 3:1-17",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c198",
+    "titulo": "Orai Sem Cessar e em Tudo Dai Graças",
+    "referencia": "1 Tessalonicenses 5:12-24",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c199",
+    "titulo": "Firmeza na Verdade e Consolação na Vinda do Senhor Jesus",
+    "referencia": "2 Tessalonicenses 2:13-17",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c200",
+    "titulo": "Cristo Jesus Veio ao Mundo para Salvar os Pecadores",
+    "referencia": "1 Timóteo 1:12-17",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c201",
+    "titulo": "Combate o Bom Combate da Fé",
+    "referencia": "1 Timóteo 6:11-16",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c202",
+    "titulo": "Toda a Escritura é Inspirada por Deus",
+    "referencia": "2 Timóteo 3:14-17",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c203",
+    "titulo": "Combati o Bom Combate, Completei a Carreira, Guardei a Fé",
+    "referencia": "2 Timóteo 4:1-8",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c204",
+    "titulo": "A Graça Salvadora de Deus se Manifestou a Todos",
+    "referencia": "Tito 2:11-14",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c205",
+    "titulo": "A Intercessão de Paulo pelo Irmão Onésimo diante de Filemom",
+    "referencia": "Filemom 1:1-25",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c206",
+    "titulo": "Jesus, o Nosso Grande Sumo Sacerdote e o Trono da Graça",
+    "referencia": "Hebreus 4:12-16",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c207",
+    "titulo": "A Nuvem de Testemunhas e Olhando Firmemente para o Autor da Fé",
+    "referencia": "Hebreus 12:1-13",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c208",
+    "titulo": "A Provação da Fé, o Pedido de Sabedoria e Praticantes da Palavra",
+    "referencia": "Tiago 1:2-25",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c209",
+    "titulo": "A Oração da Fé e o Exemplo de Perseverança de Elias",
+    "referencia": "Tiago 5:13-20",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c210",
+    "titulo": "Lançando Sobre Ele Toda a Vossa Ansiedade",
+    "referencia": "1 Pedro 5:1-11",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c211",
+    "titulo": "Participantes da Natureza Divina e a Palavra Profética Confirmada",
+    "referencia": "2 Pedro 1:1-21",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c212",
+    "titulo": "A Paciência do Senhor e a Promessa de Novos Céus e Nova Terra",
+    "referencia": "2 Pedro 3:8-18",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c213",
+    "titulo": "Andando na Luz e o Sangue de Jesus que Purifica de Todo Pecado",
+    "referencia": "1 João 1:1-10",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c214",
+    "titulo": "Perseverando na Verdade e no Amor de Cristo",
+    "referencia": "2 João 1:1-13",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c215",
+    "titulo": "A Fidelidade de Gaio e o Testemunho de Demétrio",
+    "referencia": "3 João 1:1-15",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c216",
+    "titulo": "Batalhando pela Fé e a Doxologia ao Único Deus Salvador",
+    "referencia": "Judas 1:1-25",
+    "categoria": "Epístolas"
+  },
+  {
+    "id": "c217",
+    "titulo": "A Visão de Cristo Glorificado entre os Sete Candeeiros em Patmos",
+    "referencia": "Apocalipse 1:9-20",
+    "categoria": "Apocalipse"
+  },
+  {
+    "id": "c218",
+    "titulo": "As Cartas às Sete Igrejas: Eis que Estou à Porta e Bato",
+    "referencia": "Apocalipse 3:14-22",
+    "categoria": "Apocalipse"
+  },
+  {
+    "id": "c219",
+    "titulo": "A Grande Multidão de Todas as Nações Diante do Trono e do Cordeiro",
+    "referencia": "Apocalipse 7:9-17",
+    "categoria": "Apocalipse"
+  },
+  {
+    "id": "c220",
+    "titulo": "As Bodas do Cordeiro e o Rei dos Reis e Senhor dos Senhores",
+    "referencia": "Apocalipse 19:6-16",
+    "categoria": "Apocalipse"
+  }
+]

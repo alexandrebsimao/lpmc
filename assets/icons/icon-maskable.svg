@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="256" cy="180" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#261e15" />
+      <stop offset="65%" stop-color="#120f0c" />
+      <stop offset="100%" stop-color="#0a0807" />
+    </radialGradient>
+
+    <radialGradient id="haloGrad" cx="256" cy="152" r="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f3d999" stop-opacity="0.42" />
+      <stop offset="45%" stop-color="#d4af6e" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#d4af6e" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="goldGrad" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f6e0a6" />
+      <stop offset="35%" stop-color="#dfbc7c" />
+      <stop offset="70%" stop-color="#c69c56" />
+      <stop offset="100%" stop-color="#966e2d" />
+    </linearGradient>
+
+    <linearGradient id="goldBright" x1="256" y1="56" x2="256" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff0c4" />
+      <stop offset="50%" stop-color="#e3c181" />
+      <stop offset="100%" stop-color="#b48842" />
+    </linearGradient>
+
+    <linearGradient id="pageGradLeft" x1="96" y1="210" x2="256" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#241d15" />
+      <stop offset="100%" stop-color="#15110c" />
+    </linearGradient>
+
+    <linearGradient id="pageGradRight" x1="416" y1="210" x2="256" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#241d15" />
+      <stop offset="100%" stop-color="#15110c" />
+    </linearGradient>
+
+    <linearGradient id="viaPathGrad" x1="256" y1="410" x2="256" y2="185" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f6e0a6" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#d4af6e" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#d4af6e" stop-opacity="0.08" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo Total para Maskable Icon -->
+  <rect width="512" height="512" fill="url(#bgGrad)" />
+
+  <!-- Conteúdo centralizado dentro da safe-zone de 80% -->
+  <g transform="translate(51.2, 51.2) scale(0.8)">
+    <circle cx="256" cy="156" r="140" fill="url(#haloGrad)" />
+
+    <g stroke="url(#goldGrad)" stroke-width="3.6" stroke-linecap="round" opacity="0.65">
+      <line x1="256" y1="44" x2="256" y2="62" />
+      <line x1="212" y1="56" x2="220" y2="76" />
+      <line x1="300" y1="56" x2="292" y2="76" />
+      <line x1="170" y1="80" x2="188" y2="98" />
+      <line x1="342" y1="80" x2="324" y2="98" />
+      <line x1="140" y1="118" x2="164" y2="130" />
+      <line x1="372" y1="118" x2="348" y2="130" />
+    </g>
+
+    <path d="M249 70 H263 V104 H296 V118 H263 V188 H249 V118 H216 V104 H249 Z" fill="url(#goldBright)" />
+    <polygon points="256,99 268,111 256,123 244,111" fill="#fff6d6" />
+
+    <path d="M84 232 H198 C224 232 244 246 256 266 C268 246 288 232 314 232 H428 L416 404 H304 C282 404 266 414 256 428 C246 414 230 404 208 404 H96 Z"
+          fill="#120e0a" stroke="url(#goldGrad)" stroke-width="6" stroke-linejoin="round" opacity="0.65" />
+
+    <g stroke="url(#goldBright)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M98 206 H204 C230 206 248 222 256 246 V398 C244 380 224 370 198 370 H98 Z" fill="url(#pageGradLeft)" />
+      <path d="M414 206 H308 C282 206 264 222 256 246 V398 C268 380 288 370 314 370 H414 Z" fill="url(#pageGradRight)" />
+    </g>
+
+    <path d="M256 238 C246 284 222 336 196 370 H316 C290 336 266 284 256 238 Z" fill="url(#viaPathGrad)" />
+    <path d="M256 188 V398" stroke="url(#goldBright)" stroke-width="6.5" stroke-linecap="round" />
+
+    <g stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" opacity="0.85">
+      <line x1="130" y1="248" x2="210" y2="248" />
+      <line x1="130" y1="282" x2="216" y2="282" />
+      <line x1="130" y1="316" x2="196" y2="316" />
+      <line x1="302" y1="248" x2="382" y2="248" />
+      <line x1="296" y1="282" x2="382" y2="282" />
+      <line x1="316" y1="316" x2="382" y2="316" />
+    </g>
+
+    <path d="M240 400 L256 446 L272 400" fill="none" stroke="url(#goldBright)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

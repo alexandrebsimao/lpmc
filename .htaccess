@@ -1,0 +1,45 @@
+DirectoryIndex index.php
+
+<IfModule mod_setenvif.c>
+  SetEnvIf X-Forwarded-Proto "^https$" HTTPS=on
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Endpoint de Healthcheck (Dokploy / Traefik / Docker)
+  RewriteRule ^healthz/?$ healthz.php [L,QSA]
+
+  # Redireciona / reescreve URLs legadas .html para .php
+  RewriteRule ^index\.html$ index.php [L,QSA]
+  RewriteRule ^stories\.html$ stories.php [L,QSA]
+  RewriteRule ^about\.html$ about.php [L,QSA]
+  RewriteRule ^bible\.html$ bible.php [L,QSA]
+  RewriteRule ^divisions\.html$ divisions.php [L,QSA]
+
+  # Rotas amigáveis
+  RewriteRule ^biblia/?$ bible.php [L,QSA]
+  RewriteRule ^historias/?$ stories.php [L,QSA]
+  RewriteRule ^stories/?$ stories.php [L,QSA]
+  RewriteRule ^divisoes/?$ divisions.php [L,QSA]
+  RewriteRule ^separacao/?$ divisions.php [L,QSA]
+  RewriteRule ^sobre/?$ about.php [L,QSA]
+  RewriteRule ^about/?$ about.php [L,QSA]
+  RewriteRule ^offline/?$ offline.php [L,QSA]
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType image/svg+xml .svg
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "^(sw\.js|manifest\.webmanifest|healthz\.php)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Service-Worker-Allowed "/"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/json application/manifest+json application/javascript image/svg+xml
+</IfModule>

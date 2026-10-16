@@ -1,0 +1,105 @@
+{
+  "id": "/index.php",
+  "name": "Via Scriptura — Bíblia Completa (NAA) & Leitura Diária",
+  "short_name": "Via Scriptura",
+  "description": "Leia histórias bíblicas diárias ilustradas, explore as 12 Eras e 10 Divisões Canônicas, e acesse a Bíblia Sagrada completa na versão Nova Almeida Atualizada (NAA) mesmo offline.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "/index.php?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait-primary",
+  "background_color": "#0d0b09",
+  "theme_color": "#0d0b09",
+  "categories": [
+    "books",
+    "education",
+    "lifestyle",
+    "reference"
+  ],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Leitura do Dia",
+      "short_name": "Hoje",
+      "description": "História bíblica e leitura completa do dia de hoje",
+      "url": "/index.php",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Bíblia Completa (NAA)",
+      "short_name": "Bíblia",
+      "description": "Ler os 66 livros da Bíblia na versão Nova Almeida Atualizada",
+      "url": "/bible.php",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "366 Histórias Bíblicas",
+      "short_name": "Histórias",
+      "description": "Catálogo completo das 366 histórias bíblicas",
+      "url": "/stories.php",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Separação Bíblica",
+      "short_name": "Separação",
+      "description": "12 Eras Cronológicas e 10 Divisões Literárias da Bíblia",
+      "url": "/divisions.php",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
