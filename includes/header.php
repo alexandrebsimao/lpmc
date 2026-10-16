@@ -4,10 +4,16 @@
  * Cabeçalho global e barra de navegação moderna do Via Scriptura.
  */
 
+$forwardedProto = $_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '';
+$isHttps = ($forwardedProto === 'https') || (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off');
+$detectedScheme = $isHttps ? 'https' : 'http';
+$detectedHost = $_SERVER['HTTP_X_FORWARDED_HOST'] ?? $_SERVER['HTTP_HOST'] ?? 'www.viascriptura.com';
+$baseAppUrl = rtrim((string)(getenv('APP_URL') ?: ($detectedScheme . '://' . $detectedHost)), '/');
+
 $pageTitle = $pageTitle ?? 'Via Scriptura — Leitura Bíblica Diária & Bíblia Completa (NAA)';
 $pageDescription = $pageDescription ?? 'Leia histórias bíblicas diárias ilustradas e a Bíblia Sagrada completa na versão Nova Almeida Atualizada (NAA).';
 $pageKeywords = $pageKeywords ?? 'leitura bíblica, Bíblia completa, Nova Almeida Atualizada, NAA, histórias bíblicas, devocional diário, versículos';
-$pageUrl = $pageUrl ?? 'https://www.viascriptura.com';
+$pageUrl = $pageUrl ?? ($baseAppUrl . ($_SERVER['REQUEST_URI'] ?? '/'));
 $pageImage = $pageImage ?? 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=80';
 $activeNav = $activeNav ?? 'home';
 $bodyClass = $bodyClass ?? '';
@@ -120,7 +126,7 @@ $bodyClass = $bodyClass ?? '';
             <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
             <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
           </svg>
-          <span>Histórias <small class="nav-badge">366</small></span>
+          <span>Histórias <small class="nav-badge">586</small></span>
         </a>
         <a href="divisions.php" class="nav-item <?= $activeNav === 'divisions' ? 'active' : '' ?>">
           <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true">

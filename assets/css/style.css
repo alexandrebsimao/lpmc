@@ -3595,3 +3595,120 @@ body {
   }
 }
 
+/* Filtros de Origem (Todas / 366 Definidas / +220 Canônicas) e Emblemas Canônicos */
+.divisions-origin-filters {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.origin-filter-btn {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.origin-filter-btn:hover {
+  color: var(--text-primary);
+}
+
+.origin-filter-btn.active {
+  background: var(--gold);
+  color: #120f0c;
+  font-weight: 700;
+}
+
+.sep-thumb--canonical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 35%, rgba(216, 178, 110, 0.22), rgba(18, 14, 10, 0.95));
+  border: 1px solid var(--gold-border);
+  text-decoration: none;
+}
+
+.canonical-emblem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.canonical-emblem span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sep-day-tag--canonical {
+  background: rgba(216, 178, 110, 0.18);
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
+}
+
+.sep-story-meta-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.sep-origin-pill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.origin-pill--defined {
+  background: var(--gold-soft);
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
+}
+
+.origin-pill--canonical {
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.row-day-pill--canonical {
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.stories-filters-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.story-day-badge--canonical {
+  background: rgba(18, 15, 12, 0.85);
+  border: 1px solid var(--gold-border);
+  color: var(--gold);
+}
+
+
+

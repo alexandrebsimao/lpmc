@@ -1,7 +1,14 @@
 DirectoryIndex index.php
 
+<IfModule mod_setenvif.c>
+  SetEnvIf X-Forwarded-Proto "^https$" HTTPS=on
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Endpoint de Healthcheck (Dokploy / Traefik / Docker)
+  RewriteRule ^healthz/?$ healthz.php [L,QSA]
 
   # Redireciona / reescreve URLs legadas .html para .php
   RewriteRule ^index\.html$ index.php [L,QSA]
@@ -27,7 +34,7 @@ DirectoryIndex index.php
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "^(sw\.js|manifest\.webmanifest)$">
+  <FilesMatch "^(sw\.js|manifest\.webmanifest|healthz\.php)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
     Header set Service-Worker-Allowed "/"
   </FilesMatch>

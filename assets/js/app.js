@@ -701,12 +701,14 @@
     const grid = document.getElementById('stories-grid');
     const searchInput = document.getElementById('search-input');
     const filterButtons = document.querySelectorAll('[data-story-testament]');
+    const originButtons = document.querySelectorAll('[data-story-origin]');
     const countIndicator = document.getElementById('stories-count-indicator');
     const emptyMsg = document.getElementById('no-stories-message');
 
     if (!grid) return;
 
     let activeTestament = 'ALL';
+    let activeOrigin = 'ALL';
 
     function filterCards() {
       const term = searchInput ? stripAccents(searchInput.value) : '';
@@ -715,11 +717,13 @@
 
       cards.forEach(card => {
         const t = card.getAttribute('data-testament') || '';
+        const o = card.getAttribute('data-origin') || 'defined';
         const s = card.getAttribute('data-search') || '';
         const matchTestament = activeTestament === 'ALL' || t === activeTestament;
+        const matchOrigin = activeOrigin === 'ALL' || o === activeOrigin;
         const matchSearch = !term || s.includes(term);
 
-        if (matchTestament && matchSearch) {
+        if (matchTestament && matchOrigin && matchSearch) {
           card.style.display = '';
           visible++;
         } else {
@@ -746,13 +750,24 @@
         filterCards();
       });
     });
+
+    originButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeOrigin = btn.getAttribute('data-story-origin') || 'ALL';
+        originButtons.forEach(b => b.classList.toggle('active', b === btn));
+        filterCards();
+      });
+    });
   }
 
   // ── Tela de Separação das Histórias Bíblicas (divisions.php) ──
   function initDivisionsPage() {
     const modeTabs = document.querySelectorAll('[data-div-tab]');
+    const originButtons = document.querySelectorAll('[data-origin-filter]');
     const filterInput = document.getElementById('divisions-filter-input');
     if (!modeTabs.length) return;
+
+    let activeOrigin = 'all';
 
     function switchDivTab(tabName, updateUrl = true) {
       modeTabs.forEach(btn => {
@@ -778,6 +793,45 @@
       }
     }
 
+    function applyDivisionsFilters() {
+      const term = filterInput ? stripAccents(filterInput.value) : '';
+
+      // Filtra cards nos modos Eras e Divisões
+      document.querySelectorAll('#div-pane-eras [data-separation-block], #div-pane-divisions [data-separation-block]').forEach(block => {
+        const items = block.querySelectorAll('.sep-story-card[data-sep-item]');
+        let visibleCount = 0;
+        items.forEach(item => {
+          const data = item.getAttribute('data-sep-item') || '';
+          const origin = item.getAttribute('data-story-origin') || 'defined';
+          const matchTerm = !term || data.includes(term);
+          const matchOrigin = activeOrigin === 'all' || origin === activeOrigin;
+          const show = matchTerm && matchOrigin;
+          item.style.display = show ? '' : 'none';
+          if (show) visibleCount++;
+        });
+        block.style.display = visibleCount > 0 ? '' : 'none';
+      });
+
+      // Filtra cards e linhas no modo 66 Livros
+      document.querySelectorAll('#div-pane-books .book-separation-card').forEach(card => {
+        const cardData = card.getAttribute('data-sep-item') || '';
+        const rows = card.querySelectorAll('.book-story-row');
+        let visibleRows = 0;
+
+        rows.forEach(row => {
+          const rowData = row.getAttribute('data-sep-item') || '';
+          const origin = row.getAttribute('data-story-origin') || 'defined';
+          const matchTerm = !term || rowData.includes(term) || cardData.includes(term);
+          const matchOrigin = activeOrigin === 'all' || origin === activeOrigin;
+          const show = matchTerm && matchOrigin;
+          row.style.display = show ? '' : 'none';
+          if (show) visibleRows++;
+        });
+
+        card.style.display = visibleRows > 0 ? '' : 'none';
+      });
+    }
+
     modeTabs.forEach(btn => {
       btn.addEventListener('click', () => {
         const target = btn.getAttribute('data-div-tab');
@@ -785,29 +839,16 @@
       });
     });
 
-    if (filterInput) {
-      filterInput.addEventListener('input', e => {
-        const term = stripAccents(e.target.value);
-        // Filtra cards nos modos Eras e Divisões
-        document.querySelectorAll('#div-pane-eras [data-separation-block], #div-pane-divisions [data-separation-block]').forEach(block => {
-          const items = block.querySelectorAll('[data-sep-item]');
-          let visibleCount = 0;
-          items.forEach(item => {
-            const data = item.getAttribute('data-sep-item') || '';
-            const match = !term || data.includes(term);
-            item.style.display = match ? '' : 'none';
-            if (match) visibleCount++;
-          });
-          block.style.display = visibleCount > 0 ? '' : 'none';
-        });
-
-        // Filtra cards no modo 66 Livros
-        document.querySelectorAll('#div-pane-books .book-separation-card').forEach(card => {
-          const data = card.getAttribute('data-sep-item') || '';
-          const match = !term || data.includes(term);
-          card.style.display = match ? '' : 'none';
-        });
+    originButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeOrigin = btn.getAttribute('data-origin-filter') || 'all';
+        originButtons.forEach(b => b.classList.toggle('active', b === btn));
+        applyDivisionsFilters();
       });
+    });
+
+    if (filterInput) {
+      filterInput.addEventListener('input', applyDivisionsFilters);
     }
   }
 

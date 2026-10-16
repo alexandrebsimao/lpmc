@@ -6,7 +6,9 @@ require_once __DIR__ . '/src/BibleRepository.php';
 use ViaScriptura\BibleRepository;
 
 $repo = new BibleRepository();
-$stories = $repo->getAllStories();
+$definedStories = $repo->getAllStories();
+$canonicalStories = $repo->getCanonicalExtraStories();
+$stories = array_merge($definedStories, $canonicalStories);
 
 $vtCount = 0;
 $ntCount = 0;
@@ -19,8 +21,8 @@ foreach ($stories as $s) {
     }
 }
 
-$pageTitle = 'Histórias Bíblicas (366 Leituras Diárias) — Via Scriptura';
-$pageDescription = 'Explore nossa coleção completa de 366 histórias bíblicas ilustradas com versículos e capítulos da Bíblia Nova Almeida Atualizada (NAA).';
+$pageTitle = 'Todas as Histórias Bíblicas (' . count($stories) . ' Passagens) — Via Scriptura';
+$pageDescription = 'Explore nossa coleção completa de ' . count($stories) . ' histórias bíblicas (incluindo as 366 leituras diárias do ano e +220 narrativas canônicas) na versão Nova Almeida Atualizada (NAA).';
 $pageUrl = 'https://www.viascriptura.com/stories.php';
 $activeNav = 'stories';
 $bodyClass = 'page-stories';
@@ -31,17 +33,18 @@ require __DIR__ . '/includes/header.php';
   <section id="stories-section" class="stories-page-section">
     <div class="stories-header">
       <div class="stories-header-titles">
-        <span class="section-kicker">Jornada Devocional Anual · 366 Passagens</span>
+        <span class="section-kicker">Acervo Integral das Escrituras · <?= count($stories) ?> Passagens</span>
         <h1>Histórias <em>Bíblicas</em></h1>
         <p class="stories-subtitle">
-          Percorra as 366 leituras bíblicas curadas do ano ou filtre por Testamento, título e referência bíblica.
+          Explore todas as <strong><?= count($stories) ?> histórias bíblicas</strong> em uma única tela — incluindo as <strong><?= count($definedStories) ?> leituras diárias do ano</strong> e <strong>+<?= count($canonicalStories) ?> histórias canônicas</strong> de todos os 66 livros da Bíblia.
         </p>
       </div>
 
       <div class="stories-stats-pills">
-        <span class="stat-pill"><strong><?= count($stories) ?></strong> Leituras</span>
-        <span class="stat-pill"><strong><?= $vtCount ?></strong> Antigo Testamento</span>
-        <span class="stat-pill"><strong><?= $ntCount ?></strong> Novo Testamento</span>
+        <span class="stat-pill"><strong><?= count($stories) ?></strong> Total de Histórias</span>
+        <span class="stat-pill"><strong><?= count($definedStories) ?></strong> Leituras Diárias</span>
+        <span class="stat-pill"><strong>+<?= count($canonicalStories) ?></strong> Outras Histórias</span>
+        <span class="stat-pill"><strong><?= $vtCount ?></strong> AT · <strong><?= $ntCount ?></strong> NT</span>
         <a href="divisions.php" class="btn-modern-primary">
           <span>Ver Separação por Eras & Divisões</span>
           <span aria-hidden="true">→</span>
@@ -49,18 +52,32 @@ require __DIR__ . '/includes/header.php';
       </div>
     </div>
 
-    <!-- Barra de Busca e Filtros -->
+    <!-- Barra de Busca e Filtros Combinados -->
     <div class="stories-controls-bar">
-      <div class="stories-filter-tabs" role="tablist" aria-label="Filtrar histórias por Testamento">
-        <button type="button" class="filter-tab-btn active" data-story-testament="ALL">
-          Todas (<?= count($stories) ?>)
-        </button>
-        <button type="button" class="filter-tab-btn" data-story-testament="VT">
-          Antigo Testamento (<?= $vtCount ?>)
-        </button>
-        <button type="button" class="filter-tab-btn" data-story-testament="NT">
-          Novo Testamento (<?= $ntCount ?>)
-        </button>
+      <div class="stories-filters-group">
+        <div class="stories-filter-tabs" role="tablist" aria-label="Filtrar histórias por coleção">
+          <button type="button" class="filter-tab-btn active" data-story-origin="ALL">
+            Todas (<?= count($stories) ?>)
+          </button>
+          <button type="button" class="filter-tab-btn" data-story-origin="defined">
+            Leituras Diárias (<?= count($definedStories) ?>)
+          </button>
+          <button type="button" class="filter-tab-btn" data-story-origin="canonical">
+            Outras Histórias (+<?= count($canonicalStories) ?>)
+          </button>
+        </div>
+
+        <div class="stories-filter-tabs" role="tablist" aria-label="Filtrar histórias por Testamento">
+          <button type="button" class="filter-tab-btn active" data-story-testament="ALL">
+            Todos Testamentos
+          </button>
+          <button type="button" class="filter-tab-btn" data-story-testament="VT">
+            Antigo Testamento (<?= $vtCount ?>)
+          </button>
+          <button type="button" class="filter-tab-btn" data-story-testament="NT">
+            Novo Testamento (<?= $ntCount ?>)
+          </button>
+        </div>
       </div>
 
       <div class="stories-search-box">
@@ -76,30 +93,37 @@ require __DIR__ . '/includes/header.php';
       </div>
     </div>
 
-    <!-- Grade de Histórias Renderizada no Servidor -->
+    <!-- Grade Unificada com Todas as 586 Histórias Renderizadas no Servidor -->
     <div id="stories-grid" class="stories-grid">
       <?php foreach ($stories as $historia): ?>
         <?php
+          $origin = (string)($historia['origin'] ?? 'defined');
+          $isDefined = ($origin === 'defined');
           $slug = (string)($historia['slug'] ?? '');
           $dia = (string)($historia['dia'] ?? '');
           $data = (string)($historia['data'] ?? '');
+          $categoria = (string)($historia['categoria'] ?? '');
           $titulo = (string)($historia['titulo'] ?? '');
           $referencia = (string)($historia['referencia'] ?? '');
-          $imgUrl = (string)($historia['imagem']['url'] ?? 'https://cdn.pixabay.com/photo/2023/04/03/17/25/jesus-7897344_1280.jpg');
+          $imgUrl = (string)($historia['imagem']['url'] ?? 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/photo-1470252649378-9c29740c9fa8.jpeg');
           $imgAlt = (string)($historia['imagem']['alt'] ?? $titulo);
           $testament = (string)($historia['book']['testament'] ?? 'VT');
-          $categoryShort = (string)($historia['book']['category_short'] ?? '');
-          $storyUrl = $slug !== '' ? 'index.php?p=' . urlencode($slug) : 'index.php?day=' . urlencode($dia);
+          $bookName = (string)($historia['book']['name'] ?? '');
+          $categoryShort = (string)($historia['book']['category_short'] ?? $categoria);
+          $storyUrl = $slug !== '' ? 'index.php?p=' . urlencode($slug) : ($isDefined ? 'index.php?day=' . urlencode($dia) : (string)($historia['bible_url'] ?? 'bible.php'));
           $bibleUrl = (string)($historia['bible_url'] ?? 'bible.php');
           $rawExcerpt = preg_replace('/\b\d+\.\s*/', '', (string)($historia['texto'] ?? '')) ?? '';
           $excerpt = mb_strlen($rawExcerpt, 'UTF-8') > 115
               ? mb_substr($rawExcerpt, 0, 115, 'UTF-8') . '…'
               : $rawExcerpt;
-          $searchIndex = BibleRepository::stripAccents($titulo . ' ' . $referencia . ' ' . $categoryShort . ' dia ' . $dia);
+          $searchIndex = BibleRepository::stripAccents(
+              $titulo . ' ' . $referencia . ' ' . $bookName . ' ' . $categoryShort . ' ' . ($isDefined ? 'dia ' . $dia . ' diaria' : $categoria . ' canonica')
+          );
         ?>
         <article
-          class="story-card"
+          class="story-card <?= $isDefined ? 'story-card--daily' : 'story-card--canonical' ?>"
           data-testament="<?= htmlspecialchars($testament, ENT_QUOTES, 'UTF-8') ?>"
+          data-origin="<?= htmlspecialchars($origin, ENT_QUOTES, 'UTF-8') ?>"
           data-search="<?= htmlspecialchars($searchIndex, ENT_QUOTES, 'UTF-8') ?>"
         >
           <a href="<?= htmlspecialchars($storyUrl, ENT_QUOTES, 'UTF-8') ?>" class="story-card-image-link">
@@ -111,7 +135,11 @@ require __DIR__ . '/includes/header.php';
               />
               <div class="story-overlay"></div>
               <div class="story-badges-top">
-                <span class="story-day-badge">Dia <?= htmlspecialchars($dia, ENT_QUOTES, 'UTF-8') ?><?= $data !== '' ? ' · ' . htmlspecialchars($data, ENT_QUOTES, 'UTF-8') : '' ?></span>
+                <?php if ($isDefined): ?>
+                  <span class="story-day-badge">Dia <?= htmlspecialchars($dia, ENT_QUOTES, 'UTF-8') ?><?= $data !== '' ? ' · ' . htmlspecialchars($data, ENT_QUOTES, 'UTF-8') : '' ?></span>
+                <?php else: ?>
+                  <span class="story-day-badge story-day-badge--canonical">História Bíblica<?= $categoria !== '' ? ' · ' . htmlspecialchars($categoria, ENT_QUOTES, 'UTF-8') : '' ?></span>
+                <?php endif; ?>
                 <?php if ($categoryShort !== ''): ?>
                   <span class="story-cat-badge"><?= htmlspecialchars($categoryShort, ENT_QUOTES, 'UTF-8') ?></span>
                 <?php endif; ?>
@@ -132,7 +160,7 @@ require __DIR__ . '/includes/header.php';
 
             <div class="story-card-actions">
               <a href="<?= htmlspecialchars($storyUrl, ENT_QUOTES, 'UTF-8') ?>" class="story-action-primary">
-                Ler Meditação
+                Ler História
               </a>
               <a href="<?= htmlspecialchars($bibleUrl, ENT_QUOTES, 'UTF-8') ?>" class="story-action-secondary" title="Ler o capítulo completo na Bíblia">
                 Capítulo

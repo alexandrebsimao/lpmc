@@ -10,6 +10,7 @@ class BibleRepository
     private array $bookNameMap = [];
     private array $booksCache = [];
     private ?array $storiesCache = null;
+    private ?array $canonicalStoriesCache = null;
 
     public function __construct(?string $dataDir = null)
     {
@@ -499,6 +500,7 @@ class BibleRepository
 
         foreach ($stories as &$story) {
             $ref = (string)($story['referencia'] ?? '');
+            $story['origin'] = 'defined';
             $parsed = $this->parseReference($ref);
             if ($parsed) {
                 $story['book'] = $parsed['book'];
@@ -530,11 +532,161 @@ class BibleRepository
     }
 
     /**
-     * Retorna as histórias devocionais relacionadas a um livro e capítulo.
+     * Carrega o catálogo de histórias bíblicas canônicas adicionais (além das 366 devocionais diárias),
+     * enriquecendo cada uma com o trecho oficial da Bíblia NAA e URL direta de leitura.
+     */
+    public function getCanonicalExtraStories(): array
+    {
+        if ($this->canonicalStoriesCache !== null) {
+            return $this->canonicalStoriesCache;
+        }
+
+        $file = $this->dataDir . '/canonical_stories.json';
+        if (!is_file($file)) {
+            $this->canonicalStoriesCache = [];
+            return [];
+        }
+
+        $raw = file_get_contents($file);
+        $items = $raw ? json_decode($raw, true) : [];
+        if (!is_array($items)) {
+            $this->canonicalStoriesCache = [];
+            return [];
+        }
+
+        $categoryArtwork = [
+            'Origens' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/photo-1470252649378-9c29740c9fa8.jpeg',
+            'Patriarcas' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jacob_esau_meeting.png',
+            'Êxodo' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/a_sarca_ardente.png',
+            'Lei e Aliança' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/a_consagracao_dos_sacerdotes.png',
+            'Deserto' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/balaao_e_a_jumenta.png',
+            'Conquista' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/a_morte_de_moises.png',
+            'Juízes' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Viagem sagrada sob o luar.png',
+            'Redenção' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/a_alegria_da_salvacao.png',
+            'Reino Unido' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/ai-generated-8930616_1280.png',
+            'Reino Dividido' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O pregador e a figura luminosa.png',
+            'Crônicas' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/a_apresentacao_no_templo.png',
+            'Pós-Exílio' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jesus_no_templo_aos_doze_anos.png',
+            'Sabedoria' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jesus_cresce_em_sabedoria.png',
+            'Salmos' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/a_alegria_da_salvacao.png',
+            'Profetas' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/um_menino_nos_nasceu.png',
+            'Exílio' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/sodoma_gomorra_1280x800.png',
+            'Evangelhos' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Batismo ao pôr do sol.png',
+            'Parábolas' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/jesus_cresce_em_sabedoria.png',
+            'Milagres' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O pregador e a figura luminosa.png',
+            'Paixão' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Viagem sagrada sob o luar.png',
+            'Ressurreição' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de Natal iluminada e serena.png',
+            'Igreja Primitiva' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/O pregador e a figura luminosa.png',
+            'Epístolas' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/photo-1470252649378-9c29740c9fa8.jpeg',
+            'Apocalipse' => 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/Cena de Natal iluminada e serena.png',
+        ];
+
+        $enriched = [];
+        foreach ($items as $idx => $item) {
+            $id = (string)($item['id'] ?? ('c' . ($idx + 1)));
+            $title = (string)($item['titulo'] ?? '');
+            $ref = (string)($item['referencia'] ?? '');
+            $cat = (string)($item['categoria'] ?? 'Narrativa Bíblica');
+            $parsed = $this->parseReference($ref);
+
+            $bookMeta = $parsed['book'] ?? null;
+            $chapter = (int)($parsed['chapter'] ?? 1);
+            $highlight = $parsed['highlight'] ?? null;
+            $hlStr = '';
+            if ($highlight) {
+                $hlStr = $highlight['start'] === $highlight['end']
+                    ? (string)$highlight['start']
+                    : $highlight['start'] . '-' . $highlight['end'];
+            }
+
+            $bibleUrl = $bookMeta
+                ? 'bible.php?book=' . urlencode($bookMeta['url_abbrev'])
+                    . '&ch=' . $chapter
+                    . ($hlStr !== '' ? '&hl=' . urlencode($hlStr) : '')
+                    . '&ref=' . urlencode($ref)
+                : 'bible.php';
+
+            // Extrai os primeiros versículos reais da Bíblia NAA para resumo e compartilhamento
+            $passageText = '';
+            if ($bookMeta) {
+                $bookData = $this->getBookData($bookMeta['abbrev']);
+                $chapterVerses = $bookData['chapters'][$chapter - 1] ?? [];
+                $startV = $highlight ? max(1, (int)$highlight['start']) : 1;
+                $endV = $highlight ? min(count($chapterVerses), (int)$highlight['end']) : min(count($chapterVerses), 4);
+                $maxV = min($endV, $startV + 3);
+                $snippetParts = [];
+                for ($v = $startV; $v <= $maxV; $v++) {
+                    if (isset($chapterVerses[$v - 1])) {
+                        $snippetParts[] = $v . '. ' . $chapterVerses[$v - 1];
+                    }
+                }
+                $passageText = implode(' ', $snippetParts);
+            }
+
+            $slug = 'canonical_' . $id;
+            $imgUrl = $categoryArtwork[$cat] ?? 'https://raw.githubusercontent.com/alexandrebsimao/via-scriptura/refs/heads/main/photo-1470252649378-9c29740c9fa8.jpeg';
+
+            $enriched[] = [
+                'id' => $id,
+                'dia' => null,
+                'data' => $cat,
+                'titulo' => $title,
+                'referencia' => $ref,
+                'categoria' => $cat,
+                'texto' => $passageText,
+                'imagem' => [
+                    'url' => $imgUrl,
+                    'alt' => "Representação visual de '{$title}', baseada em {$ref} (NAA)."
+                ],
+                'slug' => $slug,
+                'origin' => 'canonical',
+                'book' => $bookMeta,
+                'chapter' => $chapter,
+                'highlight' => $highlight,
+                'highlight_str' => $hlStr,
+                'bible_url' => $bibleUrl,
+            ];
+        }
+
+        $this->canonicalStoriesCache = $enriched;
+        return $this->canonicalStoriesCache;
+    }
+
+    /**
+     * Retorna todas as histórias bíblicas combinadas (366 já definidas + histórias canônicas adicionais),
+     * ordenadas pela ordem canônica dos livros e capítulos.
+     */
+    public function getAllBiblicalStoriesCombined(): array
+    {
+        $defined = $this->getAllStories();
+        $canonical = $this->getCanonicalExtraStories();
+        $combined = array_merge($defined, $canonical);
+
+        usort($combined, static function (array $a, array $b): int {
+            $bA = (int)($a['book']['id'] ?? 999);
+            $bB = (int)($b['book']['id'] ?? 999);
+            if ($bA !== $bB) {
+                return $bA <=> $bB;
+            }
+            $cA = (int)($a['chapter'] ?? 1);
+            $cB = (int)($b['chapter'] ?? 1);
+            if ($cA !== $cB) {
+                return $cA <=> $cB;
+            }
+            $vA = (int)($a['highlight']['start'] ?? 1);
+            $vB = (int)($b['highlight']['start'] ?? 1);
+            return $vA <=> $vB;
+        });
+
+        return $combined;
+    }
+
+    /**
+     * Retorna as histórias (definidas + canônicas) relacionadas a um livro e capítulo.
      */
     public function getStoriesForChapter(string $bookAbbrev, int $chapter): array
     {
-        $stories = $this->getAllStories();
+        $stories = $this->getAllBiblicalStoriesCombined();
         $matches = [];
         foreach ($stories as $story) {
             if (
@@ -550,15 +702,19 @@ class BibleRepository
 
     /**
      * Resolve a história ativa com base nos parâmetros (?p=slug, ?day=N ou dia atual do ano).
+     * REGRA DAS HISTÓRIAS DIÁRIAS: A rotação diária automática (Dia 1 a 366) utiliza exclusivamente
+     * as 366 histórias existentes em data/data.json. Caso o usuário clique em uma história canônica
+     * extra (?p=canonical_cXXX), ela também pode ser lida na tela principal sem alterar o ciclo diário.
      */
     public function getStoryForRequest(?string $slug = null, ?string $day = null): array
     {
-        $stories = $this->getAllStories();
+        $stories = $this->getAllStories(); // Estritamente as 366 histórias diárias existentes
         $dayOfYear = (int)date('z') + 1;
         $todayFormatted = date('d/m/Y');
 
         $selected = null;
         $selectedIndex = 0;
+        $isCanonicalExtra = false;
 
         if ($slug !== null && trim($slug) !== '') {
             $slugClean = trim($slug);
@@ -567,6 +723,19 @@ class BibleRepository
                     $selected = $item;
                     $selectedIndex = $idx;
                     break;
+                }
+            }
+
+            // Se o slug for de uma história canônica adicional (ex: canonical_c001), permite leitura completa
+            if (!$selected && str_starts_with($slugClean, 'canonical_')) {
+                $canonicalStories = $this->getCanonicalExtraStories();
+                foreach ($canonicalStories as $cIdx => $cItem) {
+                    if (($cItem['slug'] ?? '') === $slugClean) {
+                        $selected = $cItem;
+                        $selectedIndex = $cIdx;
+                        $isCanonicalExtra = true;
+                        break;
+                    }
                 }
             }
         }
@@ -582,6 +751,7 @@ class BibleRepository
             }
         }
 
+        // Regra diária: busca sempre nas 366 histórias existentes pelo dia do ano (1..366)
         if (!$selected) {
             $targetDay = (string)$dayOfYear;
             foreach ($stories as $idx => $item) {
@@ -615,7 +785,7 @@ class BibleRepository
             ];
         }
 
-        // Sincroniza texto com a fonte oficial da Bíblia NAA
+        // Sincroniza texto completo da passagem com a fonte oficial da Bíblia NAA
         if (!empty($selected['referencia'])) {
             $officialText = $this->getPassageText($selected['referencia']);
             if ($officialText !== null && trim($officialText) !== '') {
@@ -623,8 +793,14 @@ class BibleRepository
             }
         }
 
-        $previous = $selectedIndex > 0 ? $stories[$selectedIndex - 1] : null;
-        $next = ($selectedIndex < count($stories) - 1) ? $stories[$selectedIndex + 1] : null;
+        if ($isCanonicalExtra) {
+            $canonicalList = $this->getCanonicalExtraStories();
+            $previous = $selectedIndex > 0 ? $canonicalList[$selectedIndex - 1] : null;
+            $next = ($selectedIndex < count($canonicalList) - 1) ? $canonicalList[$selectedIndex + 1] : null;
+        } else {
+            $previous = $selectedIndex > 0 ? $stories[$selectedIndex - 1] : null;
+            $next = ($selectedIndex < count($stories) - 1) ? $stories[$selectedIndex + 1] : null;
+        }
 
         $bookAbbrev = $selected['book']['abbrev'] ?? 'gn';
         $chapterNum = (int)($selected['chapter'] ?? 1);
@@ -761,14 +937,15 @@ class BibleRepository
     }
 
     /**
-     * Organiza todos os 66 livros e todas as 366 histórias já definidas nas 10 Divisões Canônicas da Bíblia.
+     * Organiza todos os 66 livros e todas as histórias bíblicas (366 já definidas + 220 canônicas adicionais)
+     * nas 10 Divisões Canônicas da Bíblia.
      */
     public function getStoriesSeparatedByDivision(): array
     {
-        $stories = $this->getAllStories();
+        $stories = $this->getAllBiblicalStoriesCombined();
         $groups = $this->getBooksGroupedByCategory();
 
-        // Indexa histórias definidas por id do livro
+        // Indexa histórias por id do livro
         $storiesByBookId = [];
         foreach ($stories as $story) {
             $bId = (int)($story['book']['id'] ?? 0);
@@ -782,17 +959,30 @@ class BibleRepository
             $key = $group['key'];
             $meta = self::getDivisionMeta($key);
             $divisionStories = [];
+            $definedCount = 0;
+            $canonicalCount = 0;
             $enrichedBooks = [];
 
             foreach ($group['books'] as $book) {
                 $bId = (int)$book['id'];
                 $bStories = $storiesByBookId[$bId] ?? [];
-                $book['stories'] = $bStories;
-                $book['stories_count'] = count($bStories);
-                $enrichedBooks[] = $book;
+                $bDefined = 0;
+                $bCanonical = 0;
                 foreach ($bStories as $st) {
+                    if (($st['origin'] ?? 'defined') === 'defined') {
+                        $bDefined++;
+                        $definedCount++;
+                    } else {
+                        $bCanonical++;
+                        $canonicalCount++;
+                    }
                     $divisionStories[] = $st;
                 }
+                $book['stories'] = $bStories;
+                $book['stories_count'] = count($bStories);
+                $book['defined_count'] = $bDefined;
+                $book['canonical_count'] = $bCanonical;
+                $enrichedBooks[] = $book;
             }
 
             $result[] = [
@@ -805,6 +995,8 @@ class BibleRepository
                 'books' => $enrichedBooks,
                 'stories' => $divisionStories,
                 'stories_count' => count($divisionStories),
+                'defined_count' => $definedCount,
+                'canonical_count' => $canonicalCount,
             ];
         }
 
@@ -839,11 +1031,11 @@ class BibleRepository
             return 'profetas';
         }
         if ($bookId >= 40 && $bookId <= 43) { // Evangelhos
-            // Verifica se é Advento / Nascimento / Infância de Jesus
             if (
                 (($bookId === 40 || $bookId === 42) && $chapter <= 2)
                 || ($bookId === 43 && $chapter === 1 && $story['highlight'] && $story['highlight']['start'] <= 18)
                 || str_contains($titleNorm, 'nascimento de jesus')
+                || str_contains($titleNorm, 'genealogia de jesus')
                 || str_contains($titleNorm, 'natal')
                 || str_contains($titleNorm, 'magos')
                 || str_contains($titleNorm, 'pastores')
@@ -854,12 +1046,11 @@ class BibleRepository
                 return 'advento_nascimento';
             }
 
-            // Verifica se é Paixão, Crucificação ou Ressurreição
             if (
                 ($bookId === 40 && $chapter >= 26)
                 || ($bookId === 41 && $chapter >= 14)
                 || ($bookId === 42 && $chapter >= 22)
-                || ($bookId === 43 && $chapter >= 18)
+                || ($bookId === 43 && $chapter >= 13 && ($chapter >= 17 || $chapter === 13))
                 || str_contains($titleNorm, 'cruz')
                 || str_contains($titleNorm, 'crucific')
                 || str_contains($titleNorm, 'ressurreic')
@@ -867,6 +1058,9 @@ class BibleRepository
                 || str_contains($titleNorm, 'getsemani')
                 || str_contains($titleNorm, 'ultima ceia')
                 || str_contains($titleNorm, 'pilatos')
+                || str_contains($titleNorm, 'lava os pes')
+                || str_contains($titleNorm, 'tome')
+                || str_contains($titleNorm, 'tiberiades')
             ) {
                 return 'paixao_ressurreicao';
             }
@@ -876,14 +1070,11 @@ class BibleRepository
         if ($bookId === 44) {
             return 'igreja_primitiva';
         }
-        if ($bookId >= 45 && $bookId <= 65) {
-            return 'epistolas_vida_crista';
-        }
-        return 'consumacao_apocalipse';
+        return 'epistolas_vida_crista';
     }
 
     /**
-     * Retorna todas as histórias separadas pelas 12 Grandes Eras da História Bíblica.
+     * Retorna todas as histórias (366 definidas + 220 canônicas adicionais) separadas pelas 12 Grandes Eras da História Bíblica.
      */
     public function getStoriesSeparatedByEra(): array
     {
@@ -894,8 +1085,10 @@ class BibleRepository
                 'title' => '1. A Criação e os Primórdios',
                 'range' => 'Gênesis 1–11',
                 'testament' => 'VT',
-                'description' => 'A criação dos céus e da terra, o Jardim do Éden, a queda, o dilúvio de Noé e a aliança de Deus com toda a criação.',
+                'description' => 'A criação dos céus e da terra, o Jardim do Éden, a queda, Enoque, o dilúvio de Noé, a aliança e a Torre de Babel.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'patriarcas' => [
                 'order' => 2,
@@ -903,8 +1096,10 @@ class BibleRepository
                 'title' => '2. Os Patriarcas da Aliança',
                 'range' => 'Gênesis 12–50',
                 'testament' => 'VT',
-                'description' => 'O chamado de Abraão, a promessa a Isaque, a jornada de Jacó e a providência divina na vida de José no Egito.',
+                'description' => 'O chamado de Abraão, Melquisedeque, a promessa a Isaque, a luta de Jacó no Jaboque e a providência divina na vida de José.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'exodo_lei' => [
                 'order' => 3,
@@ -912,8 +1107,10 @@ class BibleRepository
                 'title' => '3. O Êxodo e a Caminhada no Deserto',
                 'range' => 'Êxodo a Deuteronômio',
                 'testament' => 'VT',
-                'description' => 'A libertação da escravidão no Egito sob Moisés, a travessia do Mar Vermelho, os Dez Mandamentos e a fidelidade no deserto.',
+                'description' => 'A libertação do Egito sob Moisés, as pragas, o Mar Vermelho, os Dez Mandamentos, o Tabernáculo e a jornada no deserto.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'conquista_juizes' => [
                 'order' => 4,
@@ -921,8 +1118,10 @@ class BibleRepository
                 'title' => '4. A Terra Prometida e os Juízes',
                 'range' => 'Josué, Juízes e Rute',
                 'testament' => 'VT',
-                'description' => 'A conquista sob Josué, os libertadores levantados por Deus (Débora, Gideão, Sansão) e a história de redenção em Rute.',
+                'description' => 'A conquista de Canaã sob Josué, o pacto em Siquém, os juízes libertadores (Débora, Gideão, Jefté, Sansão) e a redenção em Rute.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'reino_israel' => [
                 'order' => 5,
@@ -930,8 +1129,10 @@ class BibleRepository
                 'title' => '5. Reis, Crônicas e Restauração',
                 'range' => '1 Samuel a Ester',
                 'testament' => 'VT',
-                'description' => 'O chamado de Samuel, o reinado de Davi, a sabedoria de Salomão, os milagres de Elias e Eliseu, e o retorno do exílio.',
+                'description' => 'O chamado de Samuel, o reinado de Davi e Salomão, os milagres de Elias e Eliseu, as reformas de Ezequias e Josias, e o retorno com Esdras, Neemias e Ester.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'sabedoria_salmos' => [
                 'order' => 6,
@@ -939,8 +1140,10 @@ class BibleRepository
                 'title' => '6. Sabedoria, Salmos e Adoração',
                 'range' => 'Jó, Salmos, Provérbios, Eclesiastes e Cânticos',
                 'testament' => 'VT',
-                'description' => 'A perseverança de Jó, os cânticos de confiança e refúgio nos Salmos e os conselhos eternos da sabedoria divina.',
+                'description' => 'A perseverança e restauração de Jó, os cânticos de refúgio nos Salmos, a Mulher Virtuosa e os conselhos eternos da sabedoria.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'profetas' => [
                 'order' => 7,
@@ -948,8 +1151,10 @@ class BibleRepository
                 'title' => '7. A Voz dos Profetas e Promessas Messiânicas',
                 'range' => 'Isaías a Malaquias',
                 'testament' => 'VT',
-                'description' => 'O anúncio do Servo Sofredor, o novo coração prometido, a fidelidade na fornalha e na cova dos leões e a esperança do Messias.',
+                'description' => 'O anúncio de Emanuel e do Servo Sofredor, o novo coração em Ezequiel, a fidelidade de Daniel na Babilônia e a voz dos doze profetas menores.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'advento_nascimento' => [
                 'order' => 8,
@@ -957,17 +1162,21 @@ class BibleRepository
                 'title' => '8. O Advento e o Nascimento de Jesus',
                 'range' => 'Mateus 1–2 · Lucas 1–2 · João 1',
                 'testament' => 'NT',
-                'description' => 'O Verbo que se fez carne, a anunciação a Maria, o nascimento em Belém, a adoração dos pastores e magos.',
+                'description' => 'O Verbo que se fez carne, a anunciação a Maria e José, o nascimento em Belém, a visita dos pastores, Simeão e os magos.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'ministerio_jesus' => [
                 'order' => 9,
                 'key' => 'ministerio_jesus',
-                'title' => '9. Ministério, Ensinos e Milagres de Jesus',
+                'title' => '9. Ministério, Ensinos, Parábolas e Milagres de Jesus',
                 'range' => 'Mateus, Marcos, Lucas e João',
                 'testament' => 'NT',
-                'description' => 'O Sermão do Monte, as parábolas do Reino, curas, multiplicação dos pães e os discursos de Jesus como Bom Pastor e Luz do Mundo.',
+                'description' => 'O Sermão do Monte, todas as parábolas do Reino, curas, multiplicação dos pães e os discursos de Jesus como Pão da Vida e Bom Pastor.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'paixao_ressurreicao' => [
                 'order' => 10,
@@ -975,8 +1184,10 @@ class BibleRepository
                 'title' => '10. A Cruz e a Ressurreição Gloriosa',
                 'range' => 'Narrativas da Paixão e Páscoa nos 4 Evangelhos',
                 'testament' => 'NT',
-                'description' => 'A Última Ceia, a oração no Getsêmani, o sacrifício redentor no Calvário e a vitória sobre a morte na manhã da ressurreição.',
+                'description' => 'O lava-pés, a Última Ceia, a Oração Sacerdotal, o Getsêmani, o sacrifício redentor no Calvário e as aparições do Cristo Ressurreto.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'igreja_primitiva' => [
                 'order' => 11,
@@ -984,27 +1195,36 @@ class BibleRepository
                 'title' => '11. Pentecostes e a Igreja Primitiva',
                 'range' => 'Atos dos Apóstolos 1–28',
                 'testament' => 'NT',
-                'description' => 'O derramamento do Espírito Santo, a comunhão dos primeiros cristãos, a conversão de Paulo e o Evangelho levado às nações.',
+                'description' => 'O derramamento do Espírito Santo, Estêvão, Filipe, a conversão de Saulo e as viagens missionárias até Roma.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
             'epistolas_vida_crista' => [
                 'order' => 12,
                 'key' => 'epistolas_vida_crista',
-                'title' => '12. Cartas Apostólicas, Graça e Eternidade',
+                'title' => '12. Cartas Apostólicas, Graça e Apocalipse',
                 'range' => 'Romanos a Apocalipse',
                 'testament' => 'NT',
-                'description' => 'A vida no Espírito, o fruto do amor, a armadura de Deus, a galeria dos heróis da fé e a visão da Nova Jerusalém.',
+                'description' => 'A justificação pela fé, o hino ao amor, a armadura de Deus, a galeria da fé em Hebreus, as epístolas gerais e o triunfo do Cordeiro em Apocalipse.',
                 'stories' => [],
+                'defined_count' => 0,
+                'canonical_count' => 0,
             ],
         ];
 
-        $stories = $this->getAllStories();
+        $stories = $this->getAllBiblicalStoriesCombined();
         foreach ($stories as $story) {
             $eraKey = $this->resolveEraKeyForStory($story);
             if (!isset($eras[$eraKey])) {
                 $eraKey = 'epistolas_vida_crista';
             }
             $eras[$eraKey]['stories'][] = $story;
+            if (($story['origin'] ?? 'defined') === 'defined') {
+                $eras[$eraKey]['defined_count']++;
+            } else {
+                $eras[$eraKey]['canonical_count']++;
+            }
         }
 
         return array_values($eras);

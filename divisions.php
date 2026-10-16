@@ -9,8 +9,9 @@ $repo = new BibleRepository();
 
 $eras = $repo->getStoriesSeparatedByEra();
 $divisions = $repo->getStoriesSeparatedByDivision();
-$allStories = $repo->getAllStories();
-$allBooks = $repo->getBooks();
+$definedStories = $repo->getAllStories();
+$canonicalStories = $repo->getCanonicalExtraStories();
+$totalCombinedCount = count($definedStories) + count($canonicalStories);
 
 // Modo ativo: 'eras' (12 Grandes Eras Cronológicas) | 'divisions' (10 Divisões Canônicas) | 'books' (66 Livros)
 $activeTab = (string)($_GET['tab'] ?? 'eras');
@@ -18,18 +19,8 @@ if (!in_array($activeTab, ['eras', 'divisions', 'books'], true)) {
     $activeTab = 'eras';
 }
 
-// Contabiliza quantos dos 66 livros possuem histórias devocionais definidas
-$booksWithStoriesCount = 0;
-foreach ($divisions as $div) {
-    foreach ($div['books'] as $b) {
-        if ($b['stories_count'] > 0) {
-            $booksWithStoriesCount++;
-        }
-    }
-}
-
-$pageTitle = 'Separação das Histórias Bíblicas (Eras, Divisões e Livros) — Via Scriptura';
-$pageDescription = 'Explore a separação completa de todas as histórias bíblicas organizadas pelas 12 Grandes Eras Cronológicas, 10 Divisões Canônicas e pelos 66 Livros das Escrituras.';
+$pageTitle = 'Separação de Todas as Histórias Bíblicas (586 Histórias em 12 Eras e 66 Livros) — Via Scriptura';
+$pageDescription = 'Explore a separação completa de todas as 586 histórias bíblicas (as 366 devocionais já definidas + 220 histórias canônicas adicionais) organizadas pelas 12 Grandes Eras, 10 Divisões e 66 Livros.';
 $pageUrl = 'https://www.viascriptura.com/divisions.php';
 $activeNav = 'divisions';
 $bodyClass = 'page-divisions';
@@ -43,33 +34,33 @@ require __DIR__ . '/includes/header.php';
     <section class="divisions-hero">
       <div class="divisions-hero-inner">
         <div class="divisions-hero-copy">
-          <span class="section-kicker">Mapa Estrutural & Cronológico das Escrituras</span>
-          <h1>Separação das Histórias <em>Bíblicas</em></h1>
+          <span class="section-kicker">Mapa Estrutural & Cronológico Completo das Escrituras</span>
+          <h1>Separação de Todas as Histórias <em>Bíblicas</em></h1>
           <p class="divisions-lead">
-            Navegue por todas as passagens e pelas <strong><?= count($allStories) ?> histórias já definidas</strong> no Via Scriptura, estruturadas pelas <strong>12 Grandes Eras da História da Redenção</strong>, pelas <strong>10 Divisões Canônicas</strong> e pelos <strong>66 Livros da Bíblia</strong>.
+            Navegue pelo catálogo integral de <strong><?= $totalCombinedCount ?> histórias bíblicas</strong> — unindo as <strong><?= count($definedStories) ?> histórias devocionais já definidas</strong> e <strong>+<?= count($canonicalStories) ?> histórias canônicas adicionais</strong> — cobrindo 100% dos <strong>66 Livros</strong>, <strong>10 Divisões Literárias</strong> e <strong>12 Grandes Eras da Redenção</strong>.
           </p>
         </div>
 
         <div class="divisions-stats-row">
           <div class="div-stat-box">
-            <strong>12</strong>
-            <span>Eras Bíblicas</span>
+            <strong><?= $totalCombinedCount ?></strong>
+            <span>Total de Histórias</span>
           </div>
           <div class="div-stat-box">
-            <strong>10</strong>
-            <span>Divisões Canônicas</span>
+            <strong><?= count($definedStories) ?></strong>
+            <span>Já Definidas (366 Dias)</span>
           </div>
           <div class="div-stat-box">
-            <strong>66</strong>
-            <span>Livros Sagrados</span>
+            <strong>+<?= count($canonicalStories) ?></strong>
+            <span>Histórias Canônicas</span>
           </div>
           <div class="div-stat-box">
-            <strong><?= count($allStories) ?></strong>
-            <span>Histórias Definidas</span>
+            <strong>66/66</strong>
+            <span>Livros Mapeados</span>
           </div>
         </div>
 
-        <!-- Barra de Controle: Abas de Separação + Filtro Instantâneo -->
+        <!-- Barra de Controle: Abas de Separação + Filtro de Origem + Busca Instantânea -->
         <div class="divisions-toolbar">
           <div class="divisions-mode-tabs" role="tablist" aria-label="Critério de separação das histórias">
             <button
@@ -113,6 +104,19 @@ require __DIR__ . '/includes/header.php';
                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
               </svg>
               <span>Por Livro da Bíblia (66 Livros)</span>
+            </button>
+          </div>
+
+          <!-- Filtro por Tipo de História (Todas / 366 Definidas / +220 Canônicas) -->
+          <div class="divisions-origin-filters" role="group" aria-label="Filtrar por tipo de história">
+            <button type="button" class="origin-filter-btn active" data-origin-filter="all">
+              Todas (<?= $totalCombinedCount ?>)
+            </button>
+            <button type="button" class="origin-filter-btn" data-origin-filter="defined">
+              366 Já Definidas
+            </button>
+            <button type="button" class="origin-filter-btn" data-origin-filter="canonical">
+              +<?= count($canonicalStories) ?> Além das 366
             </button>
           </div>
 
@@ -163,7 +167,7 @@ require __DIR__ . '/includes/header.php';
                     <?= $era['testament'] === 'VT' ? 'Antigo Testamento' : 'Novo Testamento' ?>
                   </span>
                   <span class="separation-range-pill"><?= htmlspecialchars($era['range'], ENT_QUOTES, 'UTF-8') ?></span>
-                  <span class="separation-count-pill"><?= count($era['stories']) ?> histórias definidas</span>
+                  <span class="separation-count-pill"><?= count($era['stories']) ?> histórias (<?= (int)$era['defined_count'] ?> definidas · +<?= (int)$era['canonical_count'] ?> canônicas)</span>
                 </div>
                 <h2><?= htmlspecialchars($era['title'], ENT_QUOTES, 'UTF-8') ?></h2>
                 <p><?= htmlspecialchars($era['description'], ENT_QUOTES, 'UTF-8') ?></p>
@@ -173,28 +177,51 @@ require __DIR__ . '/includes/header.php';
             <div class="separated-stories-grid">
               <?php foreach ($era['stories'] as $st): ?>
                 <?php
+                  $origin = (string)($st['origin'] ?? 'defined');
+                  $isDefined = $origin === 'defined';
                   $stSlug = (string)($st['slug'] ?? '');
                   $stDia = (string)($st['dia'] ?? '');
+                  $stCat = (string)($st['categoria'] ?? 'Canônica');
                   $stTitulo = (string)($st['titulo'] ?? '');
                   $stRef = (string)($st['referencia'] ?? '');
                   $stTexto = (string)($st['texto'] ?? '');
                   $stImg = (string)($st['imagem']['url'] ?? '');
-                  $stUrl = $stSlug !== '' ? 'index.php?p=' . urlencode($stSlug) : 'index.php?day=' . urlencode($stDia);
                   $stBibleUrl = (string)($st['bible_url'] ?? 'bible.php');
+                  $stUrl = $isDefined
+                      ? ($stSlug !== '' ? 'index.php?p=' . urlencode($stSlug) : 'index.php?day=' . urlencode($stDia))
+                      : $stBibleUrl;
                   $stCleanText = preg_replace('/\b\d+\.\s*/', '', $stTexto) ?? $stTexto;
-                  $stExcerpt = mb_strlen($stCleanText, 'UTF-8') > 95 ? mb_substr($stCleanText, 0, 95, 'UTF-8') . '…' : $stCleanText;
-                  $filterData = BibleRepository::stripAccents($stTitulo . ' ' . $stRef . ' ' . $era['title'] . ' dia ' . $stDia);
+                  $stExcerpt = mb_strlen($stCleanText, 'UTF-8') > 105 ? mb_substr($stCleanText, 0, 105, 'UTF-8') . '…' : $stCleanText;
+                  $filterData = BibleRepository::stripAccents($stTitulo . ' ' . $stRef . ' ' . $era['title'] . ' ' . ($isDefined ? 'dia ' . $stDia . ' definida' : $stCat . ' canonica adicional'));
                 ?>
-                <article class="sep-story-card" data-sep-item="<?= htmlspecialchars($filterData, ENT_QUOTES, 'UTF-8') ?>">
-                  <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-story-thumb-wrap">
-                    <?php if ($stImg !== ''): ?>
+                <article
+                  class="sep-story-card <?= $isDefined ? 'sep-story-card--defined' : 'sep-story-card--canonical' ?>"
+                  data-sep-item="<?= htmlspecialchars($filterData, ENT_QUOTES, 'UTF-8') ?>"
+                  data-story-origin="<?= htmlspecialchars($origin, ENT_QUOTES, 'UTF-8') ?>"
+                >
+                  <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-story-thumb-wrap <?= $isDefined ? '' : 'sep-thumb--canonical' ?>">
+                    <?php if ($isDefined && $stImg !== ''): ?>
                       <img src="<?= htmlspecialchars($stImg, ENT_QUOTES, 'UTF-8') ?>" alt="" loading="lazy" />
+                      <span class="sep-day-tag">Dia <?= htmlspecialchars($stDia, ENT_QUOTES, 'UTF-8') ?></span>
+                    <?php else: ?>
+                      <div class="canonical-emblem" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.6" fill="none">
+                          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                        <span><?= htmlspecialchars((string)($st['book']['abbrev'] ?? 'NAA'), ENT_QUOTES, 'UTF-8') ?></span>
+                      </div>
+                      <span class="sep-day-tag sep-day-tag--canonical"><?= htmlspecialchars($stCat, ENT_QUOTES, 'UTF-8') ?></span>
                     <?php endif; ?>
-                    <span class="sep-day-tag">Dia <?= htmlspecialchars($stDia, ENT_QUOTES, 'UTF-8') ?></span>
                   </a>
 
                   <div class="sep-story-body">
-                    <span class="sep-story-ref"><?= htmlspecialchars($stRef, ENT_QUOTES, 'UTF-8') ?></span>
+                    <div class="sep-story-meta-line">
+                      <span class="sep-story-ref"><?= htmlspecialchars($stRef, ENT_QUOTES, 'UTF-8') ?></span>
+                      <span class="sep-origin-pill <?= $isDefined ? 'origin-pill--defined' : 'origin-pill--canonical' ?>">
+                        <?= $isDefined ? '366 Definida' : 'Canônica Extra' ?>
+                      </span>
+                    </div>
                     <h3>
                       <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>">
                         <?= htmlspecialchars($stTitulo, ENT_QUOTES, 'UTF-8') ?>
@@ -203,8 +230,12 @@ require __DIR__ . '/includes/header.php';
                     <p class="sep-story-excerpt"><?= htmlspecialchars($stExcerpt, ENT_QUOTES, 'UTF-8') ?></p>
 
                     <div class="sep-story-actions">
-                      <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-primary">Ler História</a>
-                      <a href="<?= htmlspecialchars($stBibleUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-secondary">Capítulo</a>
+                      <?php if ($isDefined): ?>
+                        <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-primary">Ler História</a>
+                        <a href="<?= htmlspecialchars($stBibleUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-secondary">Capítulo</a>
+                      <?php else: ?>
+                        <a href="<?= htmlspecialchars($stBibleUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-primary">Ler Passagem na Bíblia</a>
+                      <?php endif; ?>
                       <button
                         type="button"
                         class="sep-share-btn btn-share-trigger"
@@ -263,7 +294,7 @@ require __DIR__ . '/includes/header.php';
                     <?= $div['testament'] === 'VT' ? 'Antigo Testamento' : 'Novo Testamento' ?>
                   </span>
                   <span class="separation-range-pill"><?= count($div['books']) ?> <?= count($div['books']) === 1 ? 'livro' : 'livros' ?></span>
-                  <span class="separation-count-pill"><?= (int)$div['stories_count'] ?> histórias definidas</span>
+                  <span class="separation-count-pill"><?= (int)$div['stories_count'] ?> histórias (<?= (int)$div['defined_count'] ?> definidas · +<?= (int)$div['canonical_count'] ?> canônicas)</span>
                 </div>
                 <h2><?= htmlspecialchars($div['label'], ENT_QUOTES, 'UTF-8') ?> — <em><?= htmlspecialchars($div['subtitle'], ENT_QUOTES, 'UTF-8') ?></em></h2>
                 <p><?= htmlspecialchars($div['description'], ENT_QUOTES, 'UTF-8') ?></p>
@@ -287,28 +318,51 @@ require __DIR__ . '/includes/header.php';
             <div class="separated-stories-grid">
               <?php foreach ($div['stories'] as $st): ?>
                 <?php
+                  $origin = (string)($st['origin'] ?? 'defined');
+                  $isDefined = $origin === 'defined';
                   $stSlug = (string)($st['slug'] ?? '');
                   $stDia = (string)($st['dia'] ?? '');
+                  $stCat = (string)($st['categoria'] ?? 'Canônica');
                   $stTitulo = (string)($st['titulo'] ?? '');
                   $stRef = (string)($st['referencia'] ?? '');
                   $stTexto = (string)($st['texto'] ?? '');
                   $stImg = (string)($st['imagem']['url'] ?? '');
-                  $stUrl = $stSlug !== '' ? 'index.php?p=' . urlencode($stSlug) : 'index.php?day=' . urlencode($stDia);
                   $stBibleUrl = (string)($st['bible_url'] ?? 'bible.php');
+                  $stUrl = $isDefined
+                      ? ($stSlug !== '' ? 'index.php?p=' . urlencode($stSlug) : 'index.php?day=' . urlencode($stDia))
+                      : $stBibleUrl;
                   $stCleanText = preg_replace('/\b\d+\.\s*/', '', $stTexto) ?? $stTexto;
-                  $stExcerpt = mb_strlen($stCleanText, 'UTF-8') > 95 ? mb_substr($stCleanText, 0, 95, 'UTF-8') . '…' : $stCleanText;
-                  $filterData = BibleRepository::stripAccents($stTitulo . ' ' . $stRef . ' ' . $div['label'] . ' dia ' . $stDia);
+                  $stExcerpt = mb_strlen($stCleanText, 'UTF-8') > 105 ? mb_substr($stCleanText, 0, 105, 'UTF-8') . '…' : $stCleanText;
+                  $filterData = BibleRepository::stripAccents($stTitulo . ' ' . $stRef . ' ' . $div['label'] . ' ' . ($isDefined ? 'dia ' . $stDia . ' definida' : $stCat . ' canonica adicional'));
                 ?>
-                <article class="sep-story-card" data-sep-item="<?= htmlspecialchars($filterData, ENT_QUOTES, 'UTF-8') ?>">
-                  <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-story-thumb-wrap">
-                    <?php if ($stImg !== ''): ?>
+                <article
+                  class="sep-story-card <?= $isDefined ? 'sep-story-card--defined' : 'sep-story-card--canonical' ?>"
+                  data-sep-item="<?= htmlspecialchars($filterData, ENT_QUOTES, 'UTF-8') ?>"
+                  data-story-origin="<?= htmlspecialchars($origin, ENT_QUOTES, 'UTF-8') ?>"
+                >
+                  <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-story-thumb-wrap <?= $isDefined ? '' : 'sep-thumb--canonical' ?>">
+                    <?php if ($isDefined && $stImg !== ''): ?>
                       <img src="<?= htmlspecialchars($stImg, ENT_QUOTES, 'UTF-8') ?>" alt="" loading="lazy" />
+                      <span class="sep-day-tag">Dia <?= htmlspecialchars($stDia, ENT_QUOTES, 'UTF-8') ?></span>
+                    <?php else: ?>
+                      <div class="canonical-emblem" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.6" fill="none">
+                          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                        <span><?= htmlspecialchars((string)($st['book']['abbrev'] ?? 'NAA'), ENT_QUOTES, 'UTF-8') ?></span>
+                      </div>
+                      <span class="sep-day-tag sep-day-tag--canonical"><?= htmlspecialchars($stCat, ENT_QUOTES, 'UTF-8') ?></span>
                     <?php endif; ?>
-                    <span class="sep-day-tag">Dia <?= htmlspecialchars($stDia, ENT_QUOTES, 'UTF-8') ?></span>
                   </a>
 
                   <div class="sep-story-body">
-                    <span class="sep-story-ref"><?= htmlspecialchars($stRef, ENT_QUOTES, 'UTF-8') ?></span>
+                    <div class="sep-story-meta-line">
+                      <span class="sep-story-ref"><?= htmlspecialchars($stRef, ENT_QUOTES, 'UTF-8') ?></span>
+                      <span class="sep-origin-pill <?= $isDefined ? 'origin-pill--defined' : 'origin-pill--canonical' ?>">
+                        <?= $isDefined ? '366 Definida' : 'Canônica Extra' ?>
+                      </span>
+                    </div>
                     <h3>
                       <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>">
                         <?= htmlspecialchars($stTitulo, ENT_QUOTES, 'UTF-8') ?>
@@ -317,8 +371,12 @@ require __DIR__ . '/includes/header.php';
                     <p class="sep-story-excerpt"><?= htmlspecialchars($stExcerpt, ENT_QUOTES, 'UTF-8') ?></p>
 
                     <div class="sep-story-actions">
-                      <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-primary">Ler História</a>
-                      <a href="<?= htmlspecialchars($stBibleUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-secondary">Capítulo</a>
+                      <?php if ($isDefined): ?>
+                        <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-primary">Ler História</a>
+                        <a href="<?= htmlspecialchars($stBibleUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-secondary">Capítulo</a>
+                      <?php else: ?>
+                        <a href="<?= htmlspecialchars($stBibleUrl, ENT_QUOTES, 'UTF-8') ?>" class="sep-link-primary">Ler Passagem na Bíblia</a>
+                      <?php endif; ?>
                       <button
                         type="button"
                         class="sep-share-btn btn-share-trigger"
@@ -392,17 +450,29 @@ require __DIR__ . '/includes/header.php';
                   <ul class="book-stories-list">
                     <?php foreach ($book['stories'] as $st): ?>
                       <?php
+                        $origin = (string)($st['origin'] ?? 'defined');
+                        $isDefined = $origin === 'defined';
                         $stSlug = (string)($st['slug'] ?? '');
                         $stDia = (string)($st['dia'] ?? '');
                         $stTitulo = (string)($st['titulo'] ?? '');
                         $stRef = (string)($st['referencia'] ?? '');
                         $stTexto = (string)($st['texto'] ?? '');
                         $stCleanText = preg_replace('/\b\d+\.\s*/', '', $stTexto) ?? $stTexto;
-                        $stUrl = $stSlug !== '' ? 'index.php?p=' . urlencode($stSlug) : 'index.php?day=' . urlencode($stDia);
+                        $stBibleUrl = (string)($st['bible_url'] ?? 'bible.php');
+                        $stUrl = $isDefined
+                            ? ($stSlug !== '' ? 'index.php?p=' . urlencode($stSlug) : 'index.php?day=' . urlencode($stDia))
+                            : $stBibleUrl;
+                        $rowFilter = BibleRepository::stripAccents($stTitulo . ' ' . $stRef . ' ' . $book['name']);
                       ?>
-                      <li class="book-story-row">
+                      <li
+                        class="book-story-row"
+                        data-sep-item="<?= htmlspecialchars($rowFilter, ENT_QUOTES, 'UTF-8') ?>"
+                        data-story-origin="<?= htmlspecialchars($origin, ENT_QUOTES, 'UTF-8') ?>"
+                      >
                         <a href="<?= htmlspecialchars($stUrl, ENT_QUOTES, 'UTF-8') ?>" class="book-story-row-link">
-                          <span class="row-day-pill">Dia <?= htmlspecialchars($stDia, ENT_QUOTES, 'UTF-8') ?></span>
+                          <span class="row-day-pill <?= $isDefined ? '' : 'row-day-pill--canonical' ?>">
+                            <?= $isDefined ? 'Dia ' . htmlspecialchars($stDia, ENT_QUOTES, 'UTF-8') : 'Bíblia' ?>
+                          </span>
                           <strong class="row-story-title"><?= htmlspecialchars($stTitulo, ENT_QUOTES, 'UTF-8') ?></strong>
                           <span class="row-story-ref"><?= htmlspecialchars($stRef, ENT_QUOTES, 'UTF-8') ?></span>
                         </a>
@@ -428,11 +498,6 @@ require __DIR__ . '/includes/header.php';
                       </li>
                     <?php endforeach; ?>
                   </ul>
-                <?php else: ?>
-                  <div class="book-no-defined-story">
-                    <span>Livro completo disponível na Bíblia em tela (<?= (int)$book['chapters_count'] ?> <?= $book['chapters_count'] === 1 ? 'capítulo' : 'capítulos' ?>).</span>
-                    <a href="bible.php?book=<?= urlencode($book['url_abbrev']) ?>&ch=1">Ler livro completo →</a>
-                  </div>
                 <?php endif; ?>
               </div>
             <?php endforeach; ?>

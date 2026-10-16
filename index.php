@@ -39,7 +39,8 @@ $bgAlt = $story['imagem']['alt'] ?? $rawTitle;
 $referencia = (string)($story['referencia'] ?? '');
 $textoPassagem = (string)($story['texto'] ?? $story['historia'] ?? '');
 $formattedPassageHtml = BibleRepository::formatPassageVersesHtml($textoPassagem);
-$diaNumero = (int)($story['dia'] ?? 1);
+$isCanonicalStory = (($story['origin'] ?? 'defined') === 'canonical');
+$diaNumero = $isCanonicalStory ? ((int)date('z') + 1) : (int)($story['dia'] ?? 1);
 $dataLabel = (string)($story['data'] ?? '');
 $yearProgress = max(1, min(100, (int)round(($diaNumero / 366) * 100)));
 
@@ -87,9 +88,15 @@ require __DIR__ . '/includes/header.php';
             <div class="hero-artwork-gradient"></div>
 
             <div class="hero-artwork-top-badges">
-              <span class="badge-glass badge-glass--gold">
-                Dia <?= $diaNumero ?> de 366<?= $dataLabel !== '' ? ' · ' . htmlspecialchars($dataLabel, ENT_QUOTES, 'UTF-8') : '' ?>
-              </span>
+              <?php if ($isCanonicalStory): ?>
+                <span class="badge-glass badge-glass--gold">
+                  História Bíblica · <?= htmlspecialchars($dataLabel !== '' ? $dataLabel : 'Escrituras', ENT_QUOTES, 'UTF-8') ?>
+                </span>
+              <?php else: ?>
+                <span class="badge-glass badge-glass--gold">
+                  Dia <?= $diaNumero ?> de 366<?= $dataLabel !== '' ? ' · ' . htmlspecialchars($dataLabel, ENT_QUOTES, 'UTF-8') : '' ?>
+                </span>
+              <?php endif; ?>
               <?php if (!empty($story['book'])): ?>
                 <span class="badge-glass">
                   <?= ($story['book']['testament'] ?? 'VT') === 'VT' ? 'Antigo Testamento' : 'Novo Testamento' ?>
@@ -99,7 +106,7 @@ require __DIR__ . '/includes/header.php';
 
             <div class="hero-artwork-footer">
               <div class="progress-meta">
-                <span>Jornada Devocional Anual</span>
+                <span>Jornada Devocional Anual (366 Dias)</span>
                 <strong><?= $yearProgress ?>% concluído</strong>
               </div>
               <div class="progress-track" role="progressbar" aria-valuenow="<?= $diaNumero ?>" aria-valuemin="1" aria-valuemax="366">
