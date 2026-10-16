@@ -129,7 +129,10 @@
   <footer id="rodape" class="site-footer visible">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="footer-title">Via <em>Scriptura</em></span>
+        <div class="footer-brand-head">
+          <img src="assets/icons/icon.svg" alt="Logo Via Scriptura" class="footer-brand-logo" width="38" height="38" loading="lazy" />
+          <span class="footer-title">Via <em>Scriptura</em></span>
+        </div>
         <p class="footer-tagline">Caminhando pelas Escrituras dia após dia com reverência, beleza e propósito.</p>
       </div>
 
@@ -137,7 +140,7 @@
         <a href="index.php">Leitura do Dia</a>
         <a href="bible.php">Bíblia Completa (NAA)</a>
         <a href="bible.php?view=panorama">Panorama dos 66 Livros</a>
-        <a href="stories.php">366 Histórias Bíblicas</a>
+        <a href="stories.php">586 Histórias Bíblicas</a>
         <a href="divisions.php">Separação Bíblica (Eras & Divisões)</a>
         <a href="about.php">Sobre o Projeto</a>
       </div>
@@ -149,6 +152,50 @@
       </div>
     </div>
   </footer>
+
+  <!-- Barra de Navegação Inferior Fixa para Mobile (App Tab Bar) -->
+  <?php $currentNav = $activeNav ?? 'home'; ?>
+  <nav class="mobile-bottom-nav" aria-label="Menu inferior mobile">
+    <a href="index.php" class="mobile-tab-item <?= $currentNav === 'home' ? 'active' : '' ?>">
+      <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+      </svg>
+      <span>Hoje</span>
+    </a>
+    <a href="bible.php" class="mobile-tab-item <?= $currentNav === 'bible' ? 'active' : '' ?>">
+      <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+      </svg>
+      <span>Bíblia</span>
+    </a>
+    <a href="stories.php" class="mobile-tab-item <?= $currentNav === 'stories' ? 'active' : '' ?>">
+      <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true">
+        <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+        <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+        <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+        <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+      </svg>
+      <span>Histórias</span>
+    </a>
+    <a href="divisions.php" class="mobile-tab-item <?= $currentNav === 'divisions' ? 'active' : '' ?>">
+      <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+        <polyline points="2 17 12 22 22 17"></polyline>
+        <polyline points="2 12 12 17 22 12"></polyline>
+      </svg>
+      <span>Separação</span>
+    </a>
+    <button type="button" class="mobile-tab-item mobile-tab-btn" data-open-drawer="true" aria-label="Abrir menu retrátil e navegação da Bíblia">
+      <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span>Menu</span>
+    </button>
+  </nav>
 
   <script src="assets/js/app.js"></script>
 </body>

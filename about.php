@@ -20,6 +20,9 @@ require __DIR__ . '/includes/header.php';
     <div class="about-overlay"></div>
 
     <section class="about-content" aria-labelledby="about-title">
+      <div class="about-logo-showcase">
+        <img src="assets/logo.png" alt="Logo Oficial Via Scriptura — Bíblia & Devocional" class="about-hero-logo" width="160" height="160" />
+      </div>
       <p class="about-label">Nossa Missão & Propósito</p>
       <h1 id="about-title">Via <em>Scriptura</em></h1>
 

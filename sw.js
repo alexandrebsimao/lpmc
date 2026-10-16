@@ -4,7 +4,7 @@
  * e estratégia híbrida (Network-First para páginas PHP + Stale-While-Revalidate para ativos/dados).
  */
 
-const CACHE_VERSION = 'v1.0.0';
+const CACHE_VERSION = 'v1.0.1';
 const STATIC_CACHE = `vs-static-${CACHE_VERSION}`;
 const PAGES_CACHE = `vs-pages-${CACHE_VERSION}`;
 const DATA_CACHE = `vs-data-${CACHE_VERSION}`;
@@ -15,6 +15,7 @@ const APP_SHELL_ASSETS = [
   '/assets/css/style.css',
   '/assets/js/app.js',
   '/assets/icons/icon.svg',
+  '/assets/icons/logo.svg',
   '/assets/icons/icon-maskable.svg',
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',

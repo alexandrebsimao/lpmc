@@ -2281,6 +2281,35 @@ body {
   text-align: center;
 }
 
+.about-logo-showcase {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.about-hero-logo {
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid var(--gold-border-strong);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55), 0 0 28px rgba(212, 175, 110, 0.18);
+}
+
+.footer-brand-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.footer-brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .about-label {
   font-size: 0.74rem;
   font-weight: 700;
@@ -3710,5 +3739,1134 @@ body {
   color: var(--gold);
 }
 
+/* ==========================================================================
+   11. OTIMIZAÇÃO COMPLETA PARA MOBILE & EXPERIÊNCIA NATIVA (PWA / APP)
+   ========================================================================== */
 
+/* Oculta a barra inferior mobile no desktop */
+.mobile-bottom-nav {
+  display: none;
+}
 
+/* Menu retrátil: a estrutura é global para permitir uma transição limpa, mas o
+   acionador só aparece em telas compactas. */
+.mobile-menu-toggle,
+.mobile-drawer {
+  display: none;
+}
+
+body.mobile-drawer-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+@media (max-width: 1080px) {
+  /* No tablet/mobile, exibe primeiro o capítulo bíblico (com os seletores de livro/capítulo)
+     e posiciona o diretório lateral dos 66 livros logo abaixo */
+  .bible-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bible-main-panel {
+    order: 1;
+    width: 100%;
+  }
+
+  .bible-sidebar {
+    order: 2;
+    width: 100%;
+    position: static;
+    max-height: 360px;
+  }
+
+  .modern-passage-body {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 7px 10px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    background: var(--bg-subtle);
+    color: var(--text-primary);
+    font: 700 0.72rem/1 var(--font-ui);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-menu-toggle:focus-visible,
+  .mobile-drawer button:focus-visible,
+  .mobile-drawer a:focus-visible,
+  .mobile-drawer input:focus-visible,
+  .mobile-drawer select:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  .mobile-drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: block;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .mobile-drawer.active {
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-drawer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 6, 5, 0.7);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  .mobile-drawer.active .mobile-drawer-backdrop {
+    opacity: 1;
+  }
+
+  .mobile-drawer-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(92vw, 430px);
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-elevated);
+    border-left: 1px solid var(--border-subtle);
+    box-shadow: -18px 0 50px rgba(0, 0, 0, 0.42);
+    transform: translateX(102%);
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .mobile-drawer.active .mobile-drawer-panel {
+    transform: translateX(0);
+  }
+
+  .mobile-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex: 0 0 auto;
+    padding: calc(14px + env(safe-area-inset-top, 0px)) 16px 14px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .mobile-drawer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .brand-emblem--sm {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+  }
+
+  .mobile-drawer-brand strong,
+  .mobile-drawer-brand span {
+    display: block;
+  }
+
+  .mobile-drawer-brand strong {
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+  }
+
+  .mobile-drawer-brand > div > span {
+    margin-top: 2px;
+    color: var(--text-muted);
+    font: 500 0.66rem/1.2 var(--font-ui);
+  }
+
+  .mobile-drawer-close {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 50%;
+    background: var(--bg-subtle);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .mobile-drawer-search {
+    flex: 0 0 auto;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--bg-subtle);
+  }
+
+  .drawer-search-form {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    padding-left: 12px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    background: var(--bg-elevated);
+  }
+
+  .drawer-search-form svg { color: var(--gold); }
+
+  .drawer-search-form input {
+    min-width: 0;
+    height: 42px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+  }
+
+  .drawer-search-submit {
+    align-self: stretch;
+    padding: 0 13px;
+    border: 0;
+    border-left: 1px solid var(--border-subtle);
+    border-radius: 0 11px 11px 0;
+    background: var(--gold-soft);
+    color: var(--gold);
+    font: 700 0.72rem var(--font-ui);
+  }
+
+  .mobile-drawer-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 12px 12px calc(22px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .drawer-section {
+    margin-bottom: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    background: var(--bg-subtle);
+  }
+
+  .drawer-section-summary,
+  .drawer-book-summary {
+    list-style: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .drawer-section-summary::-webkit-details-marker,
+  .drawer-book-summary::-webkit-details-marker { display: none; }
+
+  .drawer-section-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 13px 14px;
+    color: var(--text-primary);
+    font: 700 0.78rem var(--font-ui);
+  }
+
+  .drawer-summary-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .drawer-summary-title svg { color: var(--gold); }
+  .drawer-chevron,
+  .drawer-book-chevron { transition: transform 0.2s ease; }
+  .drawer-section[open] > .drawer-section-summary .drawer-chevron,
+  .drawer-book-group[open] > .drawer-book-summary .drawer-book-chevron { transform: rotate(180deg); }
+
+  .drawer-nav-list {
+    display: grid;
+    gap: 5px;
+    padding: 0 8px 9px;
+  }
+
+  .drawer-nav-link {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 9px;
+    min-height: 44px;
+    padding: 9px 10px;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font: 600 0.78rem var(--font-ui);
+  }
+
+  .drawer-nav-link.active {
+    background: var(--gold-soft);
+    color: var(--gold);
+  }
+
+  .drawer-link-tag {
+    color: var(--text-muted);
+    font-size: 0.6rem;
+    white-space: nowrap;
+  }
+
+  .drawer-bible-controls { padding: 0 9px 10px; }
+
+  .drawer-quick-jump {
+    display: grid;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 11px;
+    background: var(--bg-elevated);
+  }
+
+  .drawer-quick-selects {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(90px, 0.7fr);
+    gap: 7px;
+  }
+
+  .drawer-quick-selects .bible-select { min-width: 0; }
+
+  .drawer-go-btn {
+    width: 100%;
+    min-height: 40px;
+    justify-content: center;
+  }
+
+  .drawer-testament-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 10px 0 8px;
+  }
+
+  .drawer-testament-tab {
+    min-height: 36px;
+    padding: 6px 4px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 9px;
+    background: transparent;
+    color: var(--text-muted);
+    font: 700 0.64rem/1.15 var(--font-ui);
+  }
+
+  .drawer-testament-tab.active {
+    border-color: var(--gold-border-strong);
+    background: var(--gold-soft);
+    color: var(--gold);
+  }
+
+  #drawer-book-filter {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .drawer-books-accordion {
+    display: grid;
+    gap: 5px;
+    max-height: 46vh;
+    overflow-y: auto;
+    padding-right: 2px;
+    overscroll-behavior: contain;
+  }
+
+  .drawer-book-group {
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    background: var(--bg-elevated);
+  }
+
+  .drawer-book-group.is-active-book { border-color: var(--gold-border-strong); }
+
+  .drawer-book-summary {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr) auto 14px;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 6px 9px;
+  }
+
+  .drawer-book-badge {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: var(--gold-soft);
+    color: var(--gold);
+    font: 800 0.62rem var(--font-ui);
+  }
+
+  .drawer-book-meta { min-width: 0; }
+  .drawer-book-meta strong,
+  .drawer-book-meta small { display: block; }
+  .drawer-book-meta strong {
+    overflow: hidden;
+    color: var(--text-primary);
+    font: 700 0.76rem var(--font-ui);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .drawer-book-meta small,
+  .drawer-book-count {
+    color: var(--text-muted);
+    font: 500 0.6rem var(--font-ui);
+  }
+  .drawer-book-count { white-space: nowrap; }
+
+  .drawer-book-chapters {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(32px, 1fr));
+    gap: 5px;
+    padding: 4px 8px 10px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .drawer-chapter-pill {
+    display: grid;
+    place-items: center;
+    min-height: 34px;
+    border-radius: 8px;
+    background: var(--bg-subtle);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font: 700 0.68rem var(--font-ui);
+  }
+
+  .drawer-chapter-pill.active {
+    background: var(--gold);
+    color: var(--bg-main);
+  }
+
+  .mobile-tab-btn {
+    border: 0;
+    background: transparent;
+    font-family: var(--font-ui);
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-drawer-panel,
+    .mobile-drawer-backdrop { transition: none; }
+  }
+
+  /* Reserva espaço inferior para a App Tab Bar fixa */
+  body {
+    padding-bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+    overflow-x: hidden;
+  }
+
+  /* Barra de Navegação Inferior Fixa Estilo App Nativo */
+  .mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2200;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    background: var(--bg-elevated);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border-top: 1px solid var(--border-subtle);
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .mobile-tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 6px 2px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-family: var(--font-ui);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: color 0.18s ease, background 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-tab-item svg {
+    color: currentColor;
+    transition: transform 0.18s ease;
+  }
+
+  .mobile-tab-item.active {
+    color: var(--gold);
+    background: var(--gold-soft);
+  }
+
+  .mobile-tab-item.active svg {
+    transform: translateY(-1px);
+  }
+
+  /* Oculta o menu superior no mobile pois já está na barra inferior fixa */
+  .navbar-links {
+    display: none !important;
+  }
+
+  /* Cabeçalho Superior Compacto em 2 Linhas Limpas no Mobile */
+  .navbar-inner {
+    padding: 8px 14px 10px;
+    gap: 8px;
+  }
+
+  .brand-emblem {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+
+  .brand-text {
+    font-size: 1.32rem;
+  }
+
+  .brand-sub {
+    font-size: 0.56rem;
+    letter-spacing: 0.1em;
+  }
+
+  .navbar-actions {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* Busca ocupa uma linha inteira abaixo da marca/botões no mobile */
+  .navbar-search {
+    order: 4;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .navbar-search input,
+  .Navbar-search input:focus {
+    width: 100% !important;
+    font-size: 16px; /* Evita auto-zoom do iOS Safari */
+    padding: 8px 14px 8px 34px;
+    height: 38px;
+  }
+
+  .search-kbd {
+    display: none;
+  }
+
+  /* Botões compactos de Tema, Fonte e Instalar App no topo */
+  .theme-toggle-btn {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+    gap: 5px;
+  }
+
+  .pwa-install-btn {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+  }
+
+  .pwa-install-btn span {
+    display: none; /* Mantém apenas o ícone de download no topo mobile para economizar espaço */
+  }
+
+  .font-controls {
+    padding: 2px;
+    gap: 2px;
+  }
+
+  .font-size-display {
+    display: none; /* Mantém A- e A+ super compactos no mobile */
+  }
+
+  .font-btn {
+    width: 26px;
+    height: 24px;
+    font-size: 0.72rem;
+  }
+
+  /* Evita zoom automático no iOS ao focar inputs e selects */
+  input[type="search"],
+  input[type="text"],
+  select.bible-select {
+    font-size: 16px !important;
+  }
+
+  /* ── Hero & Leitura do Dia (index.php) no Mobile ── */
+  .modern-hero {
+    padding: 14px 12px 28px;
+  }
+
+  .hero-showcase-grid {
+    gap: 16px;
+  }
+
+  .hero-artwork-frame {
+    min-height: 215px;
+    max-height: 245px;
+    padding: 14px;
+    border-radius: var(--radius-lg);
+  }
+
+  .badge-glass {
+    padding: 4px 10px;
+    font-size: 0.66rem;
+  }
+
+  .reading-card-surface {
+    padding: 18px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .reading-card-eyebrow {
+    font-size: 0.66rem;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+
+  .modern-hero-title {
+    font-size: clamp(1.8rem, 6.8vw, 2.3rem);
+    margin-bottom: 12px;
+  }
+
+  .modern-reference-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+  }
+
+  .reference-pill {
+    justify-content: center;
+    width: 100%;
+    padding: 9px 14px;
+  }
+
+  .hero-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+
+  .action-chip {
+    justify-content: center;
+    padding: 9px 8px;
+    font-size: 0.74rem;
+    width: 100%;
+  }
+
+  /* Sem scroll interno na leitura do dia no mobile: texto expande naturalmente na página */
+  .modern-passage-body {
+    max-height: none !important;
+    overflow-y: visible !important;
+    padding-right: 0;
+    font-size: calc(1.04rem * var(--font-scale));
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .reading-card-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .reading-card-cta-row .btn-modern-primary,
+  .reading-card-cta-row .btn-modern-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  /* Navegação Anterior / Hoje / Próximo no Mobile */
+  .bento-nav-grid {
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .bento-nav-card {
+    padding: 12px 14px;
+  }
+
+  .nav-title {
+    font-size: 1.15rem;
+  }
+
+  /* ── Leitor da Bíblia em Tela (index.php & bible.php) no Mobile ── */
+  .onscreen-bible-section {
+    padding: 28px 12px 44px;
+  }
+
+  .onscreen-bible-top {
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 6.2vw, 2.2rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.86rem;
+  }
+
+  .onscreen-bible-quick-actions {
+    width: 100%;
+  }
+
+  .onscreen-bible-quick-actions a {
+    flex: 1 1 auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bible-hero-bar {
+    padding: 22px 14px 18px;
+    margin-bottom: 18px;
+  }
+
+  .bible-hero-inner {
+    gap: 14px;
+  }
+
+  .bible-hero-titles h1 {
+    font-size: clamp(1.9rem, 6.8vw, 2.5rem);
+  }
+
+  /* Abas de modo na Bíblia roláveis horizontalmente */
+  .bible-view-tabs {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .bible-view-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bible-view-tab {
+    flex: 0 0 auto;
+    padding: 8px 13px;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  .bible-page-container {
+    padding: 0 12px;
+  }
+
+  .bible-main-panel {
+    padding: 18px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .bible-panel-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-bottom: 14px;
+  }
+
+  .reader-chapter-title {
+    font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+  }
+
+  .bible-header-selectors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .bible-select {
+    width: 100%;
+    padding: 9px 10px;
+  }
+
+  .reading-layout-toggle {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .layout-toggle-btn {
+    text-align: center;
+    padding: 8px;
+  }
+
+  .bible-header-selectors .btn-copy-chapter {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 9px 10px;
+  }
+
+  /* Pílulas de Capítulos em Fita Horizontal Deslizante no Mobile */
+  .chapter-pills-bar {
+    margin: 14px 0;
+    padding: 10px 12px;
+  }
+
+  .chapter-pills-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    max-height: none;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .chapter-pills-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chapter-pill {
+    flex: 0 0 auto;
+    min-width: 38px;
+    height: 34px;
+  }
+
+  /* Versículos com leitura confortável no mobile */
+  .bible-verse {
+    gap: 10px;
+    padding: 8px 8px;
+    line-height: 1.8;
+    font-size: calc(1.02rem * var(--font-scale));
+  }
+
+  .verse-num {
+    min-width: 22px;
+    font-size: 0.72rem;
+  }
+
+  .verse-interaction-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .verse-selected-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .reader-footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .bible-chapter-indicator {
+    grid-column: 1 / -1;
+    order: -1;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .bible-nav-btn {
+    justify-content: center;
+    padding: 10px 12px;
+    font-size: 0.76rem;
+    text-align: center;
+  }
+
+  /* ── Tela de Histórias (stories.php) no Mobile ── */
+  .stories-page-section {
+    padding: 22px 12px 48px;
+  }
+
+  .stories-header {
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .stories-header h1 {
+    font-size: clamp(1.95rem, 7vw, 2.5rem);
+  }
+
+  .stories-stats-pills {
+    gap: 6px;
+    width: 100%;
+  }
+
+  .stat-pill {
+    padding: 6px 11px;
+    font-size: 0.72rem;
+  }
+
+  .stories-stats-pills .btn-modern-primary {
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .stories-controls-bar {
+    padding: 12px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .stories-filters-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .stories-filter-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
+    padding-bottom: 2px;
+  }
+
+  .stories-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tab-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 7px 13px;
+    font-size: 0.74rem;
+  }
+
+  .stories-search-box {
+    flex: 1 1 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .stories-search-box .search-input {
+    max-width: none;
+    width: 100%;
+  }
+
+  .stories-count-indicator {
+    text-align: right;
+    font-size: 0.74rem;
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .story-image {
+    height: 185px;
+  }
+
+  .story-content {
+    padding: 16px;
+  }
+
+  .story-card-actions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ── Tela de Separação Bíblica (divisions.php) no Mobile ── */
+  .divisions-hero {
+    padding: 22px 12px 20px;
+    margin-bottom: 20px;
+  }
+
+  .divisions-hero-copy h1 {
+    font-size: clamp(1.9rem, 6.8vw, 2.5rem);
+  }
+
+  .divisions-lead {
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+  }
+
+  .divisions-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .div-stat-box {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .div-stat-box strong {
+    font-size: 1.45rem;
+  }
+
+  .div-stat-box span {
+    font-size: 0.7rem;
+  }
+
+  .divisions-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding-top: 14px;
+  }
+
+  .divisions-mode-tabs,
+  .divisions-origin-filters,
+  .eras-timeline-nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .divisions-mode-tabs::-webkit-scrollbar,
+  .divisions-origin-filters::-webkit-scrollbar,
+  .eras-timeline-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .div-mode-tab,
+  .origin-filter-btn,
+  .era-Jump-pill {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .divisions-search-wrap {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .divisions-search-wrap .search-input {
+    width: 100%;
+  }
+
+  .divisions-container {
+    padding: 0 12px;
+  }
+
+  .eras-timeline-nav {
+    padding: 10px 12px;
+    margin-bottom: 20px;
+  }
+
+  .separation-block {
+    padding: 16px 14px;
+    margin-bottom: 24px;
+    border-radius: var(--radius-lg);
+  }
+
+  .separation-block-titles h2 {
+    font-size: 1.5rem;
+  }
+
+  .separated-stories-grid,
+  .books-separation-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sep-story-card {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .sep-story-thumb-wrap {
+    width: 74px;
+    height: 96px;
+  }
+
+  .sep-story-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .book-separation-card {
+    padding: 16px 14px;
+  }
+
+  /* ── Modais Estilo Bottom-Sheet no Mobile ── */
+  .vs-share-modal {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .vs-share-dialog {
+    width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    border-radius: 22px 22px 0 0;
+    border-bottom: none;
+    padding-bottom: env(safe-area-inset-bottom, 12px);
+    transform: translateY(100%);
+  }
+
+  .vs-share-modal.active .vs-share-dialog {
+    transform: translateY(0);
+  }
+
+  .vs-share-header {
+    padding: 18px 18px 12px;
+  }
+
+  .vs-share-body {
+    padding: 16px 18px 20px;
+    gap: 14px;
+  }
+
+  .vs-share-utility-row {
+    flex-direction: column;
+  }
+
+  .vs-share-utility-row .btn-modern-primary,
+  .vs-share-utility-row .btn-modern-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Toast posicionado acima da barra inferior mobile */
+  .vs-toast {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+    left: 14px;
+    right: 14px;
+    text-align: center;
+    padding: 11px 16px;
+    font-size: 0.8rem;
+  }
+}

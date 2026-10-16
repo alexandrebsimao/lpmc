@@ -282,7 +282,8 @@ require __DIR__ . '/includes/header.php';
                         <img src="<?= htmlspecialchars((string)$rs['imagem']['url'], ENT_QUOTES, 'UTF-8') ?>" alt="" loading="lazy" />
                       <?php endif; ?>
                       <div class="related-story-chip-info">
-                        <span class="chip-day">Dia <?= htmlspecialchars((string)$rs['dia'], ENT_QUOTES, 'UTF-8') ?> · <?= htmlspecialchars((string)$rs['referencia'], ENT_QUOTES, 'UTF-8') ?></span>
+                        <?php $chipPrefix = !empty($rs['dia']) ? 'Dia ' . htmlspecialchars((string)$rs['dia'], ENT_QUOTES, 'UTF-8') : 'História Bíblica'; ?>
+                        <span class="chip-day"><?= $chipPrefix ?> · <?= htmlspecialchars((string)$rs['referencia'], ENT_QUOTES, 'UTF-8') ?></span>
                         <strong><?= htmlspecialchars((string)$rs['titulo'], ENT_QUOTES, 'UTF-8') ?></strong>
                       </div>
                     </a>

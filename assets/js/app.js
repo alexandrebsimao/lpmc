@@ -525,6 +525,7 @@
         if (pillsListEl) {
           const isBiblePage = document.body.classList.contains('page-bible');
           pillsListEl.innerHTML = '';
+          let activePillEl = null;
           for (let c = 1; c <= total; c++) {
             const a = document.createElement('a');
             a.href = isBiblePage
@@ -534,6 +535,10 @@
             a.setAttribute('data-ch', String(c));
             a.textContent = String(c);
             pillsListEl.appendChild(a);
+            if (c === ch) activePillEl = a;
+          }
+          if (activePillEl && typeof activePillEl.scrollIntoView === 'function') {
+            activePillEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
           }
         }
 
@@ -549,11 +554,12 @@
               const imgHtml = rs.imagem?.url
                 ? `<img src="${rs.imagem.url}" alt="" loading="lazy" />`
                 : '';
+              const chipPrefix = rs.dia ? `Dia ${rs.dia}` : 'História Bíblica';
               return `
                 <a href="index.php?p=${encodeURIComponent(rs.slug || '')}" class="related-story-chip">
                   ${imgHtml}
                   <div class="related-story-chip-info">
-                    <span class="chip-day">Dia ${rs.dia} · ${rs.referencia || ''}</span>
+                    <span class="chip-day">${chipPrefix} · ${rs.referencia || ''}</span>
                     <strong>${rs.titulo || ''}</strong>
                   </div>
                 </a>
@@ -621,6 +627,32 @@
           readerTabSpan.textContent = `Leitor em Tela (${book.name} ${ch})`;
         }
 
+        // Sincroniza também o Menu Retrátil Mobile (#mobile-drawer)
+        const drawerBookSelect = document.getElementById('drawer-book-select');
+        const drawerChapterSelect = document.getElementById('drawer-chapter-select');
+        if (drawerBookSelect) {
+          drawerBookSelect.value = book.url_abbrev;
+        }
+        if (drawerChapterSelect) {
+          drawerChapterSelect.innerHTML = '';
+          for (let c = 1; c <= total; c++) {
+            const opt = document.createElement('option');
+            opt.value = c;
+            opt.textContent = `Cap. ${c}`;
+            if (c === ch) opt.selected = true;
+            drawerChapterSelect.appendChild(opt);
+          }
+        }
+        document.querySelectorAll('.drawer-book-group').forEach(group => {
+          const isMatch = group.getAttribute('data-book-abbrev') === book.url_abbrev;
+          group.classList.toggle('is-active-book', isMatch);
+          if (isMatch) group.open = true;
+          group.querySelectorAll('.drawer-chapter-pill').forEach(pill => {
+            const pillCh = parseInt(pill.getAttribute('data-drawer-ch') || '0', 10);
+            pill.classList.toggle('active', isMatch && pillCh === ch);
+          });
+        });
+
         if (pushHistory && window.history && window.history.pushState) {
           const url = new URL(window.location.href);
           url.searchParams.set('book', book.url_abbrev);
@@ -635,6 +667,8 @@
         versesListEl.classList.remove('loading-state');
       }
     }
+
+    window.vsLoadBibleChapter = loadChapterAjax;
 
     if (bookSelect) {
       bookSelect.addEventListener('change', e => {
@@ -687,6 +721,13 @@
         }
       });
     });
+
+    if (pillsListEl) {
+      const initialActivePill = pillsListEl.querySelector('.chapter-pill.active');
+      if (initialActivePill && typeof initialActivePill.scrollIntoView === 'function') {
+        initialActivePill.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+      }
+    }
 
     const firstHighlighted = versesListEl.querySelector('.bible-verse.highlighted');
     if (firstHighlighted && document.body.classList.contains('page-bible')) {
@@ -1244,6 +1285,208 @@
     }
   }
 
+  // ── Menu Retrátil Mobile & Navegação Completa da Bíblia (#mobile-drawer) ──
+  function initMobileDrawer() {
+    const drawer = document.getElementById('mobile-drawer');
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const closeBtn = document.getElementById('mobile-drawer-close');
+    const backdrop = document.getElementById('mobile-drawer-backdrop');
+    const drawerBookSelect = document.getElementById('drawer-book-select');
+    const drawerChapterSelect = document.getElementById('drawer-chapter-select');
+    const drawerGoBtn = document.getElementById('drawer-go-bible-btn');
+    const drawerTestamentTabs = document.querySelectorAll('[data-drawer-testament]');
+    const drawerBookFilter = document.getElementById('drawer-book-filter');
+    const drawerAccordion = document.getElementById('drawer-books-accordion');
+
+    if (!drawer) return;
+    const drawerPanel = drawer.querySelector('.mobile-drawer-panel');
+    let previouslyFocused = null;
+
+    function openDrawer(focusBible = false) {
+      previouslyFocused = document.activeElement;
+      drawer.classList.add('active');
+      drawer.setAttribute('aria-hidden', 'false');
+      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('mobile-drawer-open');
+
+      if (focusBible) {
+        const bibleSec = document.getElementById('drawer-bible-section');
+        if (bibleSec) {
+          bibleSec.open = true;
+          setTimeout(() => {
+            bibleSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 120);
+        }
+      } else if (drawerAccordion) {
+        const activeGroup = drawerAccordion.querySelector('.drawer-book-group.is-active-book');
+        if (activeGroup) {
+          setTimeout(() => {
+            activeGroup.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+          }, 80);
+        }
+      }
+
+      if (closeBtn) setTimeout(() => closeBtn.focus(), 0);
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('active');
+      drawer.setAttribute('aria-hidden', 'true');
+      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('mobile-drawer-open');
+      if (previouslyFocused && typeof previouslyFocused.focus === 'function') {
+        previouslyFocused.focus();
+      }
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        if (drawer.classList.contains('active')) {
+          closeDrawer();
+        } else {
+          openDrawer(false);
+        }
+      });
+    }
+
+    document.querySelectorAll('[data-open-drawer]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const focusBible = btn.getAttribute('data-open-drawer') === 'bible';
+        if (drawer.classList.contains('active')) {
+          closeDrawer();
+        } else {
+          openDrawer(focusBible);
+        }
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('active')) {
+        closeDrawer();
+      }
+
+      if (e.key === 'Tab' && drawer.classList.contains('active') && drawerPanel) {
+        const focusable = Array.from(drawerPanel.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), summary, [tabindex]:not([tabindex="-1"])'
+        )).filter(el => el.offsetParent !== null);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && drawer.classList.contains('active')) closeDrawer();
+    });
+
+    function navigateToBibleChapter(bookAbbrev, chNum) {
+      closeDrawer();
+      if (typeof window.vsLoadBibleChapter === 'function') {
+        // Se estiver em bible.php em modo panorama/busca, muda para a aba leitor
+        const readerTabBtn = document.querySelector('[data-switch-view="reader"]');
+        if (readerTabBtn && !readerTabBtn.classList.contains('active')) {
+          readerTabBtn.click();
+        }
+        window.vsLoadBibleChapter(bookAbbrev, chNum, true);
+        const targetEl = document.getElementById('reader-main-panel') || document.getElementById('biblia-em-tela');
+        if (targetEl) {
+          setTimeout(() => {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 80);
+        }
+      } else {
+        window.location.href = `bible.php?book=${encodeURIComponent(bookAbbrev)}&ch=${encodeURIComponent(chNum)}`;
+      }
+    }
+
+    // Atualiza a lista de capítulos no seletor rápido quando o livro muda
+    if (drawerBookSelect && drawerChapterSelect) {
+      drawerBookSelect.addEventListener('change', () => {
+        const selectedOption = drawerBookSelect.options[drawerBookSelect.selectedIndex];
+        const total = parseInt(selectedOption?.getAttribute('data-chapters') || '1', 10) || 1;
+        drawerChapterSelect.innerHTML = '';
+        for (let c = 1; c <= total; c++) {
+          const opt = document.createElement('option');
+          opt.value = c;
+          opt.textContent = `Cap. ${c}`;
+          drawerChapterSelect.appendChild(opt);
+        }
+      });
+    }
+
+    if (drawerGoBtn && drawerBookSelect && drawerChapterSelect) {
+      drawerGoBtn.addEventListener('click', () => {
+        const book = drawerBookSelect.value || 'gn';
+        const ch = parseInt(drawerChapterSelect.value || '1', 10) || 1;
+        navigateToBibleChapter(book, ch);
+      });
+    }
+
+    // Clique em qualquer pílula de capítulo dentro do acordeão de 66 livros do menu
+    if (drawerAccordion) {
+      drawerAccordion.addEventListener('click', (e) => {
+        const pill = e.target.closest('.drawer-chapter-pill');
+        if (!pill) return;
+        e.preventDefault();
+        const book = pill.getAttribute('data-drawer-book') || 'gn';
+        const ch = parseInt(pill.getAttribute('data-drawer-ch') || '1', 10) || 1;
+        navigateToBibleChapter(book, ch);
+      });
+    }
+
+    // Filtro de Testamento (Todos / Antigo / Novo) e busca textual de livros no menu
+    let activeDrawerTestament = 'ALL';
+
+    function filterDrawerBooks() {
+      if (!drawerAccordion) return;
+      const query = drawerBookFilter ? stripAccents(drawerBookFilter.value) : '';
+      const groups = drawerAccordion.querySelectorAll('.drawer-book-group');
+      const matchedGroups = [];
+
+      groups.forEach(group => {
+        const t = group.getAttribute('data-testament') || 'VT';
+        const name = group.getAttribute('data-book-name') || '';
+        const matchTestament = activeDrawerTestament === 'ALL' || t === activeDrawerTestament;
+        const matchSearch = !query || name.includes(query);
+
+        if (matchTestament && matchSearch) {
+          group.style.display = '';
+          matchedGroups.push(group);
+        } else {
+          group.style.display = 'none';
+        }
+      });
+
+      // Se o usuário digitou um livro específico (poucos resultados), abre automaticamente os capítulos
+      if (query && matchedGroups.length > 0 && matchedGroups.length <= 3) {
+        matchedGroups.forEach(g => { g.open = true; });
+      }
+    }
+
+    drawerTestamentTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        drawerTestamentTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        activeDrawerTestament = tab.getAttribute('data-drawer-testament') || 'ALL';
+        filterDrawerBooks();
+      });
+    });
+
+    if (drawerBookFilter) {
+      drawerBookFilter.addEventListener('input', filterDrawerBooks);
+    }
+  }
+
   // ── Inicialização Geral ──
   document.addEventListener('DOMContentLoaded', () => {
     initThemeSwitcher();
@@ -1256,5 +1499,6 @@
     initDivisionsPage();
     initShareModal();
     initPWA();
+    initMobileDrawer();
   });
 })();
