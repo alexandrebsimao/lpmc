@@ -31,13 +31,93 @@ $drawerActiveTotalChapters = (int)($drawerActiveBook['chapters_count'] ?? 50);
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="dark">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8213T4K5R"></script>
+  <!-- Analytics permanece bloqueado até o consentimento explícito do visitante. -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-P8213T4K5R');
+    (function () {
+      'use strict';
+      var storageKey = 'vs-cookie-consent-v1';
+      var measurementId = 'G-P8213T4K5R';
+      var loaded = false;
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+
+      function readChoice() {
+        try { return localStorage.getItem(storageKey); } catch (e) { return null; }
+      }
+
+      function writeChoice(choice) {
+        try { localStorage.setItem(storageKey, choice); } catch (e) {}
+      }
+
+      function loadAnalytics() {
+        if (loaded || document.querySelector('script[data-vs-analytics]')) return;
+        loaded = true;
+        window.gtag('consent', 'default', {
+          analytics_storage: 'granted',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
+        window.gtag('js', new Date());
+        window.gtag('config', measurementId, {
+          anonymize_ip: true,
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false
+        });
+        var script = document.createElement('script');
+        script.async = true;
+        script.dataset.vsAnalytics = 'true';
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+        document.head.appendChild(script);
+      }
+
+      function removeAnalyticsCookies() {
+        document.cookie.split(';').forEach(function (entry) {
+          var name = entry.split('=')[0].trim();
+          if (name === '_ga' || name.indexOf('_ga_') === 0 || name === '_gid' || name === '_gat') {
+            var hostParts = location.hostname.split('.');
+            document.cookie = name + '=; Max-Age=0; path=/; SameSite=Lax';
+            if (hostParts.length > 1) {
+              document.cookie = name + '=; Max-Age=0; path=/; domain=.' + hostParts.slice(-2).join('.') + '; SameSite=Lax';
+            }
+          }
+        });
+      }
+
+      window.ViaScripturaConsent = {
+        getChoice: readChoice,
+        accept: function () {
+          writeChoice('accepted');
+          loadAnalytics();
+          window.dispatchEvent(new CustomEvent('vs:consent-change', { detail: 'accepted' }));
+        },
+        reject: function () {
+          writeChoice('rejected');
+          window.gtag('consent', 'update', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+          });
+          removeAnalyticsCookies();
+          window.dispatchEvent(new CustomEvent('vs:consent-change', { detail: 'rejected' }));
+        },
+        clear: function () {
+          try { localStorage.removeItem(storageKey); } catch (e) {}
+          window.gtag('consent', 'update', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+          });
+          removeAnalyticsCookies();
+          window.dispatchEvent(new CustomEvent('vs:consent-change', { detail: null }));
+        }
+      };
+
+      if (readChoice() === 'accepted') loadAnalytics();
+    })();
   </script>
 
   <!-- Restaura tema salvo imediatamente para evitar flash -->

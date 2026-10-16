@@ -25,6 +25,7 @@ DirectoryIndex index.php
   RewriteRule ^separacao/?$ divisions.php [L,QSA]
   RewriteRule ^sobre/?$ about.php [L,QSA]
   RewriteRule ^about/?$ about.php [L,QSA]
+  RewriteRule ^privacidade/?$ privacy.php [L,QSA]
   RewriteRule ^offline/?$ offline.php [L,QSA]
 </IfModule>
 

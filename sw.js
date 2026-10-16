@@ -4,7 +4,7 @@
  * e estratégia híbrida (Network-First para páginas PHP + Stale-While-Revalidate para ativos/dados).
  */
 
-const CACHE_VERSION = 'v1.0.1';
+const CACHE_VERSION = 'v1.0.2';
 const STATIC_CACHE = `vs-static-${CACHE_VERSION}`;
 const PAGES_CACHE = `vs-pages-${CACHE_VERSION}`;
 const DATA_CACHE = `vs-data-${CACHE_VERSION}`;
@@ -14,6 +14,7 @@ const APP_SHELL_ASSETS = [
   '/manifest.webmanifest',
   '/assets/css/style.css',
   '/assets/js/app.js',
+  '/assets/js/consent.js',
   '/assets/icons/icon.svg',
   '/assets/icons/logo.svg',
   '/assets/icons/icon-maskable.svg',
@@ -29,7 +30,8 @@ const CORE_PAGES = [
   '/bible.php',
   '/stories.php',
   '/divisions.php',
-  '/about.php'
+  '/about.php',
+  '/privacy.php'
 ];
 
 // Instalação: pré-armazena o App Shell e páginas principais

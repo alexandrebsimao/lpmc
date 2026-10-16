@@ -125,6 +125,19 @@
   <!-- Toast de Notificação -->
   <div id="vs-toast" class="vs-toast" role="status" aria-live="polite"></div>
 
+  <!-- Consentimento de cookies analíticos (LGPD) -->
+  <section id="cookie-consent-banner" class="cookie-consent-banner" aria-labelledby="cookie-consent-title" aria-hidden="true">
+    <div class="cookie-consent-copy">
+      <strong id="cookie-consent-title">Sua privacidade importa</strong>
+      <p>Usamos cookies opcionais do Google Analytics para entender, de forma agregada, como o site é utilizado. Eles só serão ativados se você aceitar. Cookies necessários às preferências e ao funcionamento local permanecem ativos.</p>
+      <a href="privacy.php">Leia a Política de Privacidade e Cookies</a>
+    </div>
+    <div class="cookie-consent-actions">
+      <button type="button" id="cookie-reject-btn" class="cookie-choice-btn cookie-choice-btn--secondary">Recusar analíticos</button>
+      <button type="button" id="cookie-accept-btn" class="cookie-choice-btn cookie-choice-btn--primary">Aceitar analíticos</button>
+    </div>
+  </section>
+
   <!-- Rodapé Global -->
   <footer id="rodape" class="site-footer visible">
     <div class="footer-inner">
@@ -143,6 +156,8 @@
         <a href="stories.php">586 Histórias Bíblicas</a>
         <a href="divisions.php">Separação Bíblica (Eras & Divisões)</a>
         <a href="about.php">Sobre o Projeto</a>
+        <a href="privacy.php">Privacidade e Cookies</a>
+        <button type="button" id="cookie-preferences-btn" class="footer-link-button">Preferências de cookies</button>
       </div>
 
       <div class="footer-meta">
@@ -198,5 +213,6 @@
   </nav>
 
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/consent.js"></script>
 </body>
 </html>
