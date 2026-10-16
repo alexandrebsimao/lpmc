@@ -722,13 +722,6 @@
       });
     });
 
-    if (pillsListEl) {
-      const initialActivePill = pillsListEl.querySelector('.chapter-pill.active');
-      if (initialActivePill && typeof initialActivePill.scrollIntoView === 'function') {
-        initialActivePill.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
-      }
-    }
-
     const firstHighlighted = versesListEl.querySelector('.bible-verse.highlighted');
     if (firstHighlighted && document.body.classList.contains('page-bible')) {
       setTimeout(() => {
