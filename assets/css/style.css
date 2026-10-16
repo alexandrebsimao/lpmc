@@ -3895,12 +3895,6 @@ body.mobile-drawer-open {
 
 .privacy-document p + p { margin-top: 10px; }
 .privacy-document a { color: var(--gold); }
-.privacy-warning {
-  padding: 12px;
-  border-left: 3px solid var(--gold);
-  background: var(--gold-soft);
-}
-
 @media (max-width: 1080px) {
   /* No tablet/mobile, exibe primeiro o capítulo bíblico (com os seletores de livro/capítulo)
      e posiciona o diretório lateral dos 66 livros logo abaixo */
