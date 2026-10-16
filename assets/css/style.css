@@ -3364,3 +3364,234 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ==========================================================================
+   10. PROGRESSIVE WEB APP (PWA) — BOTÃO DE INSTALAÇÃO, MODAL E MODO OFFLINE
+   ========================================================================== */
+
+.pwa-install-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  border: 1px solid var(--gold-border);
+  color: var(--gold);
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.pwa-install-btn:hover {
+  background: var(--gold);
+  color: #120f0c;
+  transform: translateY(-1px);
+}
+
+.pwa-modal-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+.pwa-modal-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  border: 1px solid var(--gold-border);
+  flex-shrink: 0;
+}
+
+.pwa-modal-copy strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.pwa-modal-copy p {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.pwa-full-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.pwa-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pwa-step-card {
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+.pwa-step-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.pwa-step-card p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.pwa-step-card strong {
+  color: var(--text-primary);
+}
+
+.pwa-status-pill.offline-active {
+  background: rgba(212, 110, 90, 0.16);
+  border-color: rgba(212, 110, 90, 0.45);
+  color: #f09886;
+}
+
+/* Página dedicada Modo Offline (offline.php) */
+.offline-shell {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.offline-card {
+  max-width: 680px;
+  width: 100%;
+  padding: 42px 36px;
+  border-radius: var(--radius-xl);
+  background: var(--bg-surface);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.offline-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  background: var(--gold-soft);
+  border: 1px solid var(--gold-border);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offline-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.6vw, 2.8rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 6px 0 12px;
+}
+
+.offline-desc {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.offline-verse {
+  padding: 18px 22px;
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--gold);
+  margin-bottom: 26px;
+  text-align: left;
+}
+
+.offline-verse p {
+  font-family: var(--font-reading);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.offline-verse cite {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold);
+  font-style: normal;
+}
+
+.offline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.offline-cached-container {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+  text-align: left;
+}
+
+.offline-cached-heading {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.offline-cached-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.offline-cached-link {
+  display: block;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.offline-cached-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+@media (max-width: 640px) {
+  .pwa-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offline-card {
+    padding: 28px 20px;
+  }
+}
+

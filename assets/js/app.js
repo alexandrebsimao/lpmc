@@ -54,10 +54,21 @@
     return localStorage.getItem(THEME_KEY) || 'dark';
   }
 
+  const THEME_COLORS = {
+    dark: '#0d0b09',
+    sepia: '#f3ead8',
+    light: '#fbf9f5'
+  };
+
   function applyTheme(themeId, notify = false) {
     const valid = THEMES.find(t => t.id === themeId) || THEMES[0];
     document.documentElement.setAttribute('data-theme', valid.id);
     localStorage.setItem(THEME_KEY, valid.id);
+
+    const metaTheme = document.getElementById('meta-theme-color');
+    if (metaTheme && THEME_COLORS[valid.id]) {
+      metaTheme.setAttribute('content', THEME_COLORS[valid.id]);
+    }
 
     const labelEl = document.getElementById('theme-label-text');
     if (labelEl) {
@@ -1020,6 +1031,178 @@
     }
   }
 
+  // ── Progressive Web App (PWA): Service Worker, Instalação e Modo Offline ──
+  function initPWA() {
+    let deferredInstallPrompt = null;
+    const installBtn = document.getElementById('pwa-install-btn');
+    const pwaModal = document.getElementById('vs-pwa-modal');
+    const pwaCloseBtn = document.getElementById('vs-pwa-close');
+    const pwaBackdrop = document.getElementById('vs-pwa-backdrop');
+    const nativeInstallBox = document.getElementById('pwa-native-install-box');
+    const confirmInstallBtn = document.getElementById('pwa-confirm-install-btn');
+    const cacheCoreBtn = document.getElementById('pwa-cache-core-btn');
+    const connectionPill = document.getElementById('pwa-connection-pill');
+
+    const isStandalone =
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+      window.navigator.standalone === true;
+
+    // Exibe o botão "Instalar App" na navbar caso ainda não esteja em modo instalado
+    if (installBtn && !isStandalone) {
+      installBtn.style.display = 'inline-flex';
+    }
+
+    function openPwaModal() {
+      if (!pwaModal) return;
+      if (nativeInstallBox) {
+        nativeInstallBox.style.display = deferredInstallPrompt ? 'block' : 'none';
+      }
+      pwaModal.classList.add('active');
+      pwaModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closePwaModal() {
+      if (!pwaModal) return;
+      pwaModal.classList.remove('active');
+      pwaModal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (pwaCloseBtn) pwaCloseBtn.addEventListener('click', closePwaModal);
+    if (pwaBackdrop) pwaBackdrop.addEventListener('click', closePwaModal);
+
+    // Captura evento nativo de instalação (Chrome / Edge / Android / Desktop)
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      if (installBtn && !isStandalone) {
+        installBtn.style.display = 'inline-flex';
+      }
+      if (nativeInstallBox) {
+        nativeInstallBox.style.display = 'block';
+      }
+    });
+
+    async function triggerNativeInstall() {
+      if (!deferredInstallPrompt) {
+        openPwaModal();
+        return;
+      }
+      deferredInstallPrompt.prompt();
+      try {
+        const choice = await deferredInstallPrompt.userChoice;
+        if (choice && choice.outcome === 'accepted') {
+          showToast('Via Scriptura instalado com sucesso!');
+          if (installBtn) installBtn.style.display = 'none';
+          closePwaModal();
+        }
+      } catch (_) {}
+      deferredInstallPrompt = null;
+      if (nativeInstallBox) nativeInstallBox.style.display = 'none';
+    }
+
+    if (installBtn) {
+      installBtn.addEventListener('click', () => {
+        if (deferredInstallPrompt) {
+          triggerNativeInstall();
+        } else {
+          openPwaModal();
+        }
+      });
+    }
+
+    if (confirmInstallBtn) {
+      confirmInstallBtn.addEventListener('click', triggerNativeInstall);
+    }
+
+    window.addEventListener('appinstalled', () => {
+      deferredInstallPrompt = null;
+      if (installBtn) installBtn.style.display = 'none';
+      closePwaModal();
+      showToast('Aplicativo Via Scriptura instalado!');
+    });
+
+    // Botão para salvar explicitamente páginas principais e capítulo atual no cache offline
+    if (cacheCoreBtn) {
+      cacheCoreBtn.addEventListener('click', async () => {
+        const urlsToSave = [
+          '/index.php',
+          '/bible.php',
+          '/stories.php',
+          '/divisions.php',
+          '/about.php',
+          window.location.pathname + window.location.search
+        ];
+
+        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+          cacheCoreBtn.disabled = true;
+          cacheCoreBtn.querySelector('span').textContent = 'Salvando páginas para leitura offline...';
+          navigator.serviceWorker.controller.postMessage({
+            type: 'CACHE_URLS',
+            urls: urlsToSave
+          });
+        } else {
+          showToast('Cache offline já está ativo neste navegador!');
+        }
+      });
+    }
+
+    // Monitoramento de status Online / Offline
+    function updateOnlineStatus(notify = false) {
+      const online = navigator.onLine;
+      document.body.classList.toggle('is-offline', !online);
+      if (connectionPill) {
+        connectionPill.textContent = online
+          ? 'PWA · Pronto para Uso Offline'
+          : 'Modo Offline Ativo (Cache Local)';
+        connectionPill.classList.toggle('offline-active', !online);
+      }
+      if (notify) {
+        showToast(
+          online
+            ? 'Conexão restabelecida — você está online.'
+            : 'Sem conexão — Modo Offline ativo com leituras salvas.'
+        );
+      }
+    }
+
+    window.addEventListener('online', () => updateOnlineStatus(true));
+    window.addEventListener('offline', () => updateOnlineStatus(true));
+    updateOnlineStatus(false);
+
+    // Registro do Service Worker (/sw.js)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('/sw.js', { scope: '/' })
+          .then((registration) => {
+            registration.addEventListener('updatefound', () => {
+              const newWorker = registration.installing;
+              if (!newWorker) return;
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  newWorker.postMessage({ type: 'SKIP_WAITING' });
+                }
+              });
+            });
+          })
+          .catch(() => {
+            // Silencioso em ambientes sem suporte a SW
+          });
+      });
+
+      navigator.serviceWorker.addEventListener('message', (event) => {
+        const data = event.data || {};
+        if (data.type === 'CACHE_URLS_DONE') {
+          if (cacheCoreBtn) {
+            cacheCoreBtn.disabled = false;
+            cacheCoreBtn.querySelector('span').textContent = 'Páginas Salvas para Leitura Offline ✓';
+          }
+          showToast(`${data.savedCount || 5} páginas salvas para leitura offline!`);
+        }
+      });
+    }
+  }
+
   // ── Inicialização Geral ──
   document.addEventListener('DOMContentLoaded', () => {
     initThemeSwitcher();
@@ -1031,5 +1214,6 @@
     initStoriesCatalog();
     initDivisionsPage();
     initShareModal();
+    initPWA();
   });
 })();

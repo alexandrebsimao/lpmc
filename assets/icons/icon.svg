@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#241d15" />
+      <stop offset="100%" stop-color="#0d0b09" />
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0d290" />
+      <stop offset="50%" stop-color="#d8b26e" />
+      <stop offset="100%" stop-color="#a87f3a" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#d8b26e" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#d8b26e" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo Arredondado Editorial Escuro -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect x="18" y="18" width="476" height="476" rx="96" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-opacity="0.35" />
+
+  <!-- Halo Solar / Luz Sagrada -->
+  <circle cx="256" cy="190" r="110" fill="url(#glowGrad)" />
+
+  <!-- Cruz Sutil no Topo -->
+  <g stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round">
+    <line x1="256" y1="78" x2="256" y2="146" />
+    <line x1="228" y1="104" x2="284" y2="104" />
+  </g>
+
+  <!-- Raios de Luz -->
+  <g stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" opacity="0.55">
+    <line x1="184" y1="136" x2="164" y2="118" />
+    <line x1="328" y1="136" x2="348" y2="118" />
+    <line x1="158" y1="186" x2="132" y2="180" />
+    <line x1="354" y1="186" x2="380" y2="180" />
+  </g>
+
+  <!-- Livro Sagrado Aberto (Via Scriptura) -->
+  <g fill="none" stroke="url(#goldGrad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Página Esquerda -->
+    <path d="M104 196 H204 A52 52 0 0 1 256 248 V402 A42 42 0 0 0 214 364 H104 Z" fill="#17130e" />
+    <!-- Página Direita -->
+    <path d="M408 196 H308 A52 52 0 0 0 256 248 V402 A42 42 0 0 1 298 364 H408 Z" fill="#17130e" />
+  </g>
+
+  <!-- Linhas de Escritura nas Páginas -->
+  <g stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" opacity="0.65">
+    <line x1="138" y1="248" x2="212" y2="248" />
+    <line x1="138" y1="284" x2="218" y2="284" />
+    <line x1="138" y1="320" x2="196" y2="320" />
+
+    <line x1="300" y1="248" x2="374" y2="248" />
+    <line x1="294" y1="284" x2="374" y2="284" />
+    <line x1="316" y1="320" x2="374" y2="320" />
+  </g>
+
+  <!-- Marcador de Página Central Dourado -->
+  <path d="M244 392 L256 436 L268 392" fill="none" stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

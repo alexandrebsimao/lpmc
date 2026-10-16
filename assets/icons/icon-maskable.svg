@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#241d15" />
+      <stop offset="100%" stop-color="#0d0b09" />
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0d290" />
+      <stop offset="50%" stop-color="#d8b26e" />
+      <stop offset="100%" stop-color="#a87f3a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo Total (Safe Zone para Maskable Icon) -->
+  <rect width="512" height="512" fill="url(#bgGrad)" />
+
+  <!-- Conteúdo centralizado dentro da safe-zone de 80% -->
+  <g transform="translate(51.2, 51.2) scale(0.8)">
+    <!-- Cruz Sutil no Topo -->
+    <g stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round">
+      <line x1="256" y1="74" x2="256" y2="146" />
+      <line x1="224" y1="102" x2="288" y2="102" />
+    </g>
+
+    <!-- Livro Sagrado Aberto -->
+    <g fill="none" stroke="url(#goldGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M104 196 H204 A52 52 0 0 1 256 248 V402 A42 42 0 0 0 214 364 H104 Z" fill="#17130e" />
+      <path d="M408 196 H308 A52 52 0 0 0 256 248 V402 A42 42 0 0 1 298 364 H408 Z" fill="#17130e" />
+    </g>
+
+    <!-- Linhas de Escritura -->
+    <g stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round" opacity="0.7">
+      <line x1="138" y1="248" x2="212" y2="248" />
+      <line x1="138" y1="284" x2="218" y2="284" />
+      <line x1="138" y1="320" x2="196" y2="320" />
+      <line x1="300" y1="248" x2="374" y2="248" />
+      <line x1="294" y1="284" x2="374" y2="284" />
+      <line x1="316" y1="320" x2="374" y2="320" />
+    </g>
+  </g>
+</svg>

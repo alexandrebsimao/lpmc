@@ -38,10 +38,21 @@ $bodyClass = $bodyClass ?? '';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="<?= htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8') ?>" />
   <meta name="keywords" content="<?= htmlspecialchars($pageKeywords, ENT_QUOTES, 'UTF-8') ?>" />
-  <meta name="theme-color" content="#0d0b09" />
+  <meta name="theme-color" content="#0d0b09" id="meta-theme-color" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="Portuguese" />
   <meta name="author" content="Via Scriptura" />
+
+  <!-- Progressive Web App (PWA) & Mobile Web App Meta -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Via Scriptura" />
+  <meta name="application-name" content="Via Scriptura" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -145,6 +156,23 @@ $bodyClass = $bodyClass ?? '';
           />
           <kbd class="search-kbd" title="Pressione / para focar">/</kbd>
         </form>
+
+        <!-- Botão de Instalação do App (PWA) -->
+        <button
+          type="button"
+          id="pwa-install-btn"
+          class="pwa-install-btn"
+          style="display: none;"
+          aria-label="Instalar aplicativo Via Scriptura"
+          title="Instalar aplicativo para acesso rápido e leitura offline"
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Instalar App</span>
+        </button>
 
         <!-- Alternador de Tema (Escuro / Sépia / Claro) -->
         <button

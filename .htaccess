@@ -18,8 +18,21 @@ DirectoryIndex index.php
   RewriteRule ^separacao/?$ divisions.php [L,QSA]
   RewriteRule ^sobre/?$ about.php [L,QSA]
   RewriteRule ^about/?$ about.php [L,QSA]
+  RewriteRule ^offline/?$ offline.php [L,QSA]
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType image/svg+xml .svg
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "^(sw\.js|manifest\.webmanifest)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Service-Worker-Allowed "/"
+  </FilesMatch>
 </IfModule>
 
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/css application/json application/javascript
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/json application/manifest+json application/javascript image/svg+xml
 </IfModule>
