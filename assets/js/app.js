@@ -965,7 +965,7 @@
     modal.setAttribute('aria-hidden', 'true');
   }
 
-  function downloadShareCardPng(payload) {
+  async function downloadShareCardPng(payload) {
     const canvas = document.createElement('canvas');
     canvas.width = 1080;
     canvas.height = 1350;
@@ -1037,11 +1037,77 @@
     ctx.font = '500 26px sans-serif';
     ctx.fillText('viascriptura.com', 110, 1230);
 
-    const link = document.createElement('a');
-    link.download = `via-scriptura-${stripAccents(payload.title || 'palavra').replace(/[^a-z0-9]+/g, '-')}.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    showToast('Card visual baixado em PNG!');
+    const safeTitle = stripAccents(payload.title || 'palavra')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'palavra';
+    const filename = `via-scriptura-${safeTitle}.png`;
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      (navigator.maxTouchPoints > 1 && /Macintosh/i.test(navigator.userAgent));
+    const isAppleMobile = /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      (navigator.maxTouchPoints > 1 && /Macintosh/i.test(navigator.userAgent));
+
+    try {
+      // A conversão síncrona mantém o gesto do toque ativo. Isso é necessário
+      // para o Safari permitir que navigator.share abra a folha de ações.
+      if (isMobile && typeof navigator.share === 'function' && typeof navigator.canShare === 'function') {
+        const dataUrl = canvas.toDataURL('image/png');
+        const binary = window.atob(dataUrl.split(',')[1]);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+        const file = new File([bytes], filename, { type: 'image/png' });
+
+        if (navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: `${payload.title || 'Via Scriptura'} — Via Scriptura`
+            });
+            showToast('Escolha “Salvar Imagem” para guardar o card.');
+            return;
+          } catch (error) {
+            if (error && error.name === 'AbortError') return;
+            // Se o compartilhamento falhar, tenta o download convencional abaixo.
+          }
+        }
+      }
+
+      // Safari antigo não baixa URLs temporárias. Abrir a imagem permite usar
+      // “Salvar em Fotos” pelo menu exibido ao manter a imagem pressionada.
+      if (isAppleMobile) {
+        const imageWindow = window.open(canvas.toDataURL('image/png'), '_blank');
+        if (imageWindow) {
+          showToast('Mantenha a imagem pressionada e escolha “Salvar em Fotos”.');
+          return;
+        }
+      }
+
+      const blob = await new Promise((resolve, reject) => {
+        canvas.toBlob(result => {
+          if (result) resolve(result);
+          else reject(new Error('Não foi possível gerar a imagem.'));
+        }, 'image/png');
+      });
+
+      const objectUrl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = objectUrl;
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+      showToast('Card visual baixado em PNG!');
+    } catch (_) {
+      // Último recurso para navegadores móveis antigos: abre a imagem para que
+      // o usuário possa mantê-la pressionada e escolher “Salvar em Fotos”.
+      const imageWindow = window.open(canvas.toDataURL('image/png'), '_blank');
+      if (imageWindow) {
+        showToast('Mantenha a imagem pressionada para salvá-la.');
+      } else {
+        showToast('Não foi possível abrir a imagem. Verifique os bloqueios do navegador.');
+      }
+    }
   }
 
   function initShareModal() {
@@ -1100,8 +1166,16 @@
 
     const downloadCardBtn = document.getElementById('share-btn-download-card');
     if (downloadCardBtn) {
-      downloadCardBtn.addEventListener('click', () => {
-        downloadShareCardPng(activeSharePayload);
+      downloadCardBtn.addEventListener('click', async () => {
+        if (downloadCardBtn.disabled) return;
+        downloadCardBtn.disabled = true;
+        downloadCardBtn.setAttribute('aria-busy', 'true');
+        try {
+          await downloadShareCardPng(activeSharePayload);
+        } finally {
+          downloadCardBtn.disabled = false;
+          downloadCardBtn.removeAttribute('aria-busy');
+        }
       });
     }
   }

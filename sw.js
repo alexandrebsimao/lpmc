@@ -4,7 +4,7 @@
  * e estratégia híbrida (Network-First para páginas PHP + Stale-While-Revalidate para ativos/dados).
  */
 
-const CACHE_VERSION = 'v1.0.2';
+const CACHE_VERSION = 'v1.0.3';
 const STATIC_CACHE = `vs-static-${CACHE_VERSION}`;
 const PAGES_CACHE = `vs-pages-${CACHE_VERSION}`;
 const DATA_CACHE = `vs-data-${CACHE_VERSION}`;
