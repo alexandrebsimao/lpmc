@@ -1,0 +1,6 @@
+# Robots.txt — Via Scriptura (https://www.viascriptura.com/)
+User-agent: *
+Allow: /
+
+# Sitemap oficial
+Sitemap: https://www.viascriptura.com/sitemap.xml

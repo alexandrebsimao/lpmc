@@ -157,6 +157,7 @@
         <a href="divisions.php">Separação Bíblica (Eras & Divisões)</a>
         <a href="about.php">Sobre o Projeto</a>
         <a href="privacy.php">Privacidade e Cookies</a>
+        <a href="sitemap.xml">Mapa do Site</a>
         <button type="button" id="cookie-preferences-btn" class="footer-link-button">Preferências de cookies</button>
       </div>
 

@@ -17,7 +17,8 @@ DirectoryIndex index.php
   RewriteRule ^bible\.html$ bible.php [L,QSA]
   RewriteRule ^divisions\.html$ divisions.php [L,QSA]
 
-  # Rotas amigáveis
+  # Rotas amigáveis e redirecionamento de sitemap
+  RewriteRule ^sidemap\.xml/?$ sitemap.xml [R=301,L]
   RewriteRule ^biblia/?$ bible.php [L,QSA]
   RewriteRule ^historias/?$ stories.php [L,QSA]
   RewriteRule ^stories/?$ stories.php [L,QSA]
@@ -32,12 +33,16 @@ DirectoryIndex index.php
 <IfModule mod_mime.c>
   AddType application/manifest+json .webmanifest
   AddType image/svg+xml .svg
+  AddType application/xml .xml
 </IfModule>
 
 <IfModule mod_headers.c>
   <FilesMatch "^(sw\.js|manifest\.webmanifest|healthz\.php)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
     Header set Service-Worker-Allowed "/"
+  </FilesMatch>
+  <FilesMatch "^(sitemap\.xml|robots\.txt)$">
+    Header set Cache-Control "public, max-age=86400, stale-while-revalidate=3600"
   </FilesMatch>
 </IfModule>
 
